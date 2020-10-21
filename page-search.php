@@ -73,38 +73,72 @@ get_header(); ?>
 <section class="py-4 search">
 <div class="search__filter">
 <div>
-<p class="shop-buzz__list-txt-tag">カフェ</p><p class="shop-buzz__list-txt-tag">カフェ</p><p class="shop-buzz__list-txt-tag">カフェ</p><p class="shop-buzz__list-txt-tag">カフェ</p>
-</div>
-<button type="button" class="text-primary border-0 bg-white" data-toggle="modal" data-target="#search-restaurant">変更</button>
-</div>
-<!-- search__filter -->
-<div class="search__current my-3">
 <?php
 if ($_GET['keyword'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">'.$_GET['keyword'].'</span>';
+echo '<span class="shop-buzz__list-txt-tag">'.$_GET['keyword'].'</span>';
 }
 if ($_GET['pref'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">'.$pref[((int)$_GET['pref']-1)]['name'].'</span>';
+echo '<span class="shop-buzz__list-txt-tag">'.$pref[((int)$_GET['pref']-1)]['name'].'</span>';
 }
 if ($_GET['genre'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">'.$genres[((int)$_GET['genre']-1)]['name'].'</span>';
+echo '<span class="shop-buzz__list-txt-tag">'.$genres[((int)$_GET['genre']-1)]['name'].'</span>';
 }
 if ($_GET['credit_card'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">クレカ可</span>';
+echo '<span class="shop-buzz__list-txt-tag">クレカ可</span>';
 }
 if ($_GET['electronic_money'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">電子マネー可</span>';
+echo '<span class="shop-buzz__list-txt-tag">電子マネー可</span>';
 }
 if ($_GET['parking_flag'] != '') {
-echo '<span class="badge badge-light p-2 mr-2">駐車場あり</span>';
+echo '<span class="shop-buzz__list-txt-tag">駐車場あり</span>';
 }
 ?>
 </div>
 <!-- search__current -->
+<button type="button" class="text-primary border-0 bg-white" data-toggle="modal" data-target="#search-restaurant">変更</button>
+</div>
+<!-- search__filter -->
 <div class="search__result-txt my-3 small">検索結果：<span><?php echo number_format($data['total']); ?></span>件</div>
 <!-- search__result-txt -->
 
-<!-- TakeEats登録店舗の場合 -->
+<a class="shop-search-buzz__list-inner" href="<?php echo $home; ?>/restaurant?id=<?php echo $shop_id.$recommend; ?>">
+<p class="shop-buzz__list-net">ネット注文OK</p>
+<div class="shop-search-buzz__list-inner-img-wrap">
+<div class="shop-search-buzz__list-inner-img-list">
+<!-- 商品画像 -->
+<div class="shop-search-buzz__list-inner-img-item">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_item.png" alt="<店舗名>の商品">
+<p class="mb-0 text-white">¥1,000</p>
+</div>
+<div class="shop-search-buzz__list-inner-img-item">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_item.png" alt="<店舗名>の商品">
+<p class="mb-0 text-white">¥1,000</p>
+</div>
+<div class="shop-search-buzz__list-inner-img-item">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_item.png" alt="<店舗名>の商品">
+<p class="mb-0 text-white">¥1,000</p>
+</div>
+<div class="shop-search-buzz__list-inner-img-item">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_item.png" alt="<店舗名>の商品">
+<p class="mb-0 text-white">¥1,000</p>
+</div>
+<div class="shop-search-buzz__list-inner-img-item">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_item.png" alt="<店舗名>の商品">
+<p class="mb-0 text-white">¥1,000</p>
+</div>
+</div>
+</div>
+<div class="shop-search-buzz__list-intro bg-light">
+<div class="shop-search-buzz__list-intro-img bg-white">
+<img src="<?php echo $wp_url; ?>/dist/images/sample_logo.png" alt="<店舗名>のロゴ">
+</div>
+<div class="shop-search-buzz__list-intro-txt">
+<h3 class="text-info">店舗名が入ります</h3>
+<p class="text-info">お店の簡単な説明お店の簡単な説明お店の簡単な説明お店のーー３５文字まで...</p>
+</div>
+</div>
+</a>
+
 <a class="shop-search-buzz__list-inner" href="<?php echo $home; ?>/restaurant?id=<?php echo $shop_id.$recommend; ?>">
 <div class="shop-search-buzz__list-inner-img-wrap">
 <div class="shop-search-buzz__list-inner-img-list">
@@ -137,72 +171,10 @@ echo '<span class="badge badge-light p-2 mr-2">駐車場あり</span>';
 </div>
 <div class="shop-search-buzz__list-intro-txt">
 <h3 class="text-info">店舗名が入ります</h3>
-<p class="text-info">お店の簡単な説明お店の簡単な説明お店の...</p>
+<p class="text-info">お店の簡単な説明お店の簡単な説明お店の簡単な説明お店のーー３５文字まで...</p>
 </div>
 </div>
 </a>
-
-<!-- TakeEats未登録店舗の場合 -->
-<a class="shop-search-buzz__list-inner" href="<?php echo $home; ?>/restaurant?id=<?php echo $shop_id.$recommend; ?>">
-<div class="shop-search-buzz__list-inner-img-wrap">
-<div class="shop-search-buzz__list-inner-img-none">
-<!-- デフォルト画像画像 -->
-<img src="<?php echo $wp_url; ?>/dist/images/sample_noimage.png" alt="画像なし">
-</div>
-</div>
-<div class="shop-search-buzz__list-intro bg-light">
-<div class="shop-search-buzz__list-intro-txt">
-<h3 class="text-info">店舗名が入ります</h3>
-<p class="text-info">お店の簡単な説明お店の簡単な説明お店の...</p>
-</div>
-</div>
-</a>
-
-<!-- <div class="search__result">
-<?php
-foreach ($data['data'] as $key => $val):
-$shop_id = $val['id'];
-$shop_name = $val['name'];
-$shop_genre = $genres[((int)$val['cuisine_genre_id']-1)]['name'];
-$shop_pref = $pref[((int)$val['pref_id']-1)]['name'];
-$shop_access = mb_strimwidth($val['access'], 0, 90, "…");
-$business_hours = mb_strimwidth($val['business_hours'], 0, 90, "…");
-$regular_holiday = mb_strimwidth($val['regular_holiday'], 0, 85, "…");
-$tags = explode(',', $val['tags']);
-$takeeats_url = $val['takeeats_url'];
-$credit_card = $val['credit_card'];
-if ($takeeats_url != '' && $takeeats_url != null) {
-$recommend_flag = true;
-$recommend = '&recommend=1';
-$menus = get_menu($shop_id)['data'];
-} else {
-$recommend_flag = false;
-$recommend = '';
-$menus = [];
-}
-?>
-<a class="shop-buzz__list-inner" href="<?php echo $home; ?>/restaurant?id=<?php echo $shop_id.$recommend; ?>">
-<?php if ($recommend_flag && count($menus) != 0): ?>
-<div class="shop-buzz__list-inner-imgs">
-<?php foreach ($menus as $key => $menu): ?>
-<div><img src="//ssl.omomuki.me/storage/<?php echo $menu['thumbnail']; ?>" alt="<?php echo $menu['name']; ?>"></div>
-<?php
-if ($key === 2) {
-break;
-}
-endforeach; ?>
-</div>
-<?php endif; ?>
-</div>
-<div class="shop-buzz__list-txt">
-<p class="shop-buzz__list-txt-tag"><?php echo $shop_genre; ?></p>
-<h3><?php echo $shop_name; ?></h3>
-<p class="shop-buzz__list-txt-time">営業時間 <?php echo $business_hours; ?></p>
-<p class="shop-buzz__list-txt-time">定休日 <?php echo $regular_holiday; ?></p>
-</div>
-</a>
-
-<?php endforeach; ?> -->
 
 <!-- search__result -->
 <?php search_page_navi($total, $current_page); ?>

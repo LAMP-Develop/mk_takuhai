@@ -12320,7 +12320,7 @@ input[type="submit"], input[type="button"] {
 
 .main-left.front {
   background: #F6F1D9;
-  padding: 1rem 0 3rem 0; }
+  padding: 1rem 0 3rem; }
   @media (min-width: 768px) {
     .main-left.front {
       background: #fff; } }
@@ -12340,12 +12340,13 @@ input[type="submit"], input[type="button"] {
         align-items: flex-start;
         flex-wrap: wrap; } }
     .shop-buzz__list-inner {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       box-sizing: border-box;
       width: 100%;
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
       background-color: #fff;
       white-space: normal; }
       .shop-buzz__list-inner:hover {
@@ -12355,7 +12356,7 @@ input[type="submit"], input[type="button"] {
       .shop-buzz__list-inner::after {
         position: absolute;
         top: 50%;
-        right: .5rem;
+        right: 1rem;
         transform: rotate(45deg);
         content: "";
         width: 10px;
@@ -12364,17 +12365,23 @@ input[type="submit"], input[type="button"] {
         vertical-align: middle;
         border-top: 2px solid #271A16;
         border-right: 2px solid #271A16; }
-        @media (min-width: 768px) {
-          .shop-buzz__list-inner::after {
-            right: 1rem; } }
+    .shop-buzz__list-net {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      padding: 0.15rem 0.5rem;
+      background: #FF772F;
+      font-size: 0.8rem;
+      color: #fff;
+      z-index: 1; }
     .shop-buzz__list-img {
       position: relative;
-      width: 36%;
-      height: 100%;
-      min-height: 117px; }
+      width: 40%;
+      height: 140px; }
       @media (min-width: 768px) {
         .shop-buzz__list-img {
-          width: 40%; } }
+          width: 40%;
+          height: 150px; } }
       .shop-buzz__list-img img {
         width: 100%;
         height: 100%;
@@ -12395,11 +12402,11 @@ input[type="submit"], input[type="button"] {
         font-size: 1.125rem !important;
         color: #271A16;
         font-weight: 700;
-        margin: .75rem 0 .5rem 0;
+        margin: 0.75rem 0 0.5rem;
         letter-spacing: 0.05rem; }
         @media (min-width: 768px) {
           .shop-buzz__list-txt h3 {
-            margin: 1.05rem 0 .8rem 0; } }
+            margin: 1.05rem 0 0.8rem; } }
       .shop-buzz__list-txt-tag {
         display: inline-block;
         background-color: #F5F3EB;
@@ -12415,14 +12422,15 @@ input[type="submit"], input[type="button"] {
         margin: 0;
         padding: 0;
         line-height: 1.3rem;
-        font-size: .8rem; }
+        font-size: 0.8rem; }
 
 .shop-search-buzz__list-inner {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #F5F3EB; }
+  border-bottom: 1px solid #F5F3EB;
+  position: relative; }
   .shop-search-buzz__list-inner:hover {
     text-decoration: none; }
   .shop-search-buzz__list-inner-img-none {
@@ -12464,12 +12472,14 @@ input[type="submit"], input[type="button"] {
   position: relative;
   display: flex;
   align-items: center;
-  padding: .8rem;
-  margin-top: .5rem; }
+  padding: 0.8rem;
+  margin-top: 0.5rem; }
+  .shop-search-buzz__list-intro-txt {
+    width: calc(100% - 50px - 1rem); }
   .shop-search-buzz__list-intro::after {
     position: absolute;
     top: calc(50% - 5px);
-    right: .5rem;
+    right: 0.5rem;
     transform: rotate(45deg);
     content: "";
     width: 10px;
@@ -12495,10 +12505,10 @@ input[type="submit"], input[type="button"] {
     margin-bottom: 5px; }
   .shop-search-buzz__list-intro p {
     color: #5D5D5D !important;
-    margin: 0;
+    margin: 0 10px 0 0;
     padding: 0;
-    line-height: .9rem;
-    font-size: .75rem; }
+    line-height: 0.9rem;
+    font-size: 0.75rem; }
 
 .featured-article {
   position: relative;
@@ -13081,8 +13091,8 @@ input[type="submit"], input[type="button"] {
           padding: 0.75em 1.3rem; }
           .restaurant-block .container table tbody tr td .btn {
             font-size: 13px;
-            color: #fff !important;
             border-radius: 1rem; }
+            .restaurant-block .container table tbody tr td .btn a,
             .restaurant-block .container table tbody tr td .btn i {
               color: #fff !important; }
   .restaurant-ttl {

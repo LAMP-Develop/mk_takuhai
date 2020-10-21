@@ -52,9 +52,9 @@ get_header(); ?>
 </div>
 
 <div class="search__result__inner__wrap mt-4 mb-0 position-relative">
-<p class="search__result__inner__wrap-name"><?php echo $shop_name; ?></p>
+<p class="search__result__inner__wrap-name">TakeCafe</p>
 <p class="search__result__inner__wrap-info">
-<span><?php echo $shop_genre; ?></span>
+<span>カフェ</span>
 <span>¥800円から注文可</span>
 </p>
 <p class="search__result__inner-time">2行から3行程度の店舗紹介テキストが入ります。2行から3行程度の店舗紹介テキストが入ります。2行から3行程度の店舗紹介テキストが入ります。</p>
@@ -89,16 +89,6 @@ get_header(); ?>
 <p class="mb-0 text-white">¥1,000</p>
 </div>
 </div>
-<!-- <?php if (count($menus) != 0):
-foreach ($menus as $key => $menu): ?>
-<a class="menu__ranking__inner" href="<?php echo $takeeats_url; ?>" target="_blank">
-<div class="menu__ranking__inner__thumbnail">
-<img src="//ssl.omomuki.me/storage/<?php echo $menu['thumbnail']; ?>" alt="<?php echo $menu['name']; ?>">
-</div>
-<p class="menu__ranking__inner-name"><?php echo $menu['name']; ?></p>
-<p class="menu__ranking__inner-price">¥<span><?php echo number_format((int)$menu['price']); ?></span>[税抜]</p>
-</a>
-<?php endforeach; endif; ?> -->
 </div>
 <div class="text-center">
 <a class="restaurant-btn py-3" href="<?php echo $takeeats_url; ?>" target="_blank">メニュー一覧をみる</a>
@@ -113,19 +103,19 @@ foreach ($menus as $key => $menu): ?>
 <tbody>
 <tr>
 <th>住所</th>
-<td>〒<?php echo $shop_zipcode; ?><br><?php echo $shop_address1.' '.$shop_address2; ?></td>
+<td>〒000-0000<br>住所が入ります。</td>
 </tr>
 <tr>
 <th class="text-nowrap">電話番号</th>
-<td><div class="btn bg-primary"><a class="text-body" href="tel:<?php echo $shop_tel; ?>"><i class="fas fa-phone mr-1 text-info"></i><?php echo $shop_tel; ?></a></div></td>
+<td><div class="btn bg-primary"><a href="tel:<?php echo $shop_tel; ?>"><i class="fas fa-phone mr-1 text-info"></i>012-3456-7890</a></div></td>
 </tr>
 <tr>
 <th>営業日・時間</th>
-<td><?php echo $business_hours; ?></td>
+<td>10:00~19:00</td>
 </tr>
 <tr>
 <th>定休日</th>
-<td><?php echo $regular_holiday; ?></td>
+<td>水曜日</td>
 </tr>
 <tr>
 <th class="text-nowrap"><?php if ($recommend) {

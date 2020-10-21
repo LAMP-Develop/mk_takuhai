@@ -37,6 +37,9 @@ if ($_GET['genre'] != '' && $val['id'] == $_GET['genre']) {
 <?php endforeach; ?>
 </select>
 </div>
+<div class="search-form my-4">
+<label><input class="mr-1" type="checkbox" name="riyu" value="1">ネット注文可能</label>
+</div>
 <button type="submit" class="btn btn-block btn-primary">絞り込む</button>
 </div>
 </form>

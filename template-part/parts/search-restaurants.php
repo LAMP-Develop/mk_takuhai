@@ -10,6 +10,9 @@ $wp_url = get_template_directory_uri();
 <div class="modal d-block position-static">
 <form action="<?php echo $home; ?>/search/" method="GET">
 <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
 </div>
 <div class="modal-body">
 <div class="search-form mt-3">
@@ -20,7 +23,7 @@ $wp_url = get_template_directory_uri();
 </div>
 </form>
 </div>
-<div class="search-form mt-4">
+<div class="search-form my-4">
 <h3 class="modal-body-title">ジャンル</h3>
 <select name="genre" class="form-control bg-light border-0">
 <option value="">すべて</option>
@@ -34,8 +37,9 @@ if ($_GET['genre'] != '' && $val['id'] == $_GET['genre']) {
 <?php endforeach; ?>
 </select>
 </div>
+<div class="search-form my-4">
+<label><input class="mr-1" type="checkbox" name="riyu" value="1">ネット注文可能</label>
 </div>
-<div class="modal-footer">
 <button type="submit" class="btn btn-block btn-primary">絞り込む</button>
 </div>
 </form>
