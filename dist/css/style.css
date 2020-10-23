@@ -12880,7 +12880,7 @@ input[type="submit"], input[type="button"] {
     padding-left: 1rem;
     padding-bottom: 0.5rem;
     border-left: solid 5px #E3556E;
-    border-bottom: solid 2px #F6F1D9; }
+    border-bottom: solid 2px #fff; }
   .post-main h4 {
     position: relative;
     font-size: 1rem;

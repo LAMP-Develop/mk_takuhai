@@ -1,41 +1,6 @@
 <?php
-global $shop_name,$shop_address1;
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
-$referer = $_SERVER['HTTP_REFERER'];
-$pref = get_pref();
-$genres = get_genres();
-$data = get_restaurant_detail($_GET['id']);
-$shop_id = $data['id'];
-$shop_name = $data['name'];
-$shop_zipcode = $data['zipcode'];
-$shop_address1 = $data['address1'];
-$shop_address2 = $data['address2'];
-$shop_access = $data['access'];
-$shop_genre = $genres[((int)$data['cuisine_genre_id']-1)]['name'];
-$business_hours = $data['business_hours'];
-$regular_holiday = $data['regular_holiday'];
-$gmap_url = $data['gmap_url'];
-$shop_tel = $data['tel'];
-$parking_flag = $data['parking_flag'];
-if ($parking_flag) {
-    $parking_text = $data['parking_text'];
-}
-$credit_card = $data['credit_card'];
-$electronic_money = $data['electronic_money'];
-$hp_url = $data['hp_url'];
-$gnavi_url = $data['gnavi_url'];
-$tabelog_url = $data['tabelog_url'];
-$demaecan_url = $data['demaecan_url'];
-$ubereats_url = $data['ubereats_url'];
-$takeeats_url = $data['takeeats_url'];
-$tags = explode(',', $data['tags']);
-if ($takeeats_url != '' && $takeeats_url != null) {
-    $recommend = true;
-    $menus = get_menu($shop_id)['data'];
-} else {
-    $recommend = false;
-}
 get_header(); ?>
 
 <div class="py-md-5">
@@ -118,21 +83,10 @@ get_header(); ?>
 <td>水曜日</td>
 </tr>
 <tr>
-<th class="text-nowrap"><?php if ($recommend) {
-    echo "予約サイト";
-} else {
-    echo "公式HP";
-} ?></th>
+<th class="text-nowrap"></th>
 <td>
 <?php if ($takeeats_url != null): ?>
-<a class="text-body" href="<?php echo $takeeats_url; ?>" target="_blank" onclick="gtag('event','click',{'event_category':'button','event_label':'テイクアウト予約する'});"><?php echo $takeeats_url; ?></a>
-<?php else: ?>
-<?php if ($hp_url != null): ?>
-<a class="text-body" href="<?php echo $hp_url; ?>" target="_blank"><?php echo $hp_url; ?></a>
-<?php else: ?>
-なし
-<?php endif; ?>
-<?php endif; ?>
+<a class="text-body" href="" target="_blank"></a>
 </td>
 </tr>
 </tbody>

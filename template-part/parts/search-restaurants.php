@@ -27,14 +27,6 @@ $wp_url = get_template_directory_uri();
 <h3 class="modal-body-title">ジャンル</h3>
 <select name="genre" class="form-control bg-light border-0">
 <option value="">すべて</option>
-<?php
-$genres = get_genres();
-foreach ($genres as $key => $val): ?>
-<option value="<?php echo $val['id']; ?>" <?php
-if ($_GET['genre'] != '' && $val['id'] == $_GET['genre']) {
-    echo "selected";
-} ?>><?php echo $val['name']; ?></option>
-<?php endforeach; ?>
 </select>
 </div>
 <div class="search-form my-4">
