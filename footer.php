@@ -24,7 +24,7 @@ $wp_url = get_template_directory_uri(); ?>
 <div class="container">
 <ul class="footer-links footer-links-main">
 <li><a href="<?php echo $home; ?>/delivery/">お届け方法について</a></li>
-<li><a href="<?php echo $home; ?>/postage/">送料について</a></li>
+<li><a href="<?php echo $home; ?>/posshop_tage/">送料について</a></li>
 <li><a href="<?php echo $home; ?>/category/news/">お知らせ一覧</a></li>
 <li><a href="#" target="_blank">MKタク配に出店</a></li>
 </ul>

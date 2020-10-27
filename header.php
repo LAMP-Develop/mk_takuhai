@@ -20,30 +20,37 @@ $wp_url = get_template_directory_uri(); ?>
 <body>
 <?php endif; ?>
 <?php wp_body_open(); ?>
-<header class="header sticky-top bg-white">
-<nav class="navbar navbar-expand-xlg justify-content-start align-items-center">
-<h1 class="navbar-brand p-0 m-0">
-<a class="d-inline-block align-middle" href="<?php echo $home; ?>">
-<img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="<?php bloginfo('name'); ?>" srcset="<?php echo $wp_url; ?>/dist/images/logo.png 1x, <?php echo $wp_url; ?>/dist/images/logo@2x.png 2x">
-</a>
-</h1>
-<!-- スマホメニュー -->
-<div class="d-block d-md-none">
-</div>
-<!-- スマホメニュー終わり -->
-<!-- PCメニュー -->
-<div class="d-none d-md-block">
-  <div class="navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item"><a class="nav-link" href="<?php echo $home; ?>/delivery">お届け方法について</a></li>
-    <li class="nav-item"><a class="nav-link" href="<?php echo $home; ?>/postage">送料について</a></li>
-    <li class="nav-item"><a class="nav-link" href="<?php echo $home; ?>/category/news">お知らせ一覧</a></li>
-    <li class="nav-item"><a class="nav-link" href="<?php echo $home; ?>/" target="_blank">MKタク配に出店する</a></li>
-  </ul>
+
+<header class="lp__header">
+<nav class="navbar">
+  <div class="lp__header-wrap">
+    <h1 class="navbar-brand p-0 m-0">
+    <a class="d-inline-block align-middle" href="<?php echo $home; ?>">
+    <img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="<?php bloginfo('name'); ?>" srcset="<?php echo $wp_url; ?>/dist/images/logo.png 1x, <?php echo $wp_url; ?>/dist/images/logo@2x.png 2x">
+    </a>
+    </h1>
+    <button class="navbar-toggler" type="button"
+        data-toggle="collapse"
+        data-target="#navmenu1"
+        aria-controls="navmenu1"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <p>メニュー</p>
+    </button>
   </div>
-</div>
-<!-- PCメニュー終わり -->
+  <div class="collapse navbar-collapse" id="navmenu1">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="https://lamp.jp/" target="_blank">お届け方法について</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>">送料について</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>">お知らせ一覧</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>">MKタク配に出店する</a>
+    </div>
+  </div>
 </nav>
 </header>
+
+
+
 <?php get_template_part('template-part/modal/search-form'); ?>
 <main>

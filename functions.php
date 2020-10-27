@@ -1,7 +1,6 @@
 <?php
 
 // 専用関数
-include_once 'lib/func/add-func.php';
 include_once 'lib/func/seo.php';
 include_once 'lib/func/remove-asset.php';
 

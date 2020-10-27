@@ -35,6 +35,7 @@ get_header(); ?>
 
 <div class="col-md-8">
 <section class="search">
+
 <div class="search__filter">
 <div><span class="shop-buzz__list-txt-tag"><?php single_cat_title(); ?></span></div>
 <!-- search__current -->
@@ -42,28 +43,46 @@ get_header(); ?>
 </div>
 
 <?php
-$cat = get_queried_object();
-$cat_name = $cat->name;
-$cat_slug = $cat->slug;
+$post_type = $_GET['post_type'];
+$s = $_GET['s'];
+$shop_category = $_GET['shop_category']; //ジャンル
+$shop_tag = $_GET['shop_tag']; //タグ
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+if ($shop_category != null && $shop_category !== 'size-nochoice') {
+  $taxquery_category = array(
+    'taxonomy' => 'shop_category',
+    'terms' => $shop_category,
+    'field' => 'slug',
+  );
+}
+
+if ($shop_tag != null) {
+  $taxquery_tag = array(
+    'taxonomy' => 'shop_tag',
+    'terms' => $shop_tag,
+    'field' => 'slug',
+  );
+}
+
 $args = array(
-'posts_per_page' => 8,
-'paged' => $paged,
-'orderby' => 'post_date',
-'order' => 'DESC',
-'post_type' => 'shop',
-'taxonomy' => 'shop_category',
-'term' => $cat_slug,
-'post_status' => 'publish'
+  'paged' => $paged,
+  'post_type' => 'shop',
+  'tax_query' => array(
+    'relation' => 'AND',
+    $taxquery_category,
+    $taxquery_tag
+  ),
 );
-$the_query = new WP_Query($args);?>
+query_posts($args);
 
-<div class="mb-3">検索結果：<span><?php echo $the_query->post_count; ?></span>件</div>
+if(have_posts()): ?>
 
-<?php if ( $the_query->have_posts() ) :
-while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<div class="mb-3">検索結果：<span><?php echo $wp_query->found_posts; ?></span>件</div>
 
-<a class="shop-search-buzz__list-inner" href="<?php get_the_permalink(); ?>">
+<?php while(have_posts()): the_post(); ?>
+
+<a class="shop-search-buzz__list-inner" href="<?php echo get_the_permalink(); ?>">
 
 <?php if( get_field('net') === "はい"): ?>
 <p class="shop-buzz__list-net">ネット注文OK</p>
@@ -141,14 +160,17 @@ echo get_field('about');
 </div>
 </a>
 
-<?php endwhile;
-if(function_exists('wp_pagenavi')):
-wp_pagenavi(); ?>
-<?php endif; ?>
-<?php else: ?>
+<?php endwhile; ?>
+
+<?php
+if (function_exists('wp_pagenavi')) {
+  wp_pagenavi();
+}
+?>
+
+<?php else: // ないとき ?>
 <p class="txt-c">該当の店舗がありません。</p>
-<?php endif;
-wp_reset_query();?>
+<?php endif;?>
 
 </div>
 </section>

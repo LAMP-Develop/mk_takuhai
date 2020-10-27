@@ -39,7 +39,7 @@
     }
     &-title {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1rem!important;
       box-sizing: border-box;
       margin-bottom: 1em;
     }
@@ -61,5 +61,12 @@
   .tab-content {
     background-color: $light;
     padding: 1rem;
+  }
+}
+
+.banner {
+  img {
+    display: block;
+    margin: 0 auto 1rem auto;
   }
 }
