@@ -164,7 +164,7 @@ echo get_field('about');
 
 <?php
 if (function_exists('wp_pagenavi')) {
-  wp_pagenavi();
+  wp_pagenavi(['query' => $wp_query]);
 }
 ?>
 
