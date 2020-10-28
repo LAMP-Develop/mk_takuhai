@@ -124,7 +124,7 @@ get_header(); ?>
 
 <section class="lp__price mb-5">
 <div class="container">
-<h2 class="lp-ttl2"><span class="marks">料金</span></h2>
+<h2 class="lp-ttl2"><span class="marks">料金について</span></h2>
 <div class="txt-c">
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
