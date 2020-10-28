@@ -26,9 +26,13 @@ $wp_url = get_template_directory_uri(); ?>
   <div class="lp__header-wrap">
     <h1 class="navbar-brand p-0 m-0">
     <a class="d-inline-block align-middle" href="<?php echo $home; ?>">
-    <img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="<?php bloginfo('name'); ?>" srcset="<?php echo $wp_url; ?>/dist/images/logo.png 1x, <?php echo $wp_url; ?>/dist/images/logo@2x.png 2x">
+    <img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="MKタク配ロゴ" srcset="<?php echo $wp_url; ?>/dist/images/logo.png 1x, <?php echo $wp_url; ?>/dist/images/logo@2x.png 2x">
     </a>
     </h1>
+    <button type="button" class="text-primary border-0 bg-white search" data-toggle="modal" data-target="#search-restaurant">
+      <img src="<?php echo $wp_url; ?>/dist/images/icon_search.svg" alt="虫眼鏡アイコン">
+      <p>検索</p>
+    </button>
     <button class="navbar-toggler" type="button"
         data-toggle="collapse"
         data-target="#navmenu1"
