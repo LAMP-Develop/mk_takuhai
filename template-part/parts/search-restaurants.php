@@ -8,7 +8,5 @@ $wp_url = get_template_directory_uri();
 </a>
 
 <div class="modal d-block position-static">
-
 <?php get_template_part('search-form') ?>
-
 </div>

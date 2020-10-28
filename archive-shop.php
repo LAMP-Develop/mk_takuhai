@@ -40,7 +40,11 @@ get_header(); ?>
 $post_type = $_GET['post_type'];
 $s = $_GET['s'];
 $shop_category = $_GET['shop_category']; //ジャンル
+$cat_date = get_term_by( 'slug', $shop_category, 'shop_category' );
+$cat_name = $cat_date->name;
 $shop_tag = $_GET['shop_tag']; //タグ
+$tag_date = get_term_by( 'slug', $shop_tag, 'shop_tag' );
+$tag_name = $tag_date->name;
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
 if ($shop_category != null && $shop_category !== 'nochoice') {
@@ -64,6 +68,7 @@ $args = array(
   'post_type' => 'shop',
   'tax_query' => array(
     'relation' => 'AND',
+    $s,
     $taxquery_category,
     $taxquery_tag
   ),
@@ -72,17 +77,15 @@ query_posts($args);
 
 if(have_posts()): ?>
 
-<?php var_dump($taxquery_category) ?>
-
 <div class="search__filter">
 <div>
 
 <?php if ($shop_category != null && $shop_category !== 'nochoice'): ?>
-<span class="shop-buzz__list-txt-tag"><?php echo $shop_category; ?></span>
+<span class="shop-buzz__list-txt-tag"><?php echo $cat_name; ?></span>
 <?php endif; ?>
 
 <?php if ($shop_tag != null): ?>
-<span class="shop-buzz__list-txt-tag"><?php echo $shop_tag; ?></span>
+<span class="shop-buzz__list-txt-tag"><?php echo $tag_name; ?></span>
 <?php endif; ?>
 
 <?php if ($s != null): ?>

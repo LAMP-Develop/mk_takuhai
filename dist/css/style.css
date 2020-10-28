@@ -13002,7 +13002,8 @@ input[type="button"] {
   .restaurant .search__result__inner__wrap {
     border-radius: 10px;
     background-color: #fff;
-    margin-top: -1rem; }
+    margin-top: -1rem;
+    padding: 1rem 1rem 1.5rem; }
     .restaurant .search__result__inner__wrap-name {
       font-size: 1.125rem;
       font-weight: bold;
@@ -13023,12 +13024,16 @@ input[type="button"] {
           margin-right: 0.3rem; }
         .restaurant .search__result__inner__wrap-info span:last-child::before {
           content: "\f277"; }
+    .restaurant .search__result__inner__wrap-about {
+      font-size: 0.9rem;
+      margin: 1rem 0 0;
+      line-height: 1.3rem; }
+    .restaurant .search__result__inner__wrap a {
+      min-width: 100%; }
   .restaurant-block {
     background-color: #fff;
     margin-top: 1rem; }
     .restaurant-block .container {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
       font-size: 0.875rem; }
       .restaurant-block .container table {
         border-collapse: inherit;
@@ -13048,7 +13053,7 @@ input[type="button"] {
         .restaurant-block .container table tbody tr td {
           width: 75%;
           word-break: break-all;
-          padding: 0.75em 1.3rem; }
+          padding: 0.75em 0 0.75em 1.3rem; }
           .restaurant-block .container table tbody tr td .btn {
             font-size: 13px;
             border-radius: 1rem; }

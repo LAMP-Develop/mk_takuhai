@@ -14,7 +14,7 @@
 <div class="search-form my-4">
 <h3 class="modal-body-title">ジャンル</h3>
 <select class="border-0" name="shop_category">
-<label><option name="shop_category" value="size-nochoice" checked="checked">指定なし</label>
+<label><option name="shop_category" value="nochoice" checked="checked">指定なし</label>
 <?php
 $taxonomy_name = 'shop_category';
 $args = array( 'hide_empty' => 0 );

@@ -24,7 +24,7 @@ get_header(); ?>
 
 <span>¥<?php the_field('price'); ?>から注文可</span>
 </p>
-<p class="search__result__inner-time"><?php the_field('about'); ?></p>
+<p class="search__result__inner__wrap-about"><?php the_field('about'); ?></p>
 
 <?php if( get_field('net') === "はい"): ?>
 
@@ -100,7 +100,7 @@ get_header(); ?>
 <div class="restaurant__overview restaurant-block">
 <h2 class="restaurant-ttl"><i class="fas fa-info-circle"></i>店舗情報</h2>
 <div class="container">
-<table class="mt-3">
+<table class="">
 <tbody>
 <tr>
 <th>住所</th>
