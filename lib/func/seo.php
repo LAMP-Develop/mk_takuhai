@@ -5,14 +5,14 @@ function edit_wpseo_title($title)
 {
     global $shop_name,$shop_address1,$pref_name,$genre_name;
     if (is_page('restaurant')) {
-        return 'テイクアウト(お持ち帰り)可のお店「'.$shop_name.'['.$shop_address1.']」 | TakeEats(テイクイーツ)';
+        return 'デリバリー可のお店「'.$shop_name.'['.$shop_address1.']」 | MKタク配';
     } elseif (is_page('search')) {
         if ($pref_name != null && $genre_name != null) {
-            return $pref_name.'で'.$genre_name.'がテイクアウト(お持ち帰り)できるおすすめのお店 | TakeEats(テイクイーツ)';
+            return $pref_name.'で'.$genre_name.'がデリバリーできるおすすめのお店 | MKタク配';
         } elseif ($pref_name == null && $genre_name != null) {
-            return $genre_name.'がテイクアウト(お持ち帰り)できるおすすめのお店 | TakeEats(テイクイーツ)';
+            return $genre_name.'がデリバリーできるおすすめのお店 | MKタク配';
         } elseif ($pref_name != null && $genre_name == null) {
-            return $pref_name.'でテイクアウト(お持ち帰り)できるおすすめのお店 | TakeEats(テイクイーツ)';
+            return $pref_name.'でデリバリーできるおすすめのお店 | MKタク配';
         } else {
             return $title;
         }
@@ -27,14 +27,14 @@ function filter_wpseo_metadesc($wpseo_replace_vars)
 {
     global $shop_name,$shop_address1,$pref_name,$genre_name;
     if (is_page('restaurant')) {
-        return $shop_name.'('.$shop_address1.')'.'でテイクアウト(お持ち帰り)してお家で美味しいごはんを食べませんか？';
+        return $shop_name.'('.$shop_address1.')'.'でデリバリーしてお家で美味しいごはんを食べませんか？';
     } elseif (is_page('search')) {
         if ($pref_name != null && $genre_name != null) {
-            return $pref_name.'で'.$genre_name.'がテイクアウト(お持ち帰り)できるおすすめのお店一覧ページです。テイクアウトを活用してお家で美味しいごはんを食べませんか？';
+            return $pref_name.'で'.$genre_name.'がデリバリーできるおすすめのお店一覧ページです。デリバリーを活用してお家で美味しいごはんを食べませんか？';
         } elseif ($pref_name == null && $genre_name != null) {
-            return $genre_name.'がテイクアウト(お持ち帰り)できるおすすめのお店一覧ページです。テイクアウトを活用してお家で美味しいごはんを食べませんか？';
+            return $genre_name.'がデリバリーできるおすすめのお店一覧ページです。デリバリーを活用してお家で美味しいごはんを食べませんか？';
         } elseif ($pref_name != null && $genre_name == null) {
-            return $pref_name.'でテイクアウト(お持ち帰り)できるおすすめのお店一覧ページです。テイクアウトを活用してお家で美味しいごはんを食べませんか？';
+            return $pref_name.'でデリバリーできるおすすめのお店一覧ページです。デリバリーを活用してお家で美味しいごはんを食べませんか？';
         } else {
             return $wpseo_replace_vars;
         }

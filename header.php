@@ -14,7 +14,7 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
 
-<?php if (!is_page(['search', 'geo']) && !is_single()): ?>
+<?php if (!is_page(['search', 'geo','service']) && !is_single()): ?>
 <body class="bg-light">
 <?php else: ?>
 <body>
@@ -45,10 +45,10 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
   <div class="collapse navbar-collapse" id="navmenu1">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="https://lamp.jp/" target="_blank">お届け方法について</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>">送料について</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>">お知らせ一覧</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>">MKタク配に出店する</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">お届け方法について</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/postage">送料について</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">MKタク配に出店する</a>
     </div>
   </div>
 </nav>

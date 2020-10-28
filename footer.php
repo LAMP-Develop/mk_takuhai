@@ -2,6 +2,33 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri(); ?>
 
+</main>
+
+<?php if (is_page('service')): ?>
+
+<footer class="footer mt-0">
+<div class="container pt-5">
+<div class="footer__tel__inner">
+<p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
+<a href="tel:075-600-2721">075-600-2721</a>
+</div>
+<div class="footer__link__inner">
+<ul>
+<li><a href="https://lamp.jp/" target="_blank">運営会社</a></li>
+<li><a href="<?php echo $home; ?>">利用規約</a></li>
+<li><a href="<?php echo $home; ?>">特定商取引に関する方針</a></li>
+<li><a href="<?php echo $home; ?>">プライバシーポリシー</a></li>
+</ul>
+</div>
+<p class="copy">Copyright MK Co.,Ltd. All rights reserved.</p>
+<!-- footer__link__inner -->
+</div>
+</div>
+<!-- footer__link -->
+</footer>
+
+<?php else: ?>
+
 <div class="cta d-block d-md-none">
 
 <div class="cta-takeeats mb-0">
@@ -17,8 +44,6 @@ $wp_url = get_template_directory_uri(); ?>
 </div>
 
 </div>
-
-</main>
 
 <footer class="footermt-0 bg-info">
 <div class="container">
@@ -42,6 +67,10 @@ $wp_url = get_template_directory_uri(); ?>
 </div>
 </div>
 </footer>
+
+<?php endif; ?>
+
+
 <?php wp_footer(); ?>
 <?php if (is_home() || is_front_page()): ?>
 <!-- <script src="//code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
@@ -106,5 +135,27 @@ new Swiper(".swiper-container", {
 });
 </script>
 <?php endif; ?>
+<script>
+// $(function ($) {
+//   $("#lpcase").slick({
+//     slidesToShow: 5,
+//     slidesToScroll: 1,
+//     autoplay: true,
+//     autoplaySpeed: 5000,
+//     arrows: false,
+//     dots: false,
+//     centerMode: true,
+//     centerPadding: "20vw",
+//     responsive: [
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 2,
+//         },
+//       },
+//     ],
+//   });
+//   });
+</script>
 </body>
 </html>
