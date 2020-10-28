@@ -33,9 +33,8 @@ get_header(); ?>
 <!-- mv -->
 
 <section class="search">
-<div class="container">
-</div>
 <div class="search__genre bg-white">
+<div class="container">
 <div class="search__genre-list">
 <ul>
 <li>
@@ -53,7 +52,43 @@ get_header(); ?>
 <li>
 <a class="text-body" href="<?php echo $home; ?>/shop_category/sushi/">
 <img src="<?php echo $wp_url; ?>/dist/images/genre_sushi.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_sushi.png 1x, <?php echo $wp_url; ?>/dist/images/genre_sushi@2x.png 2x">
+<span>寿司</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/sweets/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_sweets.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_sweets.png 1x, <?php echo $wp_url; ?>/dist/images/genre_sweets@2x.png 2x">
+<span>スイーツ</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/obento/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_obento.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_obento.png 1x, <?php echo $wp_url; ?>/dist/images/genre_obento@2x.png 2x">
 <span>お弁当</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/fresh/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_food.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_food.png 1x, <?php echo $wp_url; ?>/dist/images/genre_food@2x.png 2x">
+<span>生鮮食品</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/sushi/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_sushi.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_sushi.png 1x, <?php echo $wp_url; ?>/dist/images/genre_sushi@2x.png 2x">
+<span>寿司</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/sweets/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_sweets.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_sweets.png 1x, <?php echo $wp_url; ?>/dist/images/genre_sweets@2x.png 2x">
+<span>スイーツ</span>
+</a>
+</li>
+<li>
+<a class="text-body" href="<?php echo $home; ?>/shop_category/sushi/">
+<img src="<?php echo $wp_url; ?>/dist/images/genre_sushi.png" alt="料理のジャンル" srcset="<?php echo $wp_url; ?>/dist/images/genre_sushi.png 1x, <?php echo $wp_url; ?>/dist/images/genre_sushi@2x.png 2x">
+<span>寿司</span>
 </a>
 </li>
 <li>
@@ -64,6 +99,7 @@ get_header(); ?>
 </li>
 
 </ul>
+</div>
 </div>
 </div>
 </section>

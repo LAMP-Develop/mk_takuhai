@@ -30,7 +30,7 @@
         .btn-primary {
           width: 100%;
           min-width: auto;
-          padding: 0.7rem 0!important !important;
+          padding: 0.7rem 0!important;
           border-radius: 0 5px 5px 0;
           background-color: $info;
           border: $info;
@@ -43,6 +43,10 @@
   &__genre {
     margin: 0;
     box-sizing: border-box;
+
+    .container {
+      padding: 0;
+    }
 
     h3 {
       font-size: $font-size-sm;
@@ -66,9 +70,16 @@
       @include media-breakpoint-up(md) {
         max-width: 960px;
         margin: 0 auto;
+        padding: 2rem 0 0 2rem;
       }
       @include media-breakpoint-up(lg) {
         max-width: 1140px;
+      }
+
+      img {
+        @include media-breakpoint-up(lg) {
+          width: 95px
+        }
       }
 
       ul {
@@ -83,10 +94,18 @@
           max-width: 24vw;
           margin-right: 1rem;
           font-size: 0;
+          :hover {
+            opacity: .5
+          }
+
+          a {
+            text-decoration: none!important;
+          }
 
           img {
             display: block;
             margin: 0 auto;
+            transition: .3s;
           }
 
           span {

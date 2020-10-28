@@ -36,12 +36,6 @@ get_header(); ?>
 <div class="col-md-8">
 <section class="search">
 
-<div class="search__filter">
-<div><span class="shop-buzz__list-txt-tag"><?php single_cat_title(); ?></span></div>
-<!-- search__current -->
-<button type="button" class="text-primary border-0 bg-white" data-toggle="modal" data-target="#search-restaurant">変更</button>
-</div>
-
 <?php
 $post_type = $_GET['post_type'];
 $s = $_GET['s'];
@@ -49,7 +43,7 @@ $shop_category = $_GET['shop_category']; //ジャンル
 $shop_tag = $_GET['shop_tag']; //タグ
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-if ($shop_category != null && $shop_category !== 'size-nochoice') {
+if ($shop_category != null && $shop_category !== 'nochoice') {
   $taxquery_category = array(
     'taxonomy' => 'shop_category',
     'terms' => $shop_category,
@@ -77,6 +71,28 @@ $args = array(
 query_posts($args);
 
 if(have_posts()): ?>
+
+<?php var_dump($taxquery_category) ?>
+
+<div class="search__filter">
+<div>
+
+<?php if ($shop_category != null && $shop_category !== 'nochoice'): ?>
+<span class="shop-buzz__list-txt-tag"><?php echo $shop_category; ?></span>
+<?php endif; ?>
+
+<?php if ($shop_tag != null): ?>
+<span class="shop-buzz__list-txt-tag"><?php echo $shop_tag; ?></span>
+<?php endif; ?>
+
+<?php if ($s != null): ?>
+<span class="shop-buzz__list-txt-tag"><?php echo $s; ?></span>
+<?php endif; ?>
+
+</div>
+<!-- search__current -->
+<button type="button" class="text-primary border-0 bg-white" data-toggle="modal" data-target="#search-restaurant">変更</button>
+</div>
 
 <div class="mb-3">検索結果：<span><?php echo $wp_query->found_posts; ?></span>件</div>
 
