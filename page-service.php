@@ -135,11 +135,45 @@ get_header(); ?>
 <section class="lp__flow bg-light">
 <div class="container">
 <h2 class="lp-ttl2"><span>導入の流れ</span></h2>
+<ul class="nav nav-tabs">
+<li class="active"><a href="#takeeats" data-toggle="tab">システムを導入する場合</a></li>
+<li><a href="#tel" data-toggle="tab">システムを導入しない場合</a></li>
+</ul>
 <div class="lp__flow__wrap">
+<div class="tab-content">
+<div class="tab-pane active" id="takeeats">
 <ol class="lp__flow__list">
 <li class="lp__flow__list__inner">
 <div class="lp__flow__list__inner-step">STEP<span>01</span></div>
-<h3>お申し込み</h3>
+<h3>注文の受付</h3>
+<p>お客様が直接作成したオーダーサイトで決済ならびに予約を行います。注文時の通知方法は店舗ごとに指定していただくことが出来ます。</p>
+</li>
+<!-- lp__flow__list__inner -->
+<li class="lp__flow__list__inner">
+<div class="lp__flow__list__inner-step">STEP<span>02</span></div>
+<h3>商品の準備</h3>
+<p>管理画面やメールから注文を確認し、MKのお迎えの時間に合わせて準備します。</p>
+</li>
+<!-- lp__flow__list__inner -->
+<li class="lp__flow__list__inner">
+<div class="lp__flow__list__inner-step">STEP<span>03</span></div>
+<h3>メニュー登録</h3>
+<p>販売する商品の登録を行います。<br>(※無料代行サービス実施中)</p>
+</li>
+<!-- lp__flow__list__inner -->
+<li class="lp__flow__list__inner">
+<div class="lp__flow__list__inner-step">STEP<span>04</span></div>
+<h3>ご利用スタート</h3>
+<p>準備が整ったら早速注文の受け付けを行いましょう。</p>
+</li>
+<!-- lp__flow__list__inner -->
+</ol>
+</div>
+<div class="tab-pane" id="tel">
+<ol class="lp__flow__list">
+<li class="lp__flow__list__inner">
+<div class="lp__flow__list__inner-step">STEP<span>01</span></div>
+<h3>注文の受付()</h3>
 <p>お申込みフォームより必要事項のご入力をお願い致します。<br>担当者よりお電話にてご連絡致します。</p>
 </li>
 <!-- lp__flow__list__inner -->
@@ -162,11 +196,20 @@ get_header(); ?>
 </li>
 <!-- lp__flow__list__inner -->
 </ol>
+</div>
+</div>
 <!-- lp__flow__list -->
 </div>
 </div>
 </section>
 <!-- flow -->
+
+<div id="toform" class="lp__cta mt-5 footer-ctabtn">
+<div class="lp__cta__box">
+<a class="smooth-scroll lp__cta__box_btn" href="<?php echo $home; ?>/seminar"><img class="mr-2" src="<?php echo $img_url; ?>cta_btn.svg" style="width:18px;
+  height:auto" alt="吹き出しアイコン">まずはお問い合わせ</a>
+</div>
+</div>
 
 <section class="lp__form">
 <div class="container">

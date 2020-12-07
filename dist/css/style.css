@@ -12190,6 +12190,28 @@ input[type="button"] {
   margin-top: 1rem;
   background-color: #000;
   color: #fff; }
+  .footer-ctabtn {
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #ff5a11;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 20px 20px 0 0; }
+    @media (min-width: 768px) {
+      .footer-ctabtn {
+        display: none; } }
+    .footer-ctabtn a {
+      color: #fff; }
   .footer-links {
     padding: 0;
     margin: 0;
@@ -12230,7 +12252,7 @@ input[type="button"] {
               padding: 2rem 2rem 2rem 0; } }
     .footer-links-sub li a {
       color: #271A16;
-      font-size: .9rem; }
+      font-size: 0.9rem; }
 
 .socket {
   font-size: 10px;

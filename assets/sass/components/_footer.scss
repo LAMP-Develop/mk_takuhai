@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
+
     &-wrap {
       z-index: 1;
       position: relative;
@@ -16,10 +17,12 @@
         align-items: center;
       }
     }
+
     &__ttl {
       font-weight: bold;
       text-align: center;
       font-size: 1.25rem;
+
       span {
         position: relative;
         display: inline-block;
@@ -28,6 +31,7 @@
         margin-bottom: 1rem;
         padding: 8px 20px;
         border-radius: 20px;
+
         &::after {
           content: '';
           width: 16px;
@@ -41,11 +45,13 @@
         }
       }
     }
+
     &__img {
       z-index: 1;
       position: relative;
       text-align: center;
     }
+
     &-btn {
       box-sizing: border-box;
       padding: 0 1rem 2rem;
@@ -55,6 +61,7 @@
         padding: 0;
         margin-top: 1.5rem;
       }
+
       span {
         background: $white;
         color: $primary;
@@ -70,34 +77,65 @@
   margin-top: 1rem;
   background-color: $black;
   color: $white;
+
+  &-ctabtn {
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #ff5a11;
+    color: $white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+    a {
+      color: $white;
+    }
+  }
+
   &-links {
     padding: 0;
     margin: 0;
     display: block;
     text-align: left;
     margin-bottom: 1rem;
+
     li {
       list-style: none;
       display: inline-block;
       vertical-align: middle;
       line-height: 1;
       margin: 0 0.5rem 1rem;
+
       a {
         display: block;
         text-align: center;
         font-size: 13px;
       }
     }
+
     &-main {
       margin-bottom: 0;
+
       li {
         background: $info;
         margin: 0;
         border-bottom: 1px solid $secondary;
         width: 49%;
         text-align: center;
+
         &:nth-child(3),
-        &:nth-child(4){
+        &:nth-child(4) {
           border-bottom: none;
         }
         @include media-breakpoint-up(md) {
@@ -105,6 +143,7 @@
           width: auto;
           border: none;
         }
+
         a {
           color: $white;
           padding: 2rem 0;
@@ -115,11 +154,12 @@
         }
       }
     }
+
     &-sub {
       li {
-        a{
+        a {
           color: $info;
-          font-size: .9rem;
+          font-size: 0.9rem;
         }
       }
     }
@@ -130,6 +170,7 @@
   font-size: 10px;
   line-height: 1;
   color: $info;
+
   a {
     color: $info;
   }
