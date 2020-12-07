@@ -49,6 +49,7 @@ $wp_url = get_template_directory_uri(); ?>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/postage">送料について</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/service">MKタク配に出店する</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/disclaimers">免責事項</a>
     </div>
   </div>
 </nav>

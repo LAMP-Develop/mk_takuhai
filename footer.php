@@ -38,7 +38,7 @@ $wp_url = get_template_directory_uri(); ?>
 <img class="cta-takeeats-wrap-bg" src="<?php echo $wp_url; ?>/dist/images/entry_img.png" alt="装飾" srcset="<?php echo $wp_url; ?>/dist/images/entry_img.png 1x, <?php echo $wp_url; ?>/dist/images/entry_img@2x.png 2x">
 </div>
 <div class="cta-takeeats-btn">
-<a class="btn btn-primary" href="<?php echo $home; ?>/request/" target="_blank"><span>無料</span>お申し込みはこちら</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/service/" target="_blank"><span>無料</span>お申し込みはこちら</a>
 </div>
 </div>
 </div>
@@ -51,7 +51,7 @@ $wp_url = get_template_directory_uri(); ?>
 <li><a href="<?php echo $home; ?>/delivery/">お届け方法について</a></li>
 <li><a href="<?php echo $home; ?>/posshop_tage/">送料について</a></li>
 <li><a href="<?php echo $home; ?>/category/news/">お知らせ一覧</a></li>
-<li><a href="#" target="_blank">MKタク配に出店</a></li>
+<li><a href="<?php echo $home; ?>/service/" target="_blank">MKタク配に出店</a></li>
 </ul>
 </div>
 <div class="bg-secondary">

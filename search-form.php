@@ -28,7 +28,7 @@ foreach($taxonomys as $taxonomy):
 </div>
 
 <div class="search-form my-4">
-<label><input type="radio" name="shop_tag" value="net"> ネット注文可</label>
+<label><input type="checkbox" name="shop_tag" value="net"> ネット注文可</label>
 </div>
 
 <input type="submit" class="btn btn-block btn-primary" value="絞り込み">
