@@ -13680,6 +13680,19 @@ input[type="button"] {
   display: block;
   margin: 0 auto; }
 
+.lp__price .another-plan {
+  border: 5px solid #F6F1D9;
+  padding: 2rem 1rem; }
+  @media (min-width: 992px) {
+    .lp__price .another-plan {
+      padding: 2rem; } }
+  .lp__price .another-plan h3 {
+    font-weight: bold; }
+  .lp__price .another-plan p {
+    font-size: .8rem; }
+  .lp__price .another-plan ul {
+    padding-left: 1rem; }
+
 .lp__flow {
   z-index: 1;
   position: relative;
