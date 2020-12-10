@@ -6,7 +6,7 @@ $wp_url = get_template_directory_uri(); ?>
 
 <?php if (is_page('service')): ?>
 
-<footer class="footer mt-0">
+<footer class="footer mt-0 mb-5">
 <div class="container pt-5">
 <div class="footer__tel__inner">
 <p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
@@ -47,7 +47,7 @@ $wp_url = get_template_directory_uri(); ?>
 
 <footer class="footermt-0 bg-info">
 <div class="container">
-<ul class="footer-links footer-links-main">
+<ul class="footer-links footer-links-main pt-4 pb-4">
 <li><a href="<?php echo $home; ?>/delivery/">お届け方法について</a></li>
 <li><a href="<?php echo $home; ?>/postage/">送料について</a></li>
 <li><a href="<?php echo $home; ?>/category/news/">お知らせ一覧</a></li>
