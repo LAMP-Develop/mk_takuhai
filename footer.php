@@ -14,13 +14,13 @@ $wp_url = get_template_directory_uri(); ?>
 </div>
 <div class="footer__link__inner">
 <ul>
-<li><a href="https://lamp.jp/" target="_blank">運営会社</a></li>
-<li><a href="<?php echo $home; ?>">利用規約</a></li>
-<li><a href="<?php echo $home; ?>">特定商取引に関する方針</a></li>
-<li><a href="<?php echo $home; ?>">プライバシーポリシー</a></li>
+<li><a href="https://www.mk-group.co.jp/" target="_blank">運営会社</a></li>
+<li><a href="<?php echo $home; ?>/term/">利用規約</a></li>
+<li><a href="<?php echo $home; ?>/law/">特定商取引に関する方針</a></li>
+<li><a href="<?php echo $home; ?>/privacy-policy/">プライバシーポリシー</a></li>
 </ul>
 </div>
-<p class="copy">Copyright MK Co.,Ltd. All rights reserved.</p>
+<p class="mb-0 pb-5 socket"><a href="https://www.mk-group.co.jp/" target="_blank">Copyright MK Co.,Ltd. All rights reserved.</a></p>
 <!-- footer__link__inner -->
 </div>
 </div>
@@ -49,9 +49,10 @@ $wp_url = get_template_directory_uri(); ?>
 <div class="container">
 <ul class="footer-links footer-links-main">
 <li><a href="<?php echo $home; ?>/delivery/">お届け方法について</a></li>
-<li><a href="<?php echo $home; ?>/posshop_tage/">送料について</a></li>
+<li><a href="<?php echo $home; ?>/postage/">送料について</a></li>
 <li><a href="<?php echo $home; ?>/category/news/">お知らせ一覧</a></li>
-<li><a href="<?php echo $home; ?>/service/" target="_blank">MKタク配に出店</a></li>
+<li><a class="nav-item nav-link" href="<?php echo $home; ?>/service/">【飲食店向け】MKタク配を始める</a></li>
+<li><a class="nav-item nav-link" href="<?php echo $home; ?>/another-plan/">【飲食店向け】宅配のみを依頼する</a></li>
 </ul>
 </div>
 <div class="bg-secondary">

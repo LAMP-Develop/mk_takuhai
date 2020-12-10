@@ -30,6 +30,21 @@ get_header(); ?>
 </div>
 </section> -->
 
+<section class="mt-5 mb-5 lp__takeeats">
+  <div class="container">
+    <div class="row">
+      <div class="lp__takeeats__txt col-md-6">
+        <h2 class="lp-ttl2"><img src="<?php echo $img_url; ?>lp_takeeats_ttl.png" alt="料理の写真" srcset="<?php echo $img_url; ?>lp_takeeats_ttl.png 1x, <?php echo $img_url; ?>lp_takeeats_ttl@2x.png 2x">注文は<b class="text-primary">店舗オリジナル</b>の<br>オーダーサイトから</h2>
+        <p>MKタク配にお申し込みいただきましたら、店舗ごとにオリジナルのオーダーサイトをご用意しております。<br>そのため店舗様はサイト制作からデリバリーまでを初期導入費・月額費０円でご利用いただくことができます。</p>
+        <p>MKタク配では、TakeEatsのシステムを利用しています。<a href="http://take-eats.jp/" target="_blank">詳しくはこちら</a></p>
+      </div>
+      <div class="lp__takeeats__img col-md-6 text-center">
+        <img src="<?php echo $img_url; ?>lp_takeeats_sp.png" alt="オーダーサイト" srcset="<?php echo $img_url; ?>lp_takeeats_sp.png 1x, <?php echo $img_url; ?>lp_takeeats_sp@2x.png 2x">
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="pb-5 mb-5 bg-light lp__about">
 <div class="container">
 <h2 class="lp-ttl2">宅配はすべて<br>MKタクシーにおまかせ</h2>
@@ -54,7 +69,7 @@ get_header(); ?>
 <div class="lp__about__list__inner-txt">
 <p class="user">あなたの店舗</p>
 <h3>料理を準備</h3>
-<p>メールやFAXで注文を確認し料理を準備します。</p>
+<p>注文通知がきたらご注文を確認し料理を準備します。</p>
 </div>
 </div>
 </div>
@@ -78,7 +93,7 @@ get_header(); ?>
 <div class="lp__about__list__inner-txt">
 <p class="user">MKタクシー</p>
 <h3>お客様に商品をお渡し</h3>
-<p>MKタクシーがあなたの店舗まで商品を取りに行きます。</p>
+<p>MKタクシーがお客様の元まで商品をお届けします。</p>
 </div>
 </div>
 </div>
@@ -128,22 +143,20 @@ get_header(); ?>
 <div class="txt-c">
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
-<p class="small my-3 text-md-center">※オプションをご選択の場合は別途費用がかかります。
+<p class="small my-3 text-md-center">※ 宅配は1回のご注文につき＋宅配料600円がお客様に加算されます。（宅配料は原則お客様負担）
+<br>※オプションをご選択の場合は別途費用がかかります。
 <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。</p>
-<div class="another-plan mt-5">
-  <div class="row">
 
-  </div>
-<h3 class="mb-3"><span class="text-primary">■</span> 宅配のみのご利用も可能です</h3>
+<div class="another-plan mt-5">
+<h3 class="mb-3 text-center">宅配のみの利用をご希望の方</h3>
 <ul>
 <li>宅配料1回550円（税込）</li>
 <li>配達以来はお電話で！（24時間対応）</li>
 <li>京都市外メーターも配達可能</li>
 </ul>
-<p class="m-0">※ 商品代の収受に関して、MKは一切関与いたしません。料理代金は直接お客様と精算願います。
-<br>※ 事前決済の場合：自社サイトや宅配サイトなど、オンライン決済が可能な飲食店様はそちらをご利用ください。
-<br>※ 事後決済の場合：事後決済はQRコード決済のみ可能です。飲食店様が契約されているQRコード決済のシールやQRコードが記された用紙をご用意いただければ、お届け時にお客様が送金操作をするところまでドライバーは確認いたします。
-<br>※ 決済完了、不能、金額差額などについては一切の責任を負いません。また、QRコードが記された用紙をお店に返却することはできませんのでコピーなどのご用意をお願いいたします。</p>
+<div class="lp-btn mt-0 mb-0">
+<a class="text-center" href="<?php echo $home; ?>/another-plan/" target="_blank">詳しくはこちら</a>
+</div>
 </div>
 </div>
 </section>
@@ -181,8 +194,6 @@ get_header(); ?>
 </ol>
 <!-- lp__flow__list -->
 </div>
-
-<p class="small text-center mt-4">※ 宅配のみをご利用の店舗様は、初回ご利用時商品と一緒にドライバーに申込書渡すだけで始められます。</p>
 </div>
 </section>
 <!-- flow -->

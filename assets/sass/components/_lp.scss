@@ -222,6 +222,38 @@
     }
   }
 
+  &__takeeats {
+    padding: 0;
+    @include media-breakpoint-up(lg) {
+      padding: 3rem 0;
+    }
+
+    &__txt {
+      width: 90%;
+      margin: 0 auto;
+
+      .lp-ttl2 {
+        padding-top: 0;
+
+        ::before {
+          display: none;
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto 1rem;
+      }
+    }
+
+    &__img {
+      margin-top: 2rem;
+      @include media-breakpoint-up(lg) {
+        margin-top: 0;
+      }
+    }
+  }
+
   &__about {
     h2 {
       ::after {
@@ -244,7 +276,7 @@
       @include media-breakpoint-up(lg) {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: inherit;
         flex-wrap: wrap;
       }
 
@@ -252,32 +284,73 @@
         position: relative;
         border-radius: 10px;
         @include media-breakpoint-up(lg) {
-          width: 49.8%;
-          margin-bottom: 3px;
+          width: 24.5%;
         }
 
         &:nth-child(1) {
           background-image: url("../images/about_bg_1.png");
           background-size: cover;
           background-position: center;
+
+          .user {
+            background: #FF9F1C;
+
+            &::before {
+              background: url("../images/icon_user.png");
+              background-size: cover;
+            }
+          }
         }
 
         &:nth-child(2) {
           background-image: url("../images/about_bg_2.png");
           background-size: cover;
           background-position: center;
+
+          .user {
+            background: #19AF58;
+
+            &::before {
+              background: url("../images/icon_store.png");
+              background-size: cover;
+            }
+          }
         }
 
         &:nth-child(3) {
           background-image: url("../images/about_bg_3.png");
           background-size: cover;
           background-position: center;
+
+          .user {
+            background: $primary;
+
+            &::before {
+              background: url("../images/icon_mk.png");
+              background-size: cover;
+            }
+          }
         }
 
         &:nth-child(4) {
           background-image: url("../images/about_bg_4.png");
           background-size: cover;
           background-position: center;
+
+          .user {
+            background: $primary;
+
+            &::before {
+              background: url("../images/icon_mk.png");
+              background-size: cover;
+            }
+          }
+
+          .lp__about__list__inner-wrap {
+            &::after {
+              display: none;
+            }
+          }
         }
 
         &-wrap {
@@ -290,6 +363,11 @@
           justify-content: space-between;
           align-items: center;
           flex-wrap: wrap;
+          @include media-breakpoint-up(lg) {
+            flex-flow: column-reverse;
+            margin-bottom: 0;
+            padding: 1.5rem 1rem;
+          }
 
           &::after {
             content: '';
@@ -303,12 +381,6 @@
             @include media-breakpoint-up(lg) {
               display: none;
             }
-
-            &:nth-child(4) {
-              &::after {
-                display: none;
-              }
-            }
           }
         }
 
@@ -317,21 +389,32 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+          }
         }
 
         &-txt {
           width: 70%;
+          @include media-breakpoint-up(lg) {
+            width: 100%;
+            text-align: center;
+          }
 
           h3 {
             color: $white;
             font-size: 1rem;
             font-weight: bold;
             margin: 1.25rem 0;
+            @include media-breakpoint-up(lg) {
+              text-align: center;
+            }
           }
 
           p {
             color: $white;
             font-size: 0.9rem;
+            text-align: left;
           }
 
           .user {
@@ -342,19 +425,13 @@
             margin: 0;
             padding: 2px 8px 2px 23px;
 
-            &:nth-child(1) {
-              background: #FF9F1C;
-
-              &::before {
-                content: '';
-                position: absolute;
-                top: calc(50% - 5px);
-                left: 8px;
-                width: 10px;
-                height: 10px;
-                background: url("../images/icon_user.png");
-                background-size: cover;
-              }
+            &::before {
+              content: '';
+              position: absolute;
+              top: calc(50% - 5px);
+              left: 8px;
+              width: 10px;
+              height: 10px;
             }
           }
         }
@@ -426,20 +503,31 @@
       display: block;
       margin: 0 auto;
     }
+
     .another-plan {
       border: 5px solid $secondary;
       padding: 2rem 1rem;
       @include media-breakpoint-up(lg) {
         padding: 2rem;
       }
+
       h3 {
         font-weight: bold;
+        font-size: 1.125rem!important;
       }
+
       p {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
+
       ul {
         padding-left: 1rem;
+        display: block;
+        width: 100%;
+        margin: 1rem auto;
+        @include media-breakpoint-up(lg) {
+          width: 320px;
+        }
       }
     }
   }
@@ -647,7 +735,7 @@
 
       a {
         color: $primary!important;
-        margin-left: 10px
+        margin-left: 10px;
       }
 
       .wpcf7-list-item,

@@ -48,7 +48,8 @@ $wp_url = get_template_directory_uri(); ?>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">お届け方法について</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/postage">送料について</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">MKタク配に出店する</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">【飲食店向け】MKタク配を始める</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/another-plan">【飲食店向け】宅配のみを依頼する</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/disclaimers">免責事項</a>
     </div>
   </div>
