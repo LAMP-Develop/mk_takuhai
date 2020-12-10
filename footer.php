@@ -38,7 +38,7 @@ $wp_url = get_template_directory_uri(); ?>
 <img class="cta-takeeats-wrap-bg" src="<?php echo $wp_url; ?>/dist/images/entry_img.png" alt="装飾" srcset="<?php echo $wp_url; ?>/dist/images/entry_img.png 1x, <?php echo $wp_url; ?>/dist/images/entry_img@2x.png 2x">
 </div>
 <div class="cta-takeeats-btn">
-<a class="btn btn-primary" href="<?php echo $home; ?>/service/" target="_blank"><span>無料</span>お申し込みはこちら</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/service/"><span>無料</span>お申し込みはこちら</a>
 </div>
 </div>
 </div>

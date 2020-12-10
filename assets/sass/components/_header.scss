@@ -81,14 +81,16 @@
           background: #F77D93!important;
 
           p {
-            width: 51px;
-            margin: 3px 0 -5px;
+            width: 100%;
+            margin: 0;
+            display: block;
           }
 
           img {
             width: 20px;
             height: 20px;
-            margin-top: -3px;
+            margin-top: 7px;
+            margin-bottom: 3px;
           }
         }
 
