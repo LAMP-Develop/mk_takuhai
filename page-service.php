@@ -119,7 +119,8 @@ get_header(); ?>
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタクシーが<br><span>大切</span>にお届けします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_2.png" alt="MKタクシーが大切お届けします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
-<p>MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOXにてお客様のもとへ大切にお届けいたします。（容器や梱包は店舗様でお願いいたします。）</p>
+<p>MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOX（40cm×24cm）にてお客様のもとへ大切にお届けいたします。</p>
+<p class="small">※ 容器や梱包は店舗様でお願いいたします。</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
@@ -151,7 +152,7 @@ get_header(); ?>
 <br>※オプションをご選択の場合は別途費用がかかります。
 <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。</p>
 
-<div class="service-tel mt-5">
+<div class="another-plan mt-5">
 <h3 class="mb-3 text-center">MK宅配を電話注文で始めたい方</h3>
 <ul>
 <li>宅配料1回550円（税込）</li>
@@ -174,7 +175,7 @@ get_header(); ?>
 <li class="lp__flow__list__inner">
 <div class="lp__flow__list__inner-step">STEP<span>01</span></div>
 <h3>お申し込み</h3>
-<p>お申込みフォームより必要事項のご入力をお願い致します。担当者よりお電話にてご連絡致します。TakeEatsカスタマーサポートよりご連絡します。</p>
+<p>お申込みフォームより必要事項のご入力をお願い致します。担当者よりお電話にてご連絡致します。</p>
 </li>
 <!-- lp__flow__list__inner -->
 <li class="lp__flow__list__inner">

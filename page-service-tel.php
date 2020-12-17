@@ -37,6 +37,9 @@ get_header(); ?>
 <div class="lp__about__list">
 <div class="lp__about__list__inner">
 <div class="lp__about__list__inner-wrap">
+<div class="lp__about__list__inner-img">
+<img src="<?php echo $img_url; ?>about_icon_1_tel.png" alt="注文事前決済" srcset="<?php echo $img_url; ?>about_icon_1_tel.png 1x, <?php echo $img_url; ?>about_icon_1_tel@2x.png 2x">
+</div>
 <div class="lp__about__list__inner-txt">
 <p class="user">あなたの店舗</p>
 <h3>宅配依頼</h3>
@@ -46,6 +49,9 @@ get_header(); ?>
 </div>
 <div class="lp__about__list__inner">
 <div class="lp__about__list__inner-wrap">
+<div class="lp__about__list__inner-img">
+<img src="<?php echo $img_url; ?>about_icon_2.png" alt="注文事前決済" srcset="<?php echo $img_url; ?>about_icon_2.png 1x, <?php echo $img_url; ?>about_icon_2@2x.png 2x">
+</div>
 <div class="lp__about__list__inner-txt">
 <p class="user">あなたの店舗</p>
 <h3>料理を準備</h3>
@@ -55,6 +61,9 @@ get_header(); ?>
 </div>
 <div class="lp__about__list__inner">
 <div class="lp__about__list__inner-wrap">
+<div class="lp__about__list__inner-img">
+<img src="<?php echo $img_url; ?>about_icon_3.png" alt="注文事前決済" srcset="<?php echo $img_url; ?>about_icon_3.png 1x, <?php echo $img_url; ?>about_icon_3@2x.png 2x">
+</div>
 <div class="lp__about__list__inner-txt">
 <p class="user">MKタクシー</p>
 <h3>商品のお受け取り</h3>
@@ -64,6 +73,9 @@ get_header(); ?>
 </div>
 <div class="lp__about__list__inner">
 <div class="lp__about__list__inner-wrap">
+<div class="lp__about__list__inner-img">
+<img src="<?php echo $img_url; ?>about_icon_4.png" alt="注文事前決済" srcset="<?php echo $img_url; ?>about_icon_4.png 1x, <?php echo $img_url; ?>about_icon_4@2x.png 2x">
+</div>
 <div class="lp__about__list__inner-txt">
 <p class="user">MKタクシー</p>
 <h3>お客様に商品をお渡し</h3>
@@ -92,7 +104,8 @@ get_header(); ?>
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタクシーが<br><span>大切</span>お届けします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_2.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
-<p>MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOXにてお客様のもとへ大切にお届けいたします。（容器や梱包は店舗様でお願いいたします。）</p>
+<p>MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOX（40cm×24cm）にてお客様のもとへ大切にお届けいたします。</p>
+<p class="small">※ 容器や梱包は店舗様でお願いいたします。</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
@@ -117,7 +130,7 @@ get_header(); ?>
 <section class="lp__price mb-5">
 <div class="container">
 <h2 class="lp-ttl2"><span class="marks">料金について</span></h2>
-<table class="table">
+<table class="lp__table mb-3">
   <tr>
     <th class="bg-secondary p-3">宅配料</th>
     <td class="p-3">1回の注文で<span class="font-weight-bold text-primary">550</span>円（税込）</td>
