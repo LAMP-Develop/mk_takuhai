@@ -22,7 +22,10 @@ get_header(); ?>
 
 <span><?php echo get_the_term_list($post->ID,'shop_category'); ?></span>
 
+<?php if(post_custom('price')): // 入力がある場合 ?>
 <span>¥<?php the_field('price'); ?>から注文可</span>
+<?php endif; ?>
+
 </p>
 <p class="search__result__inner__wrap-about"><?php the_field('about'); ?></p>
 

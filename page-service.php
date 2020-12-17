@@ -7,28 +7,29 @@ get_header(); ?>
 <div class="lp__mv">
 <div class="container">
 <div class="lp__mv-wrap">
-<img class="mb-3 sp" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
-<img class="sp" src="<?php echo $img_url; ?>lp_mv_illust.png" alt="MK運転手のイラスト" srcset="<?php echo $img_url; ?>lp_mv_illust.png 1x, <?php echo $img_url; ?>lp_mv_illust@2x.png 2x">
+
+<div>
+<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MK宅配オンライン注文をご希望の方</h3>
+<img class="sp mb-4" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
 <!-- sp -->
-<img class="pc" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
-<img class="pc" src="<?php echo $img_url; ?>lp_mv_illust_pc.png" alt="MK運転手のイラスト" srcset="<?php echo $img_url; ?>lp_mv_illust_pc.png 1x, <?php echo $img_url; ?>lp_mv_illust_pc@2x.png 2x">
+<img class="pc w-75 mb-3" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
 <!-- pc -->
 </div>
+
+<img class="sp" src="<?php echo $img_url; ?>lp_mv_illust.png" alt="MK運転手のイラスト" srcset="<?php echo $img_url; ?>lp_mv_illust.png 1x, <?php echo $img_url; ?>lp_mv_illust@2x.png 2x">
+<!-- sp -->
+<img class="pc" src="<?php echo $img_url; ?>lp_mv_illust_pc.png" alt="MK運転手のイラスト" srcset="<?php echo $img_url; ?>lp_mv_illust_pc.png 1x, <?php echo $img_url; ?>lp_mv_illust_pc@2x.png 2x">
+<!-- pc -->
+
 </div>
-<!-- .lp__hero -->
+</div>
 </div>
 
-<img class="lp__photo" src="<?php echo $img_url; ?>lp_mv_photo.png" alt="料理の写真" srcset="<?php echo $img_url; ?>lp_mv_photo.png 1x, <?php echo $img_url; ?>lp_mv_photo@2x.png 2x">
-
-<!-- <section class="lp__case">
-<div id="lpcase" class="lp__case-slide">
-<div class="lp__case-slide__inner">
-<div class="lp__case-slide__inner-logo">
-<span><img src="<?php echo $img_url; ?>logo_musashi.png" alt="寿しのむさし" srcset="<?php echo $img_url; ?>logo_musashi.png 1x, <?php echo $img_url; ?>logo_musashi@2x.png 2x"></span>
+<div class="py-3 bg-secondary">
+<div class="lp-btn">
+<a class="text-center" href="<?php echo $home; ?>/another-plan/" target="_blank">MK宅配<span class="font-weight-bold">電話注文</span>をご希望の方</a>
 </div>
 </div>
-</div>
-</section> -->
 
 <section class="mt-5 mb-5 lp__takeeats">
   <div class="container">
@@ -98,6 +99,7 @@ get_header(); ?>
 </div>
 </div>
 </div>
+<p class="small mt-5">※ 受付前日19時までのご注文に限ります。<br>※感染症対策のため商品の積み込みは 飲食店様に行っていただきます。</p>
 </div>
 </section>
 
@@ -107,23 +109,25 @@ get_header(); ?>
 <div class="lp__feature__list">
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
-<h3>京都を中心に<br><span>どこでも</span>お届けいたします！</h3>
+<h3>京都市内に<br>お届けいたします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_1.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_1.png 1x, <?php echo $img_url; ?>lp_feature_1@2x.png 2x">
 <p>テイクアウトやデリバリーに注力されている飲食店の配送をお手伝いするべく、飲食店向けのサービスとして、タクシーで料理の配達を行う「MKのタク配」を実施し、京都市内を中心に商品をお客様のもとへお届けいたします。</p>
+<p class="small">※ 以下のエリアはタク配対象外となります。<br>＜北区＞中川・小野・杉阪・真弓・大森・雲ヶ畑<br>＜右京区＞京北・嵯峨清滝・嵯峨水尾・嵯峨越畑・嵯峨樒原<br>＜左京区＞花脊・広河原・久多・大原</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタクシーが<br><span>大切</span>お届けします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_2.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
-<p>MKタクシーが飲食店様へ商品を受け取りに向かいます。お預かりした商品を、専用BOXにてお客様のもとへ大切にお届けいたします。（容器や梱包はお客様でお願いいたします。）</p>
+<p>MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOXにてお客様のもとへ大切にお届けいたします。（容器や梱包は店舗様でお願いいたします。）</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
 <h3>導入費・月額費は0円！<br>店舗の負担を<span>最小限</span>に</h3>
 <img src="<?php echo $img_url; ?>lp_feature_3.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_3.png 1x, <?php echo $img_url; ?>lp_feature_3@2x.png 2x">
-<p>初期導入費・月額利用料は全て無料！店舗が負担するのは注文時のサービス手数料のみで、固定費はかかりません。（※オプションをご選択の場合は別途費用）</p>
+<p>初期導入費・月額利用料は全て無料！店舗が負担するのは注文時のサービス手数料のみで、固定費はかかりません。</p>
+<p class="small">※ オプションをご選択の場合は別途費用<br>※ 宅配料は原則お客様負担</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
@@ -143,12 +147,12 @@ get_header(); ?>
 <div class="txt-c">
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
-<p class="small my-3 text-md-center">※ 宅配は1回のご注文につき＋宅配料600円がお客様に加算されます。（宅配料は原則お客様負担）
+<p class="small my-3 text-md-center">※ 宅配は1回のご注文につき＋宅配料550円がお客様に加算されます。（宅配料は原則お客様負担）
 <br>※オプションをご選択の場合は別途費用がかかります。
 <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。</p>
 
 <div class="another-plan mt-5">
-<h3 class="mb-3 text-center">宅配のみの利用をご希望の方</h3>
+<h3 class="mb-3 text-center">MK宅配<span class="font-weight-bold">電話注文</span>をご希望の方</h3>
 <ul>
 <li>宅配料1回550円（税込）</li>
 <li>配達以来はお電話で！（24時間対応）</li>
@@ -169,14 +173,14 @@ get_header(); ?>
 <ol class="lp__flow__list">
 <li class="lp__flow__list__inner">
 <div class="lp__flow__list__inner-step">STEP<span>01</span></div>
-<h3>注文の受付</h3>
-<p>お客様が直接作成したオーダーサイトで決済ならびに予約を行います。注文時の通知方法は店舗ごとに指定していただくことが出来ます。</p>
+<h3>お申し込み</h3>
+<p>お申込みフォームより必要事項のご入力をお願い致します。担当者よりお電話にてご連絡致します。TakeEatsカスタマーサポートよりご連絡します。</p>
 </li>
 <!-- lp__flow__list__inner -->
 <li class="lp__flow__list__inner">
 <div class="lp__flow__list__inner-step">STEP<span>02</span></div>
-<h3>商品の準備</h3>
-<p>管理画面やメールから注文を確認し、MKのお迎えの時間に合わせて準備します。</p>
+<h3>アカウント発行</h3>
+<p>お店の専用サイトを作成しアカウントを発行致します。</p>
 </li>
 <!-- lp__flow__list__inner -->
 <li class="lp__flow__list__inner">

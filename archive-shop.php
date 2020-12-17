@@ -112,40 +112,60 @@ if(have_posts()): ?>
 <?php if( get_field('menu') === "はい"): ?>
 <!-- search__result__inner__wrap -->
 
-<div class="shop-search-buzz__list-inner-img-wrap">
-<div class="shop-search-buzz__list-inner-img-list">
+<div class="shop-search-buzz__list-inner-img-wrap  w-100">
+<div class="shop-search-buzz__list-inner-img-list w-100">
 <!-- 商品 -->
 <?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_1'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_1'); ?></p>
 </div>
 <?php endif; ?>
 
 <?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_2'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_2'); ?></p>
 </div>
 <?php endif; ?>
 
 <?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_3'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_3'); ?></p>
 </div>
 <?php endif; ?>
 
 <?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_4'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_4'); ?></p>
 </div>
 <?php endif; ?>
 
 <?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_5'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_5'); ?></p>
 </div>
 </div>
@@ -159,10 +179,7 @@ if(have_posts()): ?>
 <?php endif; ?>
 
 
-<div class="shop-search-buzz__list-intro bg-light">
-<div class="shop-search-buzz__list-intro-img bg-white">
-<img src="<?php echo $wp_url; ?>/dist/images/sample_logo.png" alt="<?php the_title(); ?>のロゴ">
-</div>
+<div class="shop-search-buzz__list-intro bg-light py-3">
 <div class="shop-search-buzz__list-intro-txt">
 <h3 class="text-info"><?php the_title(); ?></h3>
 <p class="text-info">

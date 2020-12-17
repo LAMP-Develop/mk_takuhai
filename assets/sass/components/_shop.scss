@@ -94,12 +94,11 @@
         padding: 1rem;
         @include media-breakpoint-up(md) {
           width: 60%;
-          padding: 1rem 0 1rem 1.5rem;
         }
 
         h3 {
           box-sizing: border-box;
-          font-size: 1.125rem !important;
+          font-size: 1rem!important;
           color: $info;
           font-weight: 700;
           margin: 0.75rem 0 0.5rem;

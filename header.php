@@ -44,12 +44,14 @@ $wp_url = get_template_directory_uri(); ?>
     </button>
   </div>
   <div class="collapse navbar-collapse" id="navmenu1">
-    <div class="navbar-nav">
+    <div class="navbar-nav my-3">
       <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">お届け方法について</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/postage">送料について</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">【飲食店向け】MKタク配を始める</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/another-plan">【飲食店向け】宅配のみを依頼する</a>
+    </div>
+    <div class="bg-secondary">
+      <p class="text-center py-3 m-0 border-warning border-bottom">MKタク配を始めたい飲食店様へ <i class="fas fa-sort-down"></i></p>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">オンライン注文で始める</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/another-plan">電話注文で始める</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/disclaimers">免責事項</a>
     </div>
   </div>

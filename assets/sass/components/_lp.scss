@@ -173,6 +173,27 @@
       }
     }
 
+    &-ttl {
+      position: relative;
+      padding-bottom: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: calc(50% - 10px);
+        bottom: 0;
+        width: 20px;
+        height: 3px;
+        background: $info;
+      }
+    }
+
     .container {
       padding: 1rem 0 0;
       background: $light;
@@ -180,44 +201,6 @@
       text-align: center;
       @include media-breakpoint-up(md) {
         padding: 6rem 0;
-      }
-    }
-  }
-  // 写真 {
-  &__photo {
-    display: block;
-    width: 100%;
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-  }
-  // 事例
-  &__case {
-    @include media-breakpoint-up(md) {
-      margin-bottom: 1rem;
-    }
-
-    &-slide {
-      &__inner {
-        position: relative;
-        overflow: hidden;
-
-        &-logo {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 75px;
-
-          span {
-            display: block;
-
-            img {
-              display: block;
-              margin: auto;
-            }
-          }
-        }
       }
     }
   }
@@ -494,6 +477,12 @@
           margin: 0 1rem;
           font-size: 0.9rem;
         }
+
+        .small {
+          opacity: 0.5;
+          font-size: 80%;
+          line-height: 1rem;
+        }
       }
     }
   }
@@ -596,7 +585,7 @@
 
         h3 {
           width: 100%;
-          font-size: 1.125rem;
+          font-size: 1.125rem!important;
           font-weight: bold;
           background: $white;
           margin: 0;
