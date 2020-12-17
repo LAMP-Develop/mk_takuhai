@@ -840,3 +840,26 @@
     padding: 0 0 0.5rem;
   }
 }
+
+.table {
+  tr {
+    display: grid;
+    @include media-breakpoint-up(lg) {
+      display: table-row;
+    }
+  }
+
+  th {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 30%;
+    }
+  }
+
+  td {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
+  }
+}

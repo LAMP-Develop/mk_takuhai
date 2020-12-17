@@ -14,7 +14,7 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 </head>
 
-<?php if (!is_page(['search', 'geo','service']) && !is_single()): ?>
+<?php if (!is_page(['search', 'geo','service','service-tel']) && !is_single()): ?>
 <body class="bg-light">
 <?php else: ?>
 <body>
@@ -51,7 +51,7 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="bg-secondary">
       <p class="text-center py-3 m-0 border-warning border-bottom">MKタク配を始めたい飲食店様へ <i class="fas fa-sort-down"></i></p>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/service">オンライン注文で始める</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/another-plan">電話注文で始める</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service-tel">電話注文で始める</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/disclaimers">免責事項</a>
     </div>
   </div>

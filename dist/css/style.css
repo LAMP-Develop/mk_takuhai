@@ -13983,5 +13983,23 @@ input[type="button"] {
     margin: 0;
     padding: 0 0 0.5rem; }
 
+.table tr {
+  display: grid; }
+  @media (min-width: 992px) {
+    .table tr {
+      display: table-row; } }
+
+.table th {
+  width: 100%; }
+  @media (min-width: 992px) {
+    .table th {
+      width: 30%; } }
+
+.table td {
+  width: 100%; }
+  @media (min-width: 992px) {
+    .table td {
+      width: 70%; } }
+
 
 /*# sourceMappingURL=style.css.map*/
