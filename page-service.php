@@ -25,7 +25,7 @@ get_header(); ?>
 </div>
 </div>
 
-<div class="py-3 bg-warning">
+<div class="py-3 bg-light">
 <div class="lp-btn bg-info">
 <a class="text-center" href="<?php echo $home; ?>/service-tel/" target="_blank">電話注文で始めたい方</a>
 </div>
