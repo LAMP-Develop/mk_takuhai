@@ -32,8 +32,16 @@ get_header(); ?>
 </section>
 <!-- mv -->
 
+<div class="container bg-white pt-4 pb-3">
+<div class="d-md-none d-block bg-info">
+<div class="cta-takeeats-btn m-0 p-0">
+<a class="btn text-white py-3" href="<?php echo $home; ?>/delivery/">ご利用方法はこちら<i class="ml-3 fas fa-chevron-right"></i></a>
+</div>
+</div>
+</div>
+
 <section class="search">
-<div class="search__genre bg-white">
+<div class="search__genre bg-white pb-4">
 <div class="container">
 <div class="search__genre-list">
 <ul>
@@ -97,6 +105,7 @@ get_header(); ?>
 </div>
 </div>
 </section>
+
 <!-- search -->
 <div class="py-md-5 main-left front">
 <div class="container">

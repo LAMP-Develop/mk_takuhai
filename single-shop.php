@@ -4,6 +4,24 @@ $wp_url = get_template_directory_uri();
 get_header(); ?>
 
 <div class="py-md-5 bg-light">
+
+<div id="restaurant-btn" class="border-top">
+<?php if( get_field('net') === "はい"): ?>
+
+<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_url'); ?>" target="_blank" >ネットで今すぐ注文<i class="fas fa-angle-right ml-2"></i></a>
+<?php endif; ?>
+
+<?php elseif( get_field('net') === "いいえ"): ?>
+
+<?php if(post_custom('order_tel')): // 入力がある場合 ?>
+<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_tel'); ?>" target="_blank" ><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
+<?php endif; ?>
+
+<?php endif; ?>
+</div>
+<!-- 画面下固定ボタン -->
+
 <div class="container">
 <div class="row">
 
@@ -143,22 +161,6 @@ get_header(); ?>
 </div>
 
 </section>
-
-<div id="restaurant-btn" class="border-top">
-<?php if( get_field('net') === "はい"): ?>
-
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
-<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_url'); ?>" target="_blank" >ネットで今すぐ注文<i class="fas fa-angle-right ml-2"></i></a>
-<?php endif; ?>
-
-<?php elseif( get_field('net') === "いいえ"): ?>
-
-<?php if(post_custom('order_tel')): // 入力がある場合 ?>
-<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_tel'); ?>" target="_blank" ><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
-<?php endif; ?>
-
-<?php endif; ?>
-</div>
 
 </div>
 <div class="col-md-4 d-md-block d-none">
