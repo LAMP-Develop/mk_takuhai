@@ -101,7 +101,7 @@ if(have_posts()): ?>
 
 <?php while(have_posts()): the_post(); ?>
 
-<a class="shop-search-buzz__list-inner" href="<?php echo get_the_permalink(); ?>">
+<div>
 
 <?php if( get_field('net') === "はい"): ?>
 <p class="shop-buzz__list-net">ネット注文OK</p>
@@ -112,74 +112,98 @@ if(have_posts()): ?>
 <?php if( get_field('menu') === "はい"): ?>
 <!-- search__result__inner__wrap -->
 
-<div class="shop-search-buzz__list-inner-img-wrap  w-100">
-<div class="shop-search-buzz__list-inner-img-list w-100">
+<div class="shop-search-buzz__list-inner-img-wrap">
+<div class="shop-search-buzz__list-inner-img-list">
 <!-- 商品 -->
-<?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_1')): // 入力がある場合 ?>
+
+<a class="d-inline-block" href="<?php echo get_the_permalink(); ?>">
 <div class="shop-search-buzz__list-inner-img-item">
 <?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_1'); ?>" alt="<?php the_title(); ?>の商品">
 <?php else: // ないとき ?>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<img src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
 <?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_1'); ?></p>
 </div>
+</a>
+
 <?php endif; ?>
 
-<?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_2')): // 入力がある場合 ?>
+
+<a class="d-inline-block" href="<?php echo get_the_permalink(); ?>">
 <div class="shop-search-buzz__list-inner-img-item">
 <?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_2'); ?>" alt="<?php the_title(); ?>の商品">
 <?php else: // ないとき ?>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<img src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
 <?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_2'); ?></p>
 </div>
+</a>
+
 <?php endif; ?>
 
-<?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_3')): // 入力がある場合 ?>
+
+<a class="d-inline-block" href="<?php echo get_the_permalink(); ?>">
 <div class="shop-search-buzz__list-inner-img-item">
 <?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_3'); ?>" alt="<?php the_title(); ?>の商品">
 <?php else: // ないとき ?>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<img src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
 <?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_3'); ?></p>
 </div>
+</a>
+
 <?php endif; ?>
 
-<?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_4')): // 入力がある場合 ?>
+
+<a class="d-inline-block" href="<?php echo get_the_permalink(); ?>">
 <div class="shop-search-buzz__list-inner-img-item">
 <?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_4'); ?>" alt="<?php the_title(); ?>の商品">
 <?php else: // ないとき ?>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<img src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
 <?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_4'); ?></p>
 </div>
+</a>
+
 <?php endif; ?>
 
-<?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_5')): // 入力がある場合 ?>
+
+<a class="d-inline-block" href="<?php echo get_the_permalink(); ?>">
 <div class="shop-search-buzz__list-inner-img-item">
 <?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_5'); ?>" alt="<?php the_title(); ?>の商品">
 <?php else: // ないとき ?>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<img src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
 <?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_5'); ?></p>
 </div>
-</div>
-</div>
+</a>
+
+<!-- 商品終わり -->
 <?php endif; ?>
+</div>
+</div>
 
 <?php elseif( get_field('menu') === "いいえ"): ?>
+
 <div class="shop-search-buzz__list-inner-mv">
 <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
 </div>
+
 <?php endif; ?>
 
 
-<div class="shop-search-buzz__list-intro bg-light py-3">
+<a class="shop-search-buzz__list-inner" href="<?php echo get_the_permalink(); ?>">
+<div class="shop-search-buzz__list-intro bg-white py-3">
 <div class="shop-search-buzz__list-intro-txt">
 <h3 class="text-info"><?php the_title(); ?></h3>
 <p class="text-info">
@@ -196,11 +220,13 @@ echo get_field('about');
 </div>
 </a>
 
+</div>
+
 <?php endwhile; ?>
 
 <?php
 if (function_exists('wp_pagenavi')) {
-  wp_pagenavi(['query' => $wp_query]);
+wp_pagenavi(['query' => $wp_query]);
 }
 ?>
 
