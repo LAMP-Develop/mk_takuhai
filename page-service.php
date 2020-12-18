@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="lp__mv-wrap">
 
 <div>
-<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MK宅配をオンライン注文で始めたい方</h3>
+<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MK宅配を<span class="text-primary">オンライン注文</span>で始めたい方</h3>
 <img class="sp mb-4" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
 <!-- sp -->
 <img class="pc w-75 mb-3" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
@@ -25,9 +25,9 @@ get_header(); ?>
 </div>
 </div>
 
-<div class="py-3 bg-secondary">
-<div class="lp-btn">
-<a class="text-center" href="<?php echo $home; ?>/service-tel/" target="_blank">MK宅配を電話注文で始めたい方</a>
+<div class="py-3 bg-warning">
+<div class="lp-btn bg-info">
+<a class="text-center" href="<?php echo $home; ?>/service-tel/" target="_blank">電話注文で始めたい方</a>
 </div>
 </div>
 
@@ -135,7 +135,7 @@ get_header(); ?>
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタク配のサイトで<br>あなたの<span>お店を紹介</span></h3>
 <img src="<?php echo $img_url; ?>lp_feature_4.png" alt="MKタク配のサイトであなたのお店を紹介" srcset="<?php echo $img_url; ?>lp_feature_4.png 1x, <?php echo $img_url; ?>lp_feature_4@2x.png 2x">
-<p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（TakeEats)を導入の方は、お客様のネット注文が簡単です。</p>
+<p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（TakeEats)を導入の方は、お客様のオンライン注文が簡単です。</p>
 </div>
 </div>
 </div>

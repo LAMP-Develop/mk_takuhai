@@ -45,7 +45,7 @@ $wp_url = get_template_directory_uri(); ?>
   </div>
   <div class="collapse navbar-collapse" id="navmenu1">
     <div class="navbar-nav my-3">
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">お届け方法について</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">ご利用方法</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
     </div>
     <div class="bg-secondary">
