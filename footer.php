@@ -9,9 +9,9 @@ $wp_url = get_template_directory_uri(); ?>
 <footer class="footer mt-0 mb-5">
 <div class="container pt-5">
 <div class="footer__tel__inner">
-<p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
+<p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
 <a href="tel:075-600-2721">075-600-2721</a>
-<p class="small">（株式会社ランプ TakeEatsカスタマーサポート）</p>
+<p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
 </div>
 <div class="footer__link__inner">
 <ul>
@@ -32,7 +32,7 @@ $wp_url = get_template_directory_uri(); ?>
 <footer class="footer mt-0 mb-5">
 <div class="container pt-5">
 <div class="footer__tel__inner">
-<p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
+<p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
 <div>
 <p class="d-inline">【京都】</p><a class="d-inline" href="tel:075-600-2721">075-778-0150</a>
 </div>
