@@ -9,9 +9,9 @@ get_header(); ?>
 <img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_sp@2x.png 2x">
 <img class="d-none d-md-block" src="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_pc@2x.png 2x">
 </h2>
-<div class="mv_stamp">
+<!-- <div class="mv_stamp">
 <img src="<?php echo $wp_url; ?>/dist/images/mv_stamp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_stamp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_stamp@2x.png 2x">
-</div>
+</div> -->
 </div>
 <div class="search__free mv__search mt-3">
 <form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">

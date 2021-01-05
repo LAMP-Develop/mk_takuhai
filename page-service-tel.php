@@ -127,44 +127,43 @@ get_header(); ?>
 </div>
 </section>
 
-<section class="lp__price mb-5">
+<section class="lp__price bg-light mt-5 mb-5 pb-5">
 <div class="container">
 <h2 class="lp-ttl2"><span class="marks">料金について</span></h2>
-<table class="lp__table mb-3">
-  <tr>
-    <th class="bg-secondary p-3">宅配料</th>
-    <td class="p-3">1回の注文で<span class="font-weight-bold text-primary">550</span>円（税込）</td>
-  </tr>
-  <tr>
-    <th class="bg-secondary p-3">対象エリア</th>
-    <td class="p-3">・京都市内<br>・札幌市（中央区/白石区/豊平区）</td>
-  </tr>
-  <tr>
-    <th class="bg-secondary p-3">対象店舗</th>
-    <td class="p-3">料理代金の精算において<span class="font-weight-bold">直接お客様の事前または事後決済が可能なお店</span>に限ります。<br><span class="small">※ 料理代金の収受に関して、MKは一切関与いたしません。</span></td>
-  </tr>
+<table class="lp__table mb-3 bg-white">
+<tr>
+<th class="bg-secondary p-3">宅配料</th>
+<td class="p-3">1回の注文で<span class="font-weight-bold text-primary">550</span>円（税込）</td>
+</tr>
+<tr>
+<th class="bg-secondary p-3">対象エリア</th>
+<td class="p-3">・京都市内<br>・札幌市（中央区/白石区/豊平区）</td>
+</tr>
+<tr>
+<th class="bg-secondary p-3">対象店舗</th>
+<td class="p-3">料理代金の精算において<span class="font-weight-bold">直接お客様の事前または事後決済が可能なお店</span>に限ります。<br><span class="small">※ 料理代金の収受に関して、MKは一切関与いたしません。</span></td>
+</tr>
 </table>
 <p class="small">前日までのご予約であれば 最大3個まで保冷バッグをご用意いたします。
-  <br>保冷バッグ2個目以降、1個追加につき＋200円を頂戴いたします。
-  <br>■ 通常（保冷バッグ1個）宅配料550円のみ
-  <br>■ 保冷バッグ2個　550円＋200円＝750円
-  <br>■ 保冷バッグ3個　550円＋200円＋200円＝950円
-  <br>
-  <br>※当日ご予約の場合は保冷バッグ1個につきタクシー1台の運行となりますので、タクシー1台につき550円頂戴いたします（例：保冷バッグ2個必要な場合1,100円となります）。
-  <br>※宅配完了ごとに車両は毎回消毒を行っております。
-  <br>※個人情報保護のため、お店様からおうかがいしたお届け先情報は宅配完了ごとに破棄いたします。
-  <br>※当サービスは一般のお客様向けの配達を目的としています。業者間の配送等の用途にはご利用いただけません。</p>
+<br>保冷バッグ2個目以降、1個追加につき＋200円を頂戴いたします。
+<br>■ 通常（保冷バッグ1個）宅配料550円のみ
+<br>■ 保冷バッグ2個　550円＋200円＝750円
+<br>■ 保冷バッグ3個　550円＋200円＋200円＝950円
+<br>
+<br>※当日ご予約の場合は保冷バッグ1個につきタクシー1台の運行となりますので、タクシー1台につき550円頂戴いたします（例：保冷バッグ2個必要な場合1,100円となります）。
+<br>※宅配完了ごとに車両は毎回消毒を行っております。
+<br>※個人情報保護のため、お店様からおうかがいしたお届け先情報は宅配完了ごとに破棄いたします。
+<br>※当サービスは一般のお客様向けの配達を目的としています。業者間の配送等の用途にはご利用いただけません。</p>
 </div>
 </section>
 
-<section class="mb-5">
-  <div class="container bg-light pb-5 rounded">
-    <h2 class="lp-ttl2"><span class="marks">お申し込み</span></h2>
-    <p class="text-center">初回ご利用時に商品と一緒に、こちらの申込書を印刷・ご記入の上、ドライバーにお渡しください。</p>
-    <div class="lp-btn">
-    <a class="text-center" href="https://www.mk-group.co.jp/takuhai/order.html" target="_blank">申込書ダウンロード</a>
-    </div>
-  </div>
+<section id="contact" class="lp__form">
+<div class="container">
+<div class="text-center lp__form-top">
+<h2 class="lp-ttl2"><span class="marks">お申し込み</span></h2>
+</div>
+<div><?php the_content(); ?></div>
+</div>
 </section>
 
 

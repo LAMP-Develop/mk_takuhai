@@ -744,8 +744,17 @@
         z-index: 1;
         max-width: 300px;
       }
+      input[type='submit']:disabled {
+        background: gray;
+
+        &:hover {
+          cursor: not-allowed;
+          opacity: 1;
+        }
+      }
     }
   }
+
   &__table {
     tr {
       display: grid;

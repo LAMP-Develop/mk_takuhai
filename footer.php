@@ -24,7 +24,6 @@ $wp_url = get_template_directory_uri(); ?>
 <p class="mb-0 pb-5 socket"><a href="https://www.mk-group.co.jp/" target="_blank">Copyright MK Co.,Ltd. All rights reserved.</a></p>
 <!-- footer__link__inner -->
 </div>
-</div>
 <!-- footer__link -->
 </footer>
 

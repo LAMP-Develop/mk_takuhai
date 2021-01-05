@@ -26,13 +26,13 @@ function dp_deregister_scripts()
 add_action('wp_print_scripts', 'dp_deregister_scripts', 100);
 
 // 標準のjquery消去
-function my_delete_local_jquery()
-{
-    if (!is_admin() && !is_single() && !is_page('request') && !is_page('contact')) {
-        wp_deregister_script('jquery');
-    }
-}
-add_action('wp_enqueue_scripts', 'my_delete_local_jquery');
+// function my_delete_local_jquery()
+// {
+//     if (!is_admin() && !is_single() && !is_page('request') && !is_page('contact')) {
+//         wp_deregister_script('jquery');
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'my_delete_local_jquery');
 
 
 // 読み込み確認

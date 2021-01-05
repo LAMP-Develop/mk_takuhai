@@ -32,18 +32,18 @@ get_header(); ?>
 </div>
 
 <section class="mt-5 mb-5 lp__takeeats">
-  <div class="container">
-    <div class="row">
-      <div class="lp__takeeats__txt col-md-6">
-        <h2 class="lp-ttl2"><img src="<?php echo $img_url; ?>lp_takeeats_ttl.png" alt="料理の写真" srcset="<?php echo $img_url; ?>lp_takeeats_ttl.png 1x, <?php echo $img_url; ?>lp_takeeats_ttl@2x.png 2x">注文は<b class="text-primary">店舗オリジナル</b>の<br>オーダーサイトから</h2>
-        <p>MKタク配にお申し込みいただきましたら、店舗ごとにオリジナルのオーダーサイトをご用意しております。<br>そのため店舗様はサイト制作からデリバリーまでを初期導入費・月額費０円でご利用いただくことができます。</p>
-        <p>MKタク配では、TakeEatsのシステムを利用しています。<a href="http://take-eats.jp/" target="_blank">詳しくはこちら</a></p>
-      </div>
-      <div class="lp__takeeats__img col-md-6 text-center">
-        <img src="<?php echo $img_url; ?>lp_takeeats_sp.png" alt="オーダーサイト" srcset="<?php echo $img_url; ?>lp_takeeats_sp.png 1x, <?php echo $img_url; ?>lp_takeeats_sp@2x.png 2x">
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="lp__takeeats__txt col-md-6">
+      <h2 class="lp-ttl2"><img src="<?php echo $img_url; ?>lp_takeeats_ttl.png" alt="料理の写真" srcset="<?php echo $img_url; ?>lp_takeeats_ttl.png 1x, <?php echo $img_url; ?>lp_takeeats_ttl@2x.png 2x">注文は<b class="text-primary">店舗オリジナル</b>の<br>オーダーサイトから</h2>
+      <p>MKタク配にお申し込みいただきましたら、店舗ごとにオリジナルのオーダーサイトをご用意しております。<br>そのため店舗様はサイト制作からデリバリーまでを初期導入費・月額費０円でご利用いただくことができます。</p>
+      <p>MKタク配では、TakeEatsのシステムを利用しています。<a href="http://take-eats.jp/" target="_blank">詳しくはこちら</a></p>
+    </div>
+    <div class="lp__takeeats__img col-md-6 text-center">
+      <img src="<?php echo $img_url; ?>lp_takeeats_sp.png" alt="オーダーサイト" srcset="<?php echo $img_url; ?>lp_takeeats_sp.png 1x, <?php echo $img_url; ?>lp_takeeats_sp@2x.png 2x">
     </div>
   </div>
+</div>
 </section>
 
 <section class="pb-5 mb-5 bg-light lp__about">
@@ -206,18 +206,15 @@ get_header(); ?>
 <div id="toform" class="lp__cta mt-5 footer-ctabtn">
 <div class="lp__cta__box">
 <a class="smooth-scroll lp__cta__box_btn" href="#contact"><img class="mr-2" src="<?php echo $img_url; ?>cta_btn.svg" style="width:18px;
-height:auto" alt="吹き出しアイコン">まずはお問い合わせ</a>
+height:auto" alt="吹き出しアイコン">まずはお申し込み</a>
 </div>
 </div>
 
 <section id="contact" class="lp__form">
 <div class="container">
 <div class="text-center lp__form-top">
-<h2 class="lp-ttl2"><span class="marks">お問い合わせ</span></h2>
+<h2 class="lp-ttl2"><span class="marks">お申し込み</span></h2>
 <img src="<?php echo $img_url; ?>contact_txt.png" alt="初期費用0円" srcset="<?php echo $img_url; ?>contact_txt.png 1x, <?php echo $img_url; ?>contact_txt@2x.png 2x">
-<div class="lp-btn">
-<a href="#">いますぐお問い合わせ</a>
-</div>
 </div>
 <div><?php the_content(); ?></div>
 </div>
