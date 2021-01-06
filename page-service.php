@@ -117,6 +117,14 @@ get_header(); ?>
 </div>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
+<h3>導入費・月額費は0円！<br>店舗の負担を<span>最小限</span>に</h3>
+<img src="<?php echo $img_url; ?>lp_feature_3.png" alt="導入費・月額費は0円！店舗の負担を最小限に" srcset="<?php echo $img_url; ?>lp_feature_3.png 1x, <?php echo $img_url; ?>lp_feature_3@2x.png 2x">
+<p>初期導入費・月額利用料は全て無料！店舗が負担するのは注文時のサービス手数料のみで、固定費はかかりません。</p>
+<p class="small mt-2">※ オプションをご選択の場合は別途費用<br>※ 宅配料は原則お客様負担</p>
+</div>
+</div>
+<div class="lp__feature__list__inner">
+<div class="lp__feature__list__inner-wrap">
 <h3>MKタクシーが<br><span>大切</span>にお届けします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_2.png" alt="MKタクシーが大切お届けします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
 <p>
@@ -131,14 +139,6 @@ get_header(); ?>
   <br>時間指定時の参考として、配達にかかる時間の目安は1km3～5分です（道路状況等により異なります）。
   <br>※ 宅配料の領収書が必要な場合はドライバーにお申し付けください。
 </p>
-</div>
-</div>
-<div class="lp__feature__list__inner">
-<div class="lp__feature__list__inner-wrap">
-<h3>導入費・月額費は0円！<br>店舗の負担を<span>最小限</span>に</h3>
-<img src="<?php echo $img_url; ?>lp_feature_3.png" alt="導入費・月額費は0円！店舗の負担を最小限に" srcset="<?php echo $img_url; ?>lp_feature_3.png 1x, <?php echo $img_url; ?>lp_feature_3@2x.png 2x">
-<p>初期導入費・月額利用料は全て無料！店舗が負担するのは注文時のサービス手数料のみで、固定費はかかりません。</p>
-<p class="small mt-2">※ オプションをご選択の場合は別途費用<br>※ 宅配料は原則お客様負担</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
