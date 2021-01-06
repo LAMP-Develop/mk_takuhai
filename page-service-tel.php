@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="lp__mv-wrap">
 
 <div>
-<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MK宅配を<span class="text-primary">電話注文</span>で始めたい方</h3>
+<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MKタク配を<span class="text-primary">電話注文</span>で始めたい方</h3>
 <img class="sp mb-4" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
 <!-- sp -->
 <img class="pc w-75 mb-3" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
@@ -167,9 +167,6 @@ get_header(); ?>
 <br>■ 保冷バッグ3個　550円＋200円＋200円＝950円
 <br>
 <br>※当日ご予約の場合は保冷バッグ1個につきタクシー1台の運行となりますので、タクシー1台につき550円頂戴いたします（例：保冷バッグ2個必要な場合1,100円となります）。
-<br>※宅配完了ごとに車両は毎回消毒を行っております。
-<br>※個人情報保護のため、お店様からおうかがいしたお届け先情報は宅配完了ごとに破棄いたします。
-<br>※当サービスは一般のお客様向けの配達を目的としています。業者間の配送等の用途にはご利用いただけません。
 <br>※ 宅配完了ごとに車両は毎回消毒を行っております。
 <br>※ 個人情報保護のため、お店様からおうかがいしたお届け先情報は宅配完了ごとに破棄いたします。
 <br>※ 当サービスは一般のお客様向けの配達を目的としています。業者間の配送等の用途にはご利用いただけません。

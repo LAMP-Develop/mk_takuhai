@@ -9,9 +9,11 @@ $wp_url = get_template_directory_uri(); ?>
 <footer class="footer mt-0 mb-5">
 <div class="container pt-5">
 <div class="footer__tel__inner">
-<p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
+<p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
+<p class="d-inline">【京都】</p><a href="tel:075-778-0150">075-778-0150</a>
+<p>システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
 <a href="tel:075-600-2721">075-600-2721</a>
-<p>サービス内容・システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
+<p class="small">運営会社 株式会社ランプ</p>
 </div>
 <div class="footer__link__inner">
 <ul>

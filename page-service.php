@@ -9,7 +9,7 @@ get_header(); ?>
 <div class="lp__mv-wrap">
 
 <div>
-<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MK宅配を<span class="text-primary">オンライン注文</span>で始めたい方</h3>
+<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MKタク配を<span class="text-primary">オンライン注文</span>で始めたい方</h3>
 <img class="sp mb-4" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
 <!-- sp -->
 <img class="pc w-75 mb-3" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
@@ -129,7 +129,6 @@ get_header(); ?>
 <img src="<?php echo $img_url; ?>lp_feature_2.png" alt="MKタクシーが大切お届けします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
 <p>
   MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOX（40cm×24cm）にてお客様のもとへ大切にお届けいたします。お店の近くに到着しましたらお電話いたします。ウイルス感染予防のため、トランクへの積み込みはお店の方に行っていただきます（ドライバーは商品に触れません）。
-  <br>ドライバーが商品をお預かりする際に、宅配料（現金）をドライバーにお支払いください。
 </p>
 <p class="small mt-2">
   <br>※ 容器や梱包は店舗様でお願いいたします。保冷バッグはご用意しておりますが、保冷剤などは各店舗でご用意をお願いいたします。
@@ -169,7 +168,7 @@ get_header(); ?>
 </p>
 
 <div class="another-plan mt-5">
-<h3 class="mb-3 text-center">MK宅配を電話注文で始めたい方</h3>
+<h3 class="mb-3 text-center">MKタク配を電話注文で始めたい方</h3>
 <ul>
 <li>宅配料1回550円（税込）</li>
 <li>配達以来はお電話で！（24時間対応）</li>
