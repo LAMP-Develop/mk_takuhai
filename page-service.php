@@ -109,10 +109,10 @@ get_header(); ?>
 <div class="lp__feature__list">
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
-<h3>京都市内・札幌に<br>お届けいたします！</h3>
+<h3>京都市内に<br>お届けいたします！</h3>
 <img src="<?php echo $img_url; ?>lp_feature_1.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_1.png 1x, <?php echo $img_url; ?>lp_feature_1@2x.png 2x">
 <p>テイクアウトやデリバリーに注力されている飲食店の配送をお手伝いするべく、飲食店向けのサービスとして、タクシーで料理の配達を行う「MKタク配」を実施し、京都市内を中心に商品をお客様のもとへお届けいたします。</p>
-<p class="small mt-2">※ 以下のエリアはタク配対象外となります。<br>＜北区＞中川・小野・杉阪・真弓・大森・雲ヶ畑<br>＜右京区＞京北・嵯峨清滝・嵯峨水尾・嵯峨越畑・嵯峨樒原<br>＜左京区＞花脊・広河原・久多・大原<br>※ 札幌での配達可能エリアは店舗から概ね5km以内となります。<br>※ エリア外の場合はタクシーメーター運賃で配達いたします。</p>
+<p class="small mt-2">※ 以下のエリアはタク配対象外となります。<br>＜北区＞中川・小野・杉阪・真弓・大森・雲ヶ畑<br>＜右京区＞京北・嵯峨清滝・嵯峨水尾・嵯峨越畑・嵯峨樒原<br>＜左京区＞花脊・広河原・久多・大原</p>
 </div>
 </div>
 <div class="lp__feature__list__inner">
