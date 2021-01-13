@@ -87,3 +87,34 @@ input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none!important;
 }
+
+// 重要なお知らせ
+.important {
+  width: 90%;
+  margin: 2rem auto;
+  border: 2px solid #76D2EA;
+  background: #D9F0F6;
+  padding: 2rem 0.5rem;
+  @include media-breakpoint-up(md) {
+    width: 80%;
+    padding: 2rem;
+  }
+
+  i {
+    color: #76D2EA;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1rem!important;
+    font-weight: bold;
+    margin-bottom: 1.15rem;
+  }
+  p {
+    text-align: left;
+    margin-bottom: 0;
+    font-size: .85rem;
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+  }
+}

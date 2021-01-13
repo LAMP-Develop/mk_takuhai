@@ -31,6 +31,13 @@ get_header(); ?>
 </div>
 </div>
 
+<!-- ▼ 重要なおしらせ -->
+<div class="important">
+  <h3><i class="fas fa-flag mr-2"></i>飲食店応援キャンペーン</h3>
+  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。</p>
+</div>
+<!-- ▲ 重要なおしらせ -->
+
 <section class="mt-5 mb-5 lp__takeeats">
 <div class="container">
   <div class="row">
@@ -156,10 +163,14 @@ get_header(); ?>
 <div class="container">
 <h2 class="lp-ttl2"><span class="marks">料金について</span></h2>
 <div class="txt-c">
+<p class="small mb-5 text-md-center">
+  MKタク配では、株式会社ランプが提供する<span class="font-weight-bold">TakeEatsのシステム</span>を利用しています。
+  <br>システム利用料（TakeEats）以外の店舗様にかかる費用はございません。
+</p>
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
-<p class="small my-3 text-md-center">
-  ※ 宅配は1回のご注文につき＋宅配料550円がお客様に加算されます。（宅配料は原則お客様負担）
+<p class="small mt-5 mb-3 text-md-center text-info">
+  ※ 宅配は1回のご注文につき＋宅配料<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>がお客様に加算されます。（宅配料は原則お客様負担）
   <br>※オプションをご選択の場合は別途費用がかかります。
   <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。
   <br>※ 宅配完了ごとに車両は毎回消毒を行っております。
@@ -170,7 +181,7 @@ get_header(); ?>
 <div class="another-plan mt-5">
 <h3 class="mb-3 text-center">MKタク配を電話注文で始めたい方</h3>
 <ul>
-<li>宅配料1回550円（税込）</li>
+<li>宅配料1回<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>（税込）</li>
 <li>配達以来はお電話で！（24時間対応）</li>
 <li>京都市外メーターも配達可能</li>
 </ul>
@@ -231,7 +242,18 @@ height:auto" alt="吹き出しアイコン">まずはお申し込み</a>
 <h2 class="lp-ttl2"><span class="marks">お申し込み</span></h2>
 <img src="<?php echo $img_url; ?>contact_txt.png" alt="初期費用0円" srcset="<?php echo $img_url; ?>contact_txt.png 1x, <?php echo $img_url; ?>contact_txt@2x.png 2x">
 </div>
-<div><?php the_content(); ?></div>
+
+
+<div class="bg-light mt-5 p-4">
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+<script>
+  hbspt.forms.create({
+	portalId: "8940987",
+	formId: "f73c2382-5ce4-41f3-bc5c-ca3bcfe97519"
+});
+</script>
+</div>
+
 </div>
 </section>
 

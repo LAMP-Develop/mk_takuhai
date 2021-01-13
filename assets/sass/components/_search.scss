@@ -30,7 +30,7 @@
         .btn-primary {
           width: 100%;
           min-width: auto;
-          padding: 0.7rem 0!important;
+          padding: 0.7rem 0!important !important;
           border-radius: 0 5px 5px 0;
           background-color: $info;
           border: $info;
@@ -78,7 +78,7 @@
 
       img {
         @include media-breakpoint-up(lg) {
-          width: 95px
+          width: 95px;
         }
       }
 
@@ -94,8 +94,9 @@
           max-width: 24vw;
           margin-right: 1rem;
           font-size: 0;
+
           :hover {
-            opacity: .5
+            opacity: 0.5;
           }
 
           a {
@@ -105,7 +106,7 @@
           img {
             display: block;
             margin: 0 auto;
-            transition: .3s;
+            transition: 0.3s;
           }
 
           span {
@@ -125,6 +126,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
+    border-bottom: 1px solid $warning;
+    border-top: 1px solid $warning;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
 
     p {
       margin: 0 0.2rem 0.2rem 0;
@@ -132,8 +139,11 @@
 
     button {
       display: inline-block;
-      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0;
       white-space: nowrap;
+      border: none!important;
+      border-left: 1px solid $warning!important;
     }
   }
 

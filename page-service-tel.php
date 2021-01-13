@@ -27,9 +27,16 @@ get_header(); ?>
 
 <div class="py-3 bg-warning">
 <div class="lp-btn">
-<a class="text-center" href="<?php echo $home; ?>/service-tel/" target="_blank">オンライン注文で始めたい方</a>
+<a class="text-center" href="<?php echo $home; ?>/service/" target="_blank">オンライン注文で始めたい方</a>
 </div>
 </div>
+
+<!-- ▼ 重要なおしらせ -->
+<div class="important">
+  <h3><i class="fas fa-flag mr-2"></i>飲食店応援キャンペーン</h3>
+  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。</p>
+</div>
+<!-- ▲ 重要なおしらせ -->
 
 <section class="pb-5 mb-5 bg-light lp__about">
 <div class="container">
@@ -102,8 +109,9 @@ get_header(); ?>
 </div>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
-<h3>ご利用は1回のご注文<br><span>550円</span>から</h3>
-<img src="<?php echo $img_url; ?>lp_feature_3_tel.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_3_tel.png 1x, <?php echo $img_url; ?>lp_feature_3_tel@2x.png 2x">
+<h3>ご利用は1回のご注文<br><span><s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span></span>から</h3>
+<!-- <img src="<?php echo $img_url; ?>lp_feature_3_tel.png" alt="ご利用は1回のご注文550円から" srcset="<?php echo $img_url; ?>lp_feature_3_tel.png 1x, <?php echo $img_url; ?>lp_feature_3_tel@2x.png 2x"> -->
+<img src="<?php echo $img_url; ?>lp_feature_3_110.png" alt="ご利用は1回のご注文110円から" srcset="<?php echo $img_url; ?>lp_feature_3_110.png 1x, <?php echo $img_url; ?>lp_feature_3_110@2x.png 2x">
 <p>料理代金は直接お客様と精算願います。宅配先においてもお客様に直接トランクからお受け取りいただきます。<br>ドライバーが商品をお預かりする際に、宅配料（現金）をドライバーにお支払いください。</p>
 <p class="small mt-2">
   ※ 商品代の収受に関して、MKは一切関与いたしません。
@@ -116,7 +124,7 @@ get_header(); ?>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタクシーが<br><span>大切</span>お届けします！</h3>
-<img src="<?php echo $img_url; ?>lp_feature_2.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
+<img src="<?php echo $img_url; ?>lp_feature_2.png" alt="MKタクシーが大切お届けします！" srcset="<?php echo $img_url; ?>lp_feature_2.png 1x, <?php echo $img_url; ?>lp_feature_2@2x.png 2x">
 <p>
   MKタクシーが店舗様へ商品を受け取りに向かいます。お預かりした商品を、専用BOX（40cm×24cm）にてお客様のもとへ大切にお届けいたします。お店の近くに到着しましたらお電話いたします。ウイルス感染予防のため、トランクへの積み込みはお店の方に行っていただきます（ドライバーは商品に触れません）。
 </p>
@@ -133,7 +141,7 @@ get_header(); ?>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタク配のサイトで<br>あなたの<span>お店を紹介</span></h3>
-<img src="<?php echo $img_url; ?>lp_feature_4.png" alt="京都を中心にどこでもお届けいたします！" srcset="<?php echo $img_url; ?>lp_feature_4.png 1x, <?php echo $img_url; ?>lp_feature_4@2x.png 2x">
+<img src="<?php echo $img_url; ?>lp_feature_4.png" alt="MKタク配のサイトであなたのお店を紹介" srcset="<?php echo $img_url; ?>lp_feature_4.png 1x, <?php echo $img_url; ?>lp_feature_4@2x.png 2x">
 <p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（TakeEats)を導入の方は、お客様のネット注文が簡単です。</p>
 </div>
 </div>
@@ -148,7 +156,7 @@ get_header(); ?>
 <table class="lp__table mb-3 bg-white">
 <tr>
 <th class="bg-secondary p-3">宅配料</th>
-<td class="p-3">1回の注文で<span class="font-weight-bold text-primary">550</span>円（税込）</td>
+<td class="p-3">1回の注文で<span class="font-weight-bold text-primary"><s class="text-decoration-line-through">550</s>110</span>円（税込）</td>
 </tr>
 <tr>
 <th class="bg-secondary p-3">対象エリア</th>
@@ -160,12 +168,15 @@ get_header(); ?>
 </tr>
 </table>
 <p class="small mt-2">前日までのご予約であれば 最大3個まで保冷バッグをご用意いたします。
+<br><span class="text-primary">【 緊急事態宣言解除まで保冷バッグの追加無料！ 】</span>
+<s>
 <br>保冷バッグ2個目以降、1個追加につき＋200円を頂戴いたします。
 <br>■ 通常（保冷バッグ1個）宅配料550円のみ
 <br>■ 保冷バッグ2個　550円＋200円＝750円
 <br>■ 保冷バッグ3個　550円＋200円＋200円＝950円
+</s>
 <br>
-<br>※当日ご予約の場合は保冷バッグ1個につきタクシー1台の運行となりますので、タクシー1台につき550円頂戴いたします（例：保冷バッグ2個必要な場合1,100円となります）。
+<br>※当日ご予約の場合は保冷バッグ1個につきタクシー1台の運行となりますので、タクシー1台につき<s class="text-decoration-line-through">550円</s>110円頂戴いたします（例：保冷バッグ2個必要な場合1,100円となります）。
 <br>※ 宅配完了ごとに車両は毎回消毒を行っております。
 <br>※ 個人情報保護のため、お店様からおうかがいしたお届け先情報は宅配完了ごとに破棄いたします。
 <br>※ 当サービスは一般のお客様向けの配達を目的としています。業者間の配送等の用途にはご利用いただけません。

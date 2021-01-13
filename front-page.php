@@ -40,6 +40,13 @@ get_header(); ?>
 </div>
 </div>
 
+<!-- ▼ 重要なおしらせ -->
+<div class="important">
+  <h3><i class="fas fa-flag mr-2"></i>飲食店応援キャンペーン</h3>
+  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。</p>
+</div>
+<!-- ▲ 重要なおしらせ -->
+
 <section class="search">
 <div class="search__genre bg-white pb-4">
 <div class="container">
@@ -109,7 +116,7 @@ get_header(); ?>
 <!-- search -->
 <div class="py-md-5 main-left front">
 <div class="container">
-<div class="row">
+<div class="row align-items-start">
 <div class="col-md-8">
 <?php get_template_part('template-part/parts/reco-restaurants'); ?>
 <!-- buzz -->
