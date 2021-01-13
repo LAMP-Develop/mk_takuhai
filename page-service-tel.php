@@ -156,7 +156,7 @@ get_header(); ?>
 <table class="lp__table mb-3 bg-white">
 <tr>
 <th class="bg-secondary p-3">宅配料</th>
-<td class="p-3">1回の注文で<span class="font-weight-bold text-primary"><s class="text-decoration-line-through">550</s>110</span>円（税込）</td>
+<td class="p-3">1回の注文で<span class="font-weight-bold"><s class="text-decoration-line-through">550円</s><span class="text-primary">110円（税込）</span></span></td>
 </tr>
 <tr>
 <th class="bg-secondary p-3">対象エリア</th>

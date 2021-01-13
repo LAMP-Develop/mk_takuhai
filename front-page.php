@@ -32,8 +32,8 @@ get_header(); ?>
 </section>
 <!-- mv -->
 
-<div class="container bg-white pt-4 pb-3">
-<div class="d-md-none d-block bg-info">
+<div class="d-md-none d-block container bg-white pt-4 pb-3">
+<div class="bg-info">
 <div class="cta-takeeats-btn m-0 p-0">
 <a class="btn text-white py-3" href="<?php echo $home; ?>/delivery/">ご利用方法はこちら<i class="ml-3 fas fa-chevron-right"></i></a>
 </div>
