@@ -34,7 +34,7 @@ get_header(); ?>
 <!-- ▼ 重要なおしらせ -->
 <div class="important">
   <h3><i class="fas fa-flag mr-2"></i>飲食店応援キャンペーン</h3>
-  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。</p>
+  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。（京都限定）</p>
 </div>
 <!-- ▲ 重要なおしらせ -->
 
