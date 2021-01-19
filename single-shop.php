@@ -71,37 +71,57 @@ get_header(); ?>
 <div class="shop-search-buzz__list-inner-img-list">
 
 <!-- 商品 -->
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_1')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_1'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_1'); ?></p>
 </div>
 <?php endif; ?>
 
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_2')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_2'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_2'); ?></p>
 </div>
 <?php endif; ?>
 
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_3')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_3'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_3'); ?></p>
 </div>
 <?php endif; ?>
 
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_4')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_4'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_4'); ?></p>
 </div>
 <?php endif; ?>
 
-<?php if(post_custom('order_url')): // 入力がある場合 ?>
+<?php if(post_custom('menu_price_5')): // 入力がある場合 ?>
 <div class="shop-search-buzz__list-inner-img-item">
+<?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
 <img src="<?php the_field('menu_img_5'); ?>" alt="<?php the_title(); ?>の商品">
+<?php else: // ないとき ?>
+<img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
+<?php endif; ?>
 <p class="mb-0 text-white">¥<?php the_field('menu_price_5'); ?></p>
 </div>
 <?php endif; ?>
@@ -154,10 +174,6 @@ get_header(); ?>
 </div>
 
 <!-- restaurant__external -->
-</div>
-
-<div class="mt-4 text-center">
-<a class="btn btn-sm btn-default font-weight-bold bg-white" href="<?php echo $referer; ?>">一覧ページに戻る</a>
 </div>
 
 </section>
