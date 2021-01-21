@@ -182,7 +182,7 @@ get_header(); ?>
 <h3 class="mb-3 text-center">MKタク配を電話注文で始めたい方</h3>
 <ul>
 <li>宅配料1回<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>（税込）</li>
-<li>配達以来はお電話で！（24時間対応）</li>
+<li>配達以外はお電話で！（24時間対応）</li>
 <li>京都市外メーターも配達可能</li>
 </ul>
 <div class="lp-btn mt-0 mb-0">
@@ -242,16 +242,13 @@ height:auto" alt="吹き出しアイコン">まずはお申し込み</a>
 <h2 class="lp-ttl2"><span class="marks">お申し込み</span></h2>
 <img src="<?php echo $img_url; ?>contact_txt.png" alt="初期費用0円" srcset="<?php echo $img_url; ?>contact_txt.png 1x, <?php echo $img_url; ?>contact_txt@2x.png 2x">
 </div>
-
-
-<div class="bg-light mt-5 p-4">
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-<script>
-  hbspt.forms.create({
-	portalId: "8940987",
-	formId: "f73c2382-5ce4-41f3-bc5c-ca3bcfe97519"
-});
-</script>
+<div class="text-center">
+<div class="lp-btn d-md-inline-block d-block mx-2">
+<a class="text-center font-weight-bold" href="<?php echo $home; ?>/contact/" target="_blank">お問い合わせ・資料請求</a>
+</div>
+<div class="lp-btn d-md-inline-block d-block mx-2">
+<a class="text-center font-weight-bold" href="<?php echo $home; ?>/request/" target="_blank">お申し込み</a>
+</div>
 </div>
 
 </div>
