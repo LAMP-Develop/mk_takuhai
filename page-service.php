@@ -243,14 +243,14 @@ height:auto" alt="吹き出しアイコン">まずはお申し込み</a>
 <img src="<?php echo $img_url; ?>contact_txt.png" alt="初期費用0円" srcset="<?php echo $img_url; ?>contact_txt.png 1x, <?php echo $img_url; ?>contact_txt@2x.png 2x">
 </div>
 <div class="text-center">
-<div class="lp-btn d-md-inline-block d-block mx-2">
+<div class="lp-btn d-md-inline-block d-block">
 <a class="text-center font-weight-bold" href="<?php echo $home; ?>/contact/" target="_blank">お問い合わせ・資料請求</a>
 </div>
-<div class="lp-btn d-md-inline-block d-block mx-2">
-<a class="text-center font-weight-bold" href="<?php echo $home; ?>/request/" target="_blank">お申し込み</a>
+<div class="lp-btn d-md-inline-block d-block">
+<a class="text-center font-weight-bold" href="<?php echo $home; ?>/seminar/" target="_blank">WEB説明会</a>
 </div>
 </div>
-
+<div><?php the_content(); ?></div>
 </div>
 </section>
 

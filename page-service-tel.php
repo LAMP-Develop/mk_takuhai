@@ -189,9 +189,6 @@ get_header(); ?>
 <div class="container">
 <div class="text-center lp__form-top">
 <h2 class="lp-ttl2 pb-3"><span class="marks">お申し込み</span></h2>
-<div class="lp-btn d-md-inline-block d-block">
-<a class="text-center font-weight-bold" href="<?php echo $home; ?>/contact/" target="_blank">お問い合わせ・資料請求はこちら</a>
-</div>
 </div>
 <div><?php the_content(); ?></div>
 </div>
