@@ -13,7 +13,7 @@ $wp_url = get_template_directory_uri(); ?>
 <p class="d-inline">【京都】</p><a href="tel:075-778-0150">075-778-0150</a>
 <p>システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
 <a href="tel:075-600-2721">075-600-2721</a>
-<p class="small">運営会社 株式会社ランプ</p>
+<p class="small">運営会社 株式会社ランプ<br>10：00〜18：00（土日祝除く）</p>
 </div>
 <div class="footer__link__inner">
 <ul>
