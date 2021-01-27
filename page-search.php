@@ -46,7 +46,7 @@ if ($_GET['genre'] != '') {
     $genre_id = (int)$_GET['genre'];
 }
 get_header(); ?>
-<?php get_template_part('template-part/modal/search-form'); ?>
+<?php get_template_part('template-part/modal-search'); ?>
 
 <div class="bg-secondary">
 <div class="container py-3">
@@ -176,13 +176,14 @@ echo '<span class="shop-buzz__list-txt-tag">駐車場あり</span>';
 </div>
 </a>
 
+
 <!-- search__result -->
 <?php search_page_navi($total, $current_page); ?>
 </div>
 </section>
 <!-- sidebar -->
 <div class="col-md-4 d-md-block d-none">
-<?php get_template_part('template-part/parts/search-restaurants') ?>
+<?php get_template_part('template-part/sidebar') ?>
 </div>
 
 </div>

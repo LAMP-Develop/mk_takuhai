@@ -48,7 +48,7 @@ get_header(); ?>
 <!-- ▲ 重要なおしらせ -->
 
 <!-- ▼ ジャンル -->
-<?php get_template_part('genre'); ?>
+<?php get_template_part('template-part/genre'); ?>
 <!-- ▲ ジャンル -->
 
 <!-- search -->
@@ -56,11 +56,11 @@ get_header(); ?>
 <div class="container">
 <div class="row align-items-start">
 <div class="col-md-8">
-<?php get_template_part('template-part/parts/reco-restaurants'); ?>
+<?php get_template_part('template-part/reco-restaurants'); ?>
 <!-- buzz -->
 </div>
 <div class="col-md-4 d-md-block d-none">
-<?php get_template_part('template-part/parts/search-restaurants') ?>
+<?php get_template_part('template-part/sidebar') ?>
 </div>
 <!-- sidebar -->
 </div>

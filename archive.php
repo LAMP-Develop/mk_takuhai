@@ -3,7 +3,7 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
-<?php get_template_part('template-part/modal/search-form'); ?>
+<?php get_template_part('template-part/modal-search'); ?>
 
 <div class="bg-secondary">
 <div class="container py-3">
@@ -30,10 +30,10 @@ get_header(); ?>
 </div>
 
 <!-- ▼ ジャンル -->
-<?php get_template_part('genre'); ?>
+<?php get_template_part('template-part/genre'); ?>
 <!-- ▲ ジャンル -->
 
-<div class="py-md-5 main-left  bg-white">
+<div class="pt-3 main-left  bg-white">
 <div class="container">
 <div class="row">
 
@@ -104,11 +104,11 @@ get_header(); ?>
       <!-- ▲ 一覧上 -->
 
       <!-- ▼ 一覧 (.shop-buzz__list) -->
-      <div class="shop-buzz__list">
+      <div id="scroll" class="shop-buzz__list">
       <?php while(have_posts()): the_post(); ?>
 
         <!-- ▼ ループされるコンテンツ -->
-        <a class="shop-buzz__list-inner" href="<?php echo get_the_permalink(); ?>">
+        <a class="shop-buzz__list-inner scroll-content" href="<?php echo get_the_permalink(); ?>">
         <div class="shop-buzz__list-img">
         <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
         </div>
@@ -136,15 +136,12 @@ get_header(); ?>
         <!-- ▲ ループされるコンテンツ -->
 
       <?php endwhile; ?>
+
+      <div id="scroll-content">
+        <a href="#"></a>
       </div>
 
-      <!-- ▼ ページネーション -->
-      <?php
-      if (function_exists('wp_pagenavi')) {
-      wp_pagenavi(['query' => $wp_query]);
-      }
-      ?>
-      <!-- ▲ ページネーション -->
+      </div>
 
       <?php else: // ないとき ?>
 
@@ -158,7 +155,7 @@ get_header(); ?>
 
   <!-- ▼ サイドバー -->
   <div class="col-md-4 d-md-block d-none">
-  <?php get_template_part('template-part/parts/search-restaurants') ?>
+  <?php get_template_part('template-part/sidebar') ?>
   </div>
   <!-- ▲ サイドバー -->
 

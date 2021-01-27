@@ -15,7 +15,7 @@ get_header(); ?>
 <?php elseif( get_field('net') === "いいえ"): ?>
 
 <?php if(post_custom('order_tel')): // 入力がある場合 ?>
-<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_tel'); ?>" target="_blank" ><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
+<a class="btn btn-primary w-100 mt-3" href="tel:<?php the_field('order_tel'); ?>" ><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
 <?php endif; ?>
 
 <?php endif; ?>
@@ -56,7 +56,7 @@ get_header(); ?>
 <?php elseif( get_field('net') === "いいえ"): ?>
 
 <?php if(post_custom('order_tel')): // 入力がある場合 ?>
-<a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_tel'); ?>" target="_blank" ><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
+<a class="btn btn-primary w-100 mt-3" href="tel:<?php the_field('order_tel'); ?>"><?php the_field('order_tel'); ?><i class="fas fa-angle-right ml-2"></i></a>
 <?php endif; ?>
 
 <?php endif; ?>
@@ -180,7 +180,7 @@ get_header(); ?>
 
 </div>
 <div class="col-md-4 d-md-block d-none">
-<?php get_template_part('template-part/parts/search-restaurants') ?>
+<?php get_template_part('template-part/sidebar') ?>
 </div>
 </div>
 </div>

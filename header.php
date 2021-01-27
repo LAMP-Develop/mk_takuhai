@@ -68,5 +68,5 @@ $wp_url = get_template_directory_uri(); ?>
 
 
 
-<?php get_template_part('template-part/modal/search-form'); ?>
+<?php get_template_part('template-part/modal-search'); ?>
 <main>
