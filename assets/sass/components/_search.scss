@@ -75,12 +75,6 @@
         max-width: 1140px;
       }
 
-      img {
-        @include media-breakpoint-up(lg) {
-          width: 95px;
-        }
-      }
-
       ul {
         margin: 0;
         padding: 0;
@@ -106,6 +100,7 @@
             margin: 0 auto;
             transition: 0.3s;
             border-radius: 60px;
+            width: 95px;
           }
 
           span {
@@ -127,9 +122,6 @@
     flex-wrap: nowrap;
     border-bottom: 1px solid $warning;
     border-top: 1px solid $warning;
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
-    padding-left: 1rem;
     margin-bottom: 1rem;
 
     p {

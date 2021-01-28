@@ -2,35 +2,39 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
+
+<!-- ▼ メインビジュアル -->
 <section id="mv" class="mv">
-<div class="container">
-<div class="mv__bg">
-<h2>
-<img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_sp@2x.png 2x">
-<img class="d-none d-md-block" src="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_pc@2x.png 2x">
-</h2>
-<!-- <div class="mv_stamp">
-<img src="<?php echo $wp_url; ?>/dist/images/mv_stamp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_stamp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_stamp@2x.png 2x">
-</div> -->
-</div>
-<div class="search__free mv__search mt-3">
-<form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-<div class="input-group">
-<input type="hidden" name="post_type" value="shop">
-<div class="input-group">
-<div class="input-group-prepend">
-<input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
-</div>
-</div>
-<div class="search__free__form-btn">
-<input type="submit" class="btn btn-block btn-primary text-nowrap" value="検索">
-</div>
-</form>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="mv__bg">
+      <h2>
+        <img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_sp@2x.png 2x">
+        <img class="d-none d-md-block" src="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_pc@2x.png 2x">
+      </h2>
+      <!-- <div class="mv_stamp">
+      <img src="<?php echo $wp_url; ?>/dist/images/mv_stamp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_stamp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_stamp@2x.png 2x">
+      </div> -->
+    </div>
+    <!-- ▼ 検索窓 -->
+    <div class="search__free mv__search mt-3">
+      <div class="input-group">
+        <form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+          <input type="hidden" name="post_type" value="shop">
+          <div class="input-group">
+            <div class="input-group-prepend">
+            <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+            </div>
+          </div>
+          <div class="search__free__form-btn">
+            <input type="submit" class="btn btn-block btn-primary text-nowrap" value="検索">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ▲ 検索窓 -->
+  </div>
 </section>
-<!-- mv -->
+<!-- ▲ メインビジュアル -->
 
 <div class="d-md-none d-block container bg-white pt-4 pb-3">
 <div class="bg-info">
@@ -51,19 +55,23 @@ get_header(); ?>
 <?php get_template_part('template-part/genre'); ?>
 <!-- ▲ ジャンル -->
 
-<!-- search -->
+<!-- ▼ メインエリア -->
 <div class="py-md-5 main-left front">
-<div class="container">
-<div class="row align-items-start">
-<div class="col-md-8">
-<?php get_template_part('template-part/reco-restaurants'); ?>
-<!-- buzz -->
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- ▼ 人気のお店 -->
+      <div class="col-md-8">
+        <?php get_template_part('template-part/reco-restaurants'); ?>
+      </div>
+      <!-- ▲ おすすめ店舗 -->
+      <!-- ▼ サイドバー -->
+      <div class="col-md-4 d-md-block d-none">
+        <?php get_template_part('template-part/sidebar') ?>
+      </div>
+      <!-- ▲ サイドバー -->
+    </div>
+  </div>
 </div>
-<div class="col-md-4 d-md-block d-none">
-<?php get_template_part('template-part/sidebar') ?>
-</div>
-<!-- sidebar -->
-</div>
-</div>
-</div>
+<!-- ▲ メインエリア -->
+
 <?php get_footer();

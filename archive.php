@@ -3,42 +3,40 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
-<?php get_template_part('template-part/modal-search'); ?>
-
 <div class="bg-secondary">
-<div class="container py-3">
-<div class="search__free">
+  <div class="container py-3">
+    <div class="search__free">
 
-<form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-<div class="input-group">
-<input type="hidden" name="post_type" value="shop">
+    <form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+      <div class="input-group">
+      <input type="hidden" name="post_type" value="shop">
 
-<div class="input-group">
-<div class="input-group-prepend">
-<input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
-</div>
-</div>
-<div class="search__free__form-btn">
-<input type="submit" class="btn btn-block btn-primary text-nowrap" value="検索">
-</div>
+      <div class="input-group">
+      <div class="input-group-prepend">
+      <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+      </div>
+      </div>
+      <div class="search__free__form-btn">
+      <input type="submit" class="btn btn-block btn-primary text-nowrap" value="検索">
+      </div>
 
-</form>
+      </form>
 
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ▼ ジャンル -->
 <?php get_template_part('template-part/genre'); ?>
 <!-- ▲ ジャンル -->
 
-<div class="pt-3 main-left  bg-white">
+<div class="main-left  bg-white">
 <div class="container">
 <div class="row">
 
   <div class="col-md-8">
-    <section class="search">
+    <section class="search mb-5">
 
     <?php
     $post_type = $_GET['post_type'];
@@ -136,11 +134,29 @@ get_header(); ?>
         <!-- ▲ ループされるコンテンツ -->
 
       <?php endwhile; ?>
-
-      <div id="scroll-content">
-        <a href="#"></a>
       </div>
 
+      <div class="pagination">
+          <?php global $wp_rewrite;
+          $paginate_base = get_pagenum_link(1);
+          if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
+              $paginate_format = '';
+              $paginate_base = add_query_arg('paged','%#%');
+          }
+          else{
+              $paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
+              user_trailingslashit('page/%#%/','paged');;
+              $paginate_base .= '%_%';
+          }
+          echo paginate_links(array(
+              'base' => $paginate_base,
+              'format' => $paginate_format,
+              'total' => $wp_query->max_num_pages,
+              'mid_size' => 4,
+              'current' => ($paged ? $paged : 1),
+              'prev_text' => '<< 前へ',
+              'next_text' => '次へ >>',
+          )); ?>
       </div>
 
       <?php else: // ないとき ?>
