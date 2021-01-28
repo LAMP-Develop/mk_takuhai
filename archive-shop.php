@@ -38,7 +38,7 @@ get_header(); ?>
 <div class="row">
 
   <div class="col-md-8">
-    <section class="search">
+    <section class="search mb-5">
 
     <?php
     $post_type = $_GET['post_type'];
@@ -138,13 +138,28 @@ get_header(); ?>
       <?php endwhile; ?>
       </div>
 
-      <!-- ▼ ページネーション -->
-      <?php
-      if (function_exists('wp_pagenavi')) {
-      wp_pagenavi(['query' => $wp_query]);
-      }
-      ?>
-      <!-- ▲ ページネーション -->
+      <div class="pagination d-none">
+          <?php global $wp_rewrite;
+          $paginate_base = get_pagenum_link(1);
+          if(strpos($paginate_base, '?') || ! $wp_rewrite->using_permalinks()){
+              $paginate_format = '';
+              $paginate_base = add_query_arg('paged','%#%');
+          }
+          else{
+              $paginate_format = (substr($paginate_base,-1,1) == '/' ? '' : '/') .
+              user_trailingslashit('page/%#%/','paged');;
+              $paginate_base .= '%_%';
+          }
+          echo paginate_links(array(
+              'base' => $paginate_base,
+              'format' => $paginate_format,
+              'total' => $wp_query->max_num_pages,
+              'mid_size' => 4,
+              'current' => ($paged ? $paged : 1),
+              'prev_text' => '<< 前へ',
+              'next_text' => '次へ >>',
+          )); ?>
+      </div>
 
       <?php else: // ないとき ?>
 
