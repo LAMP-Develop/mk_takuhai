@@ -10,6 +10,14 @@ get_header(); ?>
 
   <!-- ▼ ジャンル一覧 -->
   <ul>
+    <!-- ▼ ネット予約 -->
+    <li>
+      <a class="text-body" href="<?php echo $home; ?>/?post_type=shop&s=&shop_category=&shop_tag=net">
+        <img src="<?php echo $wp_url ?>/dist/images/genre_net.png" alt="<?php echo $genre_name ?>" srcset="<?php echo $wp_url ?>/dist/images/genre_net.png 1x, <?php echo $wp_url ?>/dist/images/genre_net@2x.png 2x">
+        <p class="f-12 text-center mt-2 mb-0">ネット予約可</p>
+      </a>
+    </li>
+    <!-- ▲ ネット予約 -->
     <?php
     $terms = get_terms( 'shop_category', array(
       'orderby' => 'name',
