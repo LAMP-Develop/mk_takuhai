@@ -136,6 +136,7 @@ get_header(); ?>
       <?php endwhile; ?>
       </div>
 
+      <!-- ▼ ページネーション -->
       <div class="pagination d-none">
           <?php global $wp_rewrite;
           $paginate_base = get_pagenum_link(1);
@@ -158,6 +159,7 @@ get_header(); ?>
               'next_text' => '次へ >>',
           )); ?>
       </div>
+      <!-- ▲ ページネーション -->
 
       <?php else: // ないとき ?>
 

@@ -18,7 +18,7 @@ get_header(); ?>
     <!-- ▼ 検索窓 -->
     <div class="search__free mv__search mt-3">
       <div class="input-group">
-        <form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+        <form class="search__free__form d-flex w-100" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
           <input type="hidden" name="post_type" value="shop">
           <div class="input-group">
             <div class="input-group-prepend">
