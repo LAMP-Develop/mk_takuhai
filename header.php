@@ -84,7 +84,5 @@ $wp_url = get_template_directory_uri(); ?>
 </header>
 <!-- ▲ ヘッダー -->
 
-
-
 <?php get_template_part('template-part/modal-search'); ?>
 <main>

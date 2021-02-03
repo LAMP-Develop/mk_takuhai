@@ -195,4 +195,9 @@ button {
     border: 1px solid $body-color;
     border-radius: 7px;
   }
+  &-bk {
+    background: $body-color!important;
+    border-radius: 2rem;
+    color: $white;
+  }
 }

@@ -2,7 +2,6 @@
  共通
 ====================================================*/
 form {
-  background: $light!important;
   height: 36px;
   border-radius: 20px;
 }
@@ -15,21 +14,9 @@ form {
   border: none;
 }
 
-.input-group-prepend {
-  & + .form-control {
-    border-left: 0;
-  }
-  width: 100%;
-}
-
 .input-group-text {
   background-color: $white;
   color: $info;
-}
-
-input {
-  background: none!important;
-  margin-left: 40px;
 }
 /*===================================================
  フリーワード検索窓
@@ -37,6 +24,16 @@ input {
 .search {
   &__free {
     border-bottom: 1px solid $light;
+
+    form {
+      background: $light!important;
+    }
+
+    input {
+      background: none!important;
+      margin-left: 40px;
+      width: 100%;
+    }
 
     .input-group {
       &::before {
@@ -48,6 +45,10 @@ input {
         position: absolute;
         top: calc(50% - 9px);
         left: 15px;
+      }
+
+      &-prepend {
+        width: 100%;
       }
     }
   }
@@ -164,7 +165,9 @@ input {
     }
   }
 }
-
+/*===================================================
+ モーダル内
+====================================================*/
 .form-control {
   width: 100%!important;
   height: auto!important;
@@ -179,8 +182,8 @@ input {
       input {
         padding: 14px 10px;
         background: $light;
-        border-radius: 5px;
         width: 100%;
+        border-radius: 2rem;
       }
 
       input[type="checkbox"] {
@@ -191,21 +194,8 @@ input {
       select {
         padding: 14px 10px;
         background: $light;
-        border-radius: 5px;
         width: 100%;
-      }
-
-      .btn-primary {
-        background: #E3556E!important;
-        font-size: 1rem;
-        padding: 1.05rem 2em!important !important;
-        letter-spacing: 0.05rem;
-        border-radius: 10px;
-        color: #fff;
-        border-radius: 5px;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
+        border-radius: 2rem;
       }
     }
   }

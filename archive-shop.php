@@ -3,29 +3,22 @@ $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header(); ?>
 
-<div class="bg-secondary">
-  <div class="container py-3">
-    <div class="search__free">
-
-    <form class="search__free__form" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-      <div class="input-group">
-      <input type="hidden" name="post_type" value="shop">
-
-      <div class="input-group">
-      <div class="input-group-prepend">
-      <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
-      </div>
-      </div>
-      <div class="search__free__form-btn">
-      <input type="submit" class="btn btn-block btn-primary text-nowrap" value="検索">
-      </div>
-
+<!-- ▼ 検索窓 -->
+<section class="search__free pt-sm pb-lg d-block d-md-none">
+  <div class="container">
+    <div class="input-group">
+      <form class="search__free__form d-flex w-100 shadow-sm" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+        <input type="hidden" name="post_type" value="shop">
+        <div class="input-group">
+          <div class="input-group-prepend">
+          <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+          </div>
+        </div>
       </form>
-
-      </div>
     </div>
   </div>
-</div>
+</section>
+<!-- ▲ 検索窓 -->
 
 <!-- ▼ ジャンル -->
 <?php get_template_part('template-part/genre'); ?>
