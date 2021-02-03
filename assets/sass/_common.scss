@@ -1,3 +1,6 @@
+/*===================================================
+ 共通
+====================================================*/
 main {
   margin-top: 61px;
 }
@@ -11,111 +14,51 @@ body {
 img {
   max-width: 100%;
 }
-
-button {
-  &:focus {
-    outline: none;
-  }
-}
-
-.shadow-sm {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15) !important;
-}
-
-.sec {
-  position: relative;
-  padding: 3rem 0;
-
-  &-border {
-    border-bottom: solid 0.5rem $secondary;
-  }
-}
-
 /*===================================================
- 見出し
+ 装飾
 ====================================================*/
-
-.ttl {
-  &-h2 {
-    position: relative;
-    text-align: center;
-    font-size: 1.375rem;
-    font-weight: normal;
-    color: $info;
-    margin: 1.5rem auto;
-    @include media-breakpoint-up(md) {
-      font-size: 1.4rem;
-      width: 80%;
-      margin: 1.5rem auto 2em;
-    }
-
-    &::after,
-    &::before {
-      content: "";
-      position: absolute;
-      top: calc(50% - 6px);
-      left: 0;
-      width: 60px;
-      height: 6px;
-      border-top: 1px solid $info;
-      border-bottom: 1px solid $info;
-    }
-
-    &::before {
-      left: auto;
-      right: 0;
-    }
-  }
-}
-
-.sp-mode {
-  @include media-breakpoint-up(md) {
-    max-width: 768px;
-    margin: 0 auto;
-  }
-}
-
-.page-link {
-  line-height: 1;
+/* シャドウ */
+.shadow-sm {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 input[type="submit"],
 input[type="button"] {
   -webkit-appearance: none!important;
 }
-
-// 重要なお知らせ
-.important {
-  width: 90%;
-  margin: 2rem auto;
-  border: 2px solid #76D2EA;
-  background: #D9F0F6;
-  padding: 2rem 0.5rem;
-  @include media-breakpoint-up(md) {
-    width: 80%;
-    padding: 2rem;
+/* ボタン */
+button {
+  &:focus {
+    outline: none;
   }
-
-  i {
-    color: #76D2EA;
-  }
-  h3 {
-    text-align: center;
-    font-size: 1rem!important;
+}
+/* 角丸 */
+br-7 {
+  border-radius: 7px;
+}
+/*===================================================
+ 見出し
+====================================================*/
+/* 見出し2 */
+.ttl {
+  &-h2 {
+    font-size: 1.125rem;
     font-weight: bold;
-    margin-bottom: 1.15rem;
-  }
-  p {
     text-align: left;
-    margin-bottom: 0;
-    font-size: .85rem;
-    @include media-breakpoint-up(md) {
-      text-align: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 15px;
+      border-radius: 3px;
+      background: $primary;
+      margin-right: 12px;
     }
   }
 }
 /*===================================================
- テキスト
+ フォントサイズ
 ====================================================*/
 .f-10,
 .f-14,
@@ -134,39 +77,8 @@ input[type="button"] {
   font-weight: bold;
 }
 
-.f-36 {
-  font-size: 36px;
-  @include media-breakpoint-down(md) {
-    font-size: 29px;
-  }
-}
-
-.f-32 {
-  font-size: 32px;
-  @include media-breakpoint-down(md) {
-    font-size: 26px;
-  }
-}
-
-.f-26 {
-  font-size: 26px;
-  @include media-breakpoint-down(md) {
-    font-size: 20px;
-  }
-}
-
-.f-24 {
-  font-size: 24px;
-  @include media-breakpoint-down(md) {
-    font-size: 18px;
-  }
-}
-
 .f-18 {
   font-size: 18px;
-  @include media-breakpoint-down(md) {
-    font-size: 16px;
-  }
 }
 
 .f-16 {
@@ -187,4 +99,85 @@ input[type="button"] {
 
 .f-10 {
   font-size: 10px!important;
+}
+/*===================================================
+ 余白
+====================================================*/
+/* 余白（大） - 26px - */
+.py-lg {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.pt-lg {
+  padding-top: 26px;
+}
+
+.pb-lg {
+  padding-bottom: 26px;
+}
+
+.my-lg {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.mt-lg {
+  margin-top: 26px;
+}
+
+.mb-lg {
+  margin-bottom: 26px;
+}
+/* 余白（中） - 18px - */
+.py-md {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.pt-md {
+  padding-top: 18px;
+}
+
+.pb-md {
+  padding-bottom: 18px;
+}
+
+.my-md {
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.mt-md {
+  margin-top: 18px;
+}
+
+.mb-md {
+  margin-bottom: 18px;
+}
+/* 余白(小) - 13px - */
+.py-sm {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.pt-sm {
+  padding-top: 13px;
+}
+
+.pb-sm {
+  padding-bottom: 13px;
+}
+
+.my-sm {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.mt-sm {
+  margin-top: 13px;
+}
+
+.mb-sm {
+  margin-bottom: 13px;
 }

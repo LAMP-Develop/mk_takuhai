@@ -6,15 +6,10 @@ get_header(); ?>
 <!-- ▼ メインビジュアル -->
 <section id="mv" class="mv">
   <div class="container">
-    <div class="mv__bg">
-      <h2>
-        <img class="d-block d-md-none" src="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_sp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_sp@2x.png 2x">
-        <img class="d-none d-md-block" src="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_txt_pc.png 1x, <?php echo $wp_url; ?>/dist/images/mv_txt_pc@2x.png 2x">
-      </h2>
-      <!-- <div class="mv_stamp">
-      <img src="<?php echo $wp_url; ?>/dist/images/mv_stamp.png" alt="MKタクシーが安心安全にご自宅までお届け" srcset="<?php echo $wp_url; ?>/dist/images/mv_stamp.png 1x, <?php echo $wp_url; ?>/dist/images/mv_stamp@2x.png 2x">
-      </div> -->
-    </div>
+
+
+
+
     <!-- ▼ 検索窓 -->
     <div class="search__free mv__search mt-3">
       <div class="input-group">
@@ -66,7 +61,7 @@ get_header(); ?>
       <!-- ▲ おすすめ店舗 -->
       <!-- ▼ サイドバー -->
       <div class="col-md-4 d-md-block d-none">
-        <?php get_template_part('template-part/sidebar') ?>
+        <?php get_template_part('template-part/search-form') ?>
       </div>
       <!-- ▲ サイドバー -->
     </div>

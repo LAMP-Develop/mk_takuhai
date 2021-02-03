@@ -1,16 +1,10 @@
 //トップページの店舗一覧
 
 .main-left.front {
-  background: $secondary;
-  padding: 1rem 0 3rem;
-  @include media-breakpoint-up(md) {
-    background: $white;
-  }
 }
 
 .shop {
   &-buzz {
-    background: $secondary;
     @include media-breakpoint-up(md) {
       padding: 2rem;
       border-radius: 10px;
