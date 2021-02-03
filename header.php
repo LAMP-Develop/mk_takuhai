@@ -21,6 +21,8 @@ $wp_url = get_template_directory_uri(); ?>
 
     gtag('config', 'G-7XXVBP7527');
   </script>
+  <style media="screen">
+  </style>
 </head>
 
 <?php wp_body_open(); ?>

@@ -32,7 +32,7 @@
       <label class="m-0"><input type="checkbox" name="shop_tag" value="net"> ネット注文可</label>
     </div>
 
-    <div class="container mt-lg">
+    <div class="mt-lg">
       <input type="submit" class="btn btn-bk" value="絞り込む">
     </div>
 

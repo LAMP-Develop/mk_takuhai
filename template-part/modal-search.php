@@ -13,7 +13,7 @@ $wp_url = get_template_directory_uri(); ?>
           <i class="fas fa-chevron-left text-success mr-2"></i>戻る
         </button>
       </div>
-      <div class="modal d-block">
+      <div class="d-block">
         <?php get_template_part('template-part/search-form') ?>
       </div>
     </div>

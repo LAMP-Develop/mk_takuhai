@@ -1,5 +1,5 @@
 .modal {
-  position: relative;
+  // position: relative;
 
   &-content {
     position: absolute;
@@ -13,6 +13,7 @@
 
   &-body {
     border-radius: 0;
+    height: 100vh;
     /*-- タイトル --*/
     &-name {
       position: relative;
@@ -31,10 +32,17 @@
   }
   /*-- 絞り込みボタン --*/
   .btn {
-    width: 100%;
-    // position: absolute;
-    left: 0;
-    bottom: 1rem;
+    position: fixed;
+    left: calc(50% -165px);
+    bottom: 2rem;
+    width: 330px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      width: 200px
+    }
   }
 
   &-dialog-centered {
