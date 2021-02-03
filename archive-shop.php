@@ -4,7 +4,7 @@ $wp_url = get_template_directory_uri();
 get_header(); ?>
 
 <!-- ▼ 検索窓 -->
-<section class="search__free pt-sm pb-lg d-block d-md-none">
+<section class="search__free py-md d-block d-md-none">
   <div class="container">
     <div class="input-group">
       <form class="search__free__form d-flex w-100 shadow-sm" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
@@ -72,59 +72,73 @@ get_header(); ?>
 
     if(have_posts()): ?>
 
-      <!-- ▼ 一覧上 -->
-      <div class="search__filter">
-        <!-- ▼ 検索中のキーワード・タグ -->
-        <div>
-          <?php if ($shop_category != null && $shop_category !== 'nochoice'): ?>
-          <span class="shop-buzz__list-txt-tag"><?php echo $cat_name; ?></span>
-          <?php endif; ?>
+      <!-- ▼ 検索条件 + 表示件数 -->
+      <div class="d-flex justify-content-between">
+        <div class="search__filter d-flex align-items-end">
+          <!-- ▼ 検索中のキーワード・タグ -->
+          <p class="f-13 text-success">
+            <?php if ($shop_category != null && $shop_category !== 'nochoice'): ?>
+            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $cat_name; ?></span>
+            <?php endif; ?>
 
-          <?php if ($shop_tag != null): ?>
-          <span class="shop-buzz__list-txt-tag"><?php echo $tag_name; ?></span>
-          <?php endif; ?>
+            <?php if ($shop_tag != null): ?>
+            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $tag_name; ?></span>
+            <?php endif; ?>
 
-          <?php if ($s != null): ?>
-          <span class="shop-buzz__list-txt-tag"><?php echo $s; ?></span>
-          <?php endif; ?>
+            <?php if ($s != null): ?>
+            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $s; ?></span>
+            <?php endif; ?>
+          の検索結果</p>
+          <!-- ▲ 検索中のキーワード・タグ -->
         </div>
-        <!-- ▲ 検索中のキーワード・タグ -->
-        <button type="button" class="text-primary bg-white" data-toggle="modal" data-target="#search-restaurant">変更</button>
+        <div class="f-13 text-secondary">検索結果：<span><?php echo $wp_query->found_posts; ?></span>件</div>
+        <!-- ▲ 検索条件 + 表示件数 -->
+
+        <!-- ▼ 条件を変更 -->
+        <button type="button" class="btn-change text-bk" data-toggle="modal" data-target="#search-restaurant">
+          <i class="fas fa-search mr-2"></i>
+          条件を変更
+        </button>
       </div>
-      <div class="mb-3">検索結果：<span><?php echo $wp_query->found_posts; ?></span>件</div>
-      <!-- ▲ 一覧上 -->
+      <!-- ▲ 条件を変更 -->
 
       <!-- ▼ 一覧 (.shop-buzz__list) -->
       <div id="scroll" class="shop-buzz__list">
       <?php while(have_posts()): the_post(); ?>
 
-        <!-- ▼ ループされるコンテンツ -->
-        <a class="shop-buzz__list-inner scroll-content" href="<?php echo get_the_permalink(); ?>">
-        <div class="shop-buzz__list-img">
-        <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
-        </div>
+        <!-- ▼ ループするコンテンツ -->
+        <a class="shop-buzz__list-inner shadow-sm br-7 d-block mb-md" href="<?php the_permalink(); ?>">
+          <?php if( get_field('net') === "はい"): ?>
+          <p class="shop-buzz__list-net f-11">ネット注文OK</p>
+          <?php elseif( get_field('net') === "いいえ"): ?>
+          <?php endif; ?>
 
-        <?php if( get_field('net') === "はい"): ?>
-        <p class="shop-buzz__list-net">ネット注文OK</p>
-        <?php elseif( get_field('net') === "いいえ"): ?>
-        <?php endif; ?>
+          <div class="shop-buzz__list-txt">
+            <p class="shop-buzz__list-txt-tag f-13">
+              <i class="fas fa-utensils"></i>
+              <?php
+              if ($terms = get_the_terms($post->ID, 'shop_category')) {
+              foreach ( $terms as $term ) {
+              echo esc_html($term->name);
+              }
+              }
+              ?>
+            </p>
+            <h3 class="f-15 pb-sm text-body m-0"><?php the_title(); ?></h3>
+            <div class="py-sm">
+              <p class="shop-buzz__list-txt-time pt-sm">営業時間：<?php $text = mb_substr(get_field('time'),0,23,'utf-8'); echo $text.'...';?>
+              </p>
+              <p class="shop-buzz__list-txt-time pb-sm">定休日：<?php the_field('day'); ?></p>
+            </div>
+          </div>
 
-        <div class="shop-buzz__list-txt">
-        <p class="shop-buzz__list-txt-tag">
-        <?php
-        if ($terms = get_the_terms($post->ID, 'shop_category')) {
-        foreach ( $terms as $term ) {
-        echo esc_html($term->name);
-        }
-        }
-        ?>
-        </p>
-        <h3><?php the_title(); ?></h3>
-        <p class="shop-buzz__list-txt-time">営業時間：<?php the_field('time'); ?></p>
-        <p class="shop-buzz__list-txt-time">定休日：<?php the_field('day'); ?></p>
-        </div>
+          <div class="shop-buzz__list-img">
+            <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
+          </div>
+
+          <p class="d-block d-md-none shop-buzz__list-link f-13 py-sm m-0">お店の情報を見る</p>
         </a>
-        <!-- ▲ ループされるコンテンツ -->
+        <!-- ▲ ループするコンテンツ -->
 
       <?php endwhile; ?>
       </div>

@@ -126,33 +126,6 @@ form {
   }
 }
 /*===================================================
- フィルター検索
-====================================================*/
-.search {
-  &__filter {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    border-bottom: 1px solid $warning;
-    border-top: 1px solid $warning;
-    margin-bottom: 1rem;
-
-    p {
-      margin: 0 0.2rem 0.2rem 0;
-    }
-
-    button {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem 0;
-      white-space: nowrap;
-      border: none!important;
-      border-left: 1px solid $warning!important;
-    }
-  }
-}
-/*===================================================
  フリーワード検索窓
 ====================================================*/
 .search {
@@ -166,7 +139,7 @@ form {
   }
 }
 /*===================================================
- モーダル内
+ 検索フォーム
 ====================================================*/
 .form-control {
   width: 100%!important;

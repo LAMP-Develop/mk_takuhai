@@ -28,11 +28,13 @@
     </div>
     <!-- ▲ ジャンル -->
 
-    <div class="search-form">
-      <label><input type="checkbox" name="shop_tag" value="net"> ネット注文可</label>
+    <div class="search-form border border-light py-md px-2">
+      <label class="m-0"><input type="checkbox" name="shop_tag" value="net"> ネット注文可</label>
     </div>
 
-    <input type="submit" class="btn btn-bk" value="絞り込む">
+    <div class="container mt-lg">
+      <input type="submit" class="btn btn-bk" value="絞り込む">
+    </div>
 
   </form>
 </div>

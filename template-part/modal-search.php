@@ -4,7 +4,7 @@ $wp_url = get_template_directory_uri(); ?>
 
 <!-- ▼ 詳細検索モーダル -->
 <div class="modal fade" id="search-restaurant" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
+  <div class="modal-dialog modal-dialog-centered">
     <!-- ▼ コンテンツ -->
     <div class="modal-content bg-white">
       <div class="modal-body-name">
@@ -13,7 +13,7 @@ $wp_url = get_template_directory_uri(); ?>
           <i class="fas fa-chevron-left text-success mr-2"></i>戻る
         </button>
       </div>
-      <div class="modal d-block position-static">
+      <div class="modal d-block">
         <?php get_template_part('template-part/search-form') ?>
       </div>
     </div>

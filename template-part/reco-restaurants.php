@@ -17,6 +17,7 @@ $wp_url = get_template_directory_uri();
         $the_query = get_posts( $args );
         foreach ( $the_query as $post ) : setup_postdata( $post );
       ?>
+
       <!-- ▼ ループするコンテンツ -->
       <a class="shop-buzz__list-inner shadow-sm br-7 d-block mb-md" href="<?php the_permalink(); ?>">
         <?php if( get_field('net') === "はい"): ?>
@@ -47,9 +48,10 @@ $wp_url = get_template_directory_uri();
           <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
         </div>
 
-        <p class="shop-buzz__list-link f-13 py-sm m-0">お店の情報を見る</p>
+        <p class="d-block d-md-none shop-buzz__list-link f-13 py-sm m-0">お店の情報を見る</p>
       </a>
       <!-- ▲ ループするコンテンツ -->
+
       <?php endforeach; ?>
       <?php wp_reset_postdata(); ?>
     </div>
