@@ -5,22 +5,17 @@ $wp_url = get_template_directory_uri(); ?>
 </main>
 
 <!-- ▼ 加盟店募集 -->
-<div class="cta d-block d-md-none">
-  <div class="cta-takeeats mb-0">
-    <div class="cta-takeeats-wrap">
-    <p class="cta-takeeats__ttl">
-      <span class="small">初期費用・導入費0円で</span>
-      <br>あなたのお店も<br>MKタク配始めませんか？
-    </p>
-    <div class="cta-takeeats__img">
-      <img class="cta-takeeats-wrap-bg" src="<?php echo $wp_url; ?>/dist/images/entry_img.png" alt="装飾" srcset="<?php echo $wp_url; ?>/dist/images/entry_img.png 1x, <?php echo $wp_url; ?>/dist/images/entry_img@2x.png 2x">
-    </div>
-    <div class="cta-takeeats-btn">
-      <a class="btn btn-primary" href="<?php echo $home; ?>/service/">
-        <span>無料</span>お申し込みはこちら
-      </a>
-    </div>
-    </div>
+<?php if( get_field('start-bg') != null): ?>
+<div class="start" style="background: url('')">
+<?php else: // ないとき ?>
+<div class="start">
+<?php endif; ?>
+
+  <div class="">
+    <h2 class="f-18 text-center">
+      <span class="text-body bg-white mr-2">無料</span><?php echo get_field('service-name',2); ?>をはじめませんか？
+    </h2>
+    <a href="<?php echo $home; ?>/service">今すぐ申し込む</a>
   </div>
 </div>
 <!-- ▲ 加盟店募集 -->
@@ -67,13 +62,13 @@ $wp_url = get_template_directory_uri(); ?>
     <div class="navbar-nav main">
       <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">ご利用方法</a>
       <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">[オンライン注文]MK宅配を始める</a>
-      <a class="nav-item nav-link" href="<?php echo $home; ?>/service-tel">[電話注文]MK宅配を始める</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service">[オンライン注文]<?php echo get_field('service-name',2); ?>を始める</a>
+      <a class="nav-item nav-link" href="<?php echo $home; ?>/service-tel">[電話注文]<?php echo get_field('service-name',2); ?>を始める</a>
     </div>
     <!-- ▲ メインリンク -->
     <!-- ▼ サブリンク -->
     <div class="navbar-nav sub py-lg">
-      <a class="f-12" href="https://www.mk-group.co.jp/" target="_blank">運営会社</a>
+      <a class="f-12" href="<?php echo get_field('taxi-url',2); ?>" target="_blank">運営会社</a>
       <a class="f-12" href="<?php echo $home; ?>/disclaimers">免責事項</a>
       <a class="f-12" href="<?php echo $home; ?>/term">利用規約</a>
       <br>
@@ -81,7 +76,7 @@ $wp_url = get_template_directory_uri(); ?>
       <a class="f-12" href="<?php echo $home; ?>/privacy-policy">プライバシーポリシー</a>
     </div>
     <!-- ▲ サブリンク -->
-    <small class="text-success f-10 text-center mb-3 d-block w-100">Copyright MK Co.,Ltd. All rights reserved.</small>
+    <small class="text-success f-10 text-center mb-3 d-block w-100"><?php echo get_field('copyright',2); ?></small>
   </div>
 </footer>
 <!-- ▲ フッター -->

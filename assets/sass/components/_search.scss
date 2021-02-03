@@ -1,58 +1,58 @@
+/*===================================================
+ 共通
+====================================================*/
+form {
+  background: $light!important;
+  height: 36px;
+  border-radius: 20px;
+}
+
+.form-control {
+  font-size: 1rem;
+  color: #495057;
+  width: 100%;
+  font-size: 14px;
+}
+
+.input-group-prepend {
+  width: 100%;
+}
+
+input {
+  background: none!important;
+  margin-left: 40px;
+}
+/*===================================================
+ フリーワード検索窓
+====================================================*/
 .search {
   &__free {
-    z-index: 1;
-    position: relative;
-    overflow: hidden;
+    border-bottom: 1px solid $light;
 
-    &__form {
-      overflow: hidden;
-      display: block;
-      box-sizing: border-box;
-
-      .input-group {
-        display: flex;
-        flex-wrap: nowrap;
-
-        &-prepend {
-          margin: 0;
-          width: 100%;
-
-          input {
-            padding: 5px 1rem;
-          }
-        }
-      }
-
-      &-btn {
-        width: 20%;
-
-        .btn-primary {
-          width: 100%;
-          min-width: auto;
-          padding: 0.7rem 0!important;
-          border-radius: 0 5px 5px 0;
-          background-color: $info;
-          border: $info;
-          font-weight: normal;
-        }
+    .input-group {
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f002';
+        font-weight: 900;
+        color: $success;
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 13px;
       }
     }
   }
-
+}
+/*===================================================
+ ジャンル
+====================================================*/
+.search {
   &__genre {
     margin: 0;
     box-sizing: border-box;
+    border-bottom: 1px solid $light;
 
     .container {
       padding: 0;
-    }
-
-    h3 {
-      font-size: $font-size-sm;
-      font-weight: bold;
-      margin: 0;
-      padding: 0.8rem 0;
-      border-bottom: solid 1px $secondary;
     }
 
     &-list {
@@ -82,39 +82,42 @@
 
         li {
           display: inline-block;
+          width: 142px;
+          height: 98px;
           vertical-align: middle;
           box-sizing: border-box;
-          max-width: 24vw;
-          margin-right: 1rem;
+          margin-right: 6px;
+          background-position: center;
+          background-size: cover;
+          overflow: hidden;
 
           :hover {
             opacity: 0.5;
           }
 
           a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-decoration: none!important;
-          }
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
 
-          img {
-            display: block;
-            margin: 0 auto;
-            transition: 0.3s;
-            border-radius: 60px;
-            width: 95px;
-          }
-
-          span {
-            display: block;
-            margin: 0.5rem auto 0;
-            font-size: 12px;
-            line-height: 1;
-            text-align: center;
+            p {
+              color: $white;
+              text-align: center;
+            }
           }
         }
       }
     }
   }
-
+}
+/*===================================================
+ フィルター検索
+====================================================*/
+.search {
   &__filter {
     display: flex;
     align-items: center;
@@ -137,7 +140,11 @@
       border-left: 1px solid $warning!important;
     }
   }
-
+}
+/*===================================================
+ フリーワード検索窓
+====================================================*/
+.search {
   &__result {
     &__inner {
       &__wrap {

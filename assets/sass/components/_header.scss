@@ -18,10 +18,21 @@
     padding: 0;
   }
 
+  .nav {
+    position: fixed;
+    top: 61px;
+    left: 0;
+    background: #fff;
+    @include media-breakpoint-up(md) {
+      position: relative;
+      top: auto;
+      left: 0;
+    }
+  }
+
   &-wrap {
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: nowrap!important;
     height: 61px;
@@ -43,6 +54,8 @@
 
         img {
           margin-right: 10px;
+          width: auto;
+          max-height: 37px;
         }
 
         span {
@@ -51,8 +64,15 @@
         }
       }
     }
+  }
+
+  &-btn {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
     /* メニューボタン */
-    button {
+    &-item {
       p {
         font-size: 10px;
         margin: 0;
@@ -123,11 +143,9 @@
 .nav {
   .main {
     width: 100%;
-    border-bottom: 1px solid $light;
     @include media-breakpoint-up(md) {
       display: block;
       text-align: center;
-      padding: 30px 0;
     }
 
     a {
@@ -141,6 +159,7 @@
       @include media-breakpoint-up(md) {
         display: inline-block;
         margin-right: 45px;
+        border: none;
       }
 
       &::after {
@@ -165,6 +184,9 @@
     width: 100%;
     text-align: center;
     line-height: 140%;
+    @include media-breakpoint-up(md) {
+      border-top: 1px solid $light;
+    }
 
     a {
       position: relative;
