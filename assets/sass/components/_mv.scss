@@ -1,8 +1,37 @@
 /*===================================================
+ お知らせ
+====================================================*/
+.info {
+  &-bg {
+    position: relative;
+    padding: 0 1rem;
+    background-color: $light;
+    @include media-breakpoint-up(md) {
+      text-align: center;
+    }
+    p {
+      color: $primary;
+    }
+    &::after {
+      position: absolute;
+      top: 43%;
+      right: 1rem;
+      transform: rotate(45deg);
+      content: "";
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      vertical-align: middle;
+      border-top: 1px solid $success;
+      border-right: 1px solid $success;
+    }
+  }
+}
+
+/*===================================================
  メインビジュアル
 ====================================================*/
 .mv {
-
   .container {
     padding: 0;
     position: relative;
@@ -11,34 +40,5 @@
       max-width: 980px;
       margin: 2rem auto;
     }
-  }
-}
-
-.input-group-text {
-  background-color: $white;
-  color: $info;
-}
-
-.input-group-prepend {
-  & + .form-control {
-    border-left: 0;
-  }
-}
-
-.form-control {
-  height: calc(1.5em + 1.3rem + 2px)!important;
-  border-radius: 5px 0 0 5px;
-  border: none;
-
-  &::placeholder {
-    color: #cccccc;
-  }
-
-  &:-ms-input-placeholder {
-    color: #cccccc;
-  }
-
-  &::-ms-input-placeholder {
-    color: #cccccc;
   }
 }

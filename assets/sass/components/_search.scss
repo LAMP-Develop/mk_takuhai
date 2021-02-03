@@ -12,10 +12,19 @@ form {
   color: #495057;
   width: 100%;
   font-size: 14px;
+  border: none;
 }
 
 .input-group-prepend {
+  & + .form-control {
+    border-left: 0;
+  }
   width: 100%;
+}
+
+.input-group-text {
+  background-color: $white;
+  color: $info;
 }
 
 input {

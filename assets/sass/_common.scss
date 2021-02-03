@@ -19,7 +19,7 @@ img {
 ====================================================*/
 /* シャドウ */
 .shadow-sm {
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1)!important;
 }
 
 input[type="submit"],
@@ -65,10 +65,10 @@ button {
 .f-12,
 .f-13,
 .f-14,
+.f-15,
 .f-16,
 .f-18 {
   line-height: 145%;
-  letter-spacing: 0.14rem;
 }
 
 .f-18 {
@@ -81,6 +81,10 @@ button {
 
 .f-14 {
   font-size: 14px!important;
+}
+
+.f-15 {
+  font-size: 15px!important;
 }
 
 .f-13 {
@@ -174,4 +178,21 @@ button {
 
 .mb-sm {
   margin-bottom: 13px;
+}
+
+/*===================================================
+ ボタン
+====================================================*/
+
+.btn {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 13px 0;
+  font-size: 14px;
+  text-align: center;
+  &-border {
+    border: 1px solid $body-color;
+    border-radius: 7px;
+  }
 }

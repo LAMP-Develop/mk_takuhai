@@ -5,9 +5,24 @@ get_header(); ?>
 
 <!-- ▼ お知らせ -->
 <section class="info">
-  <div class="container">
+  <?php query_posts( array(
+    'post_type' => 'post',
+    'posts_per_page' => 1
+  ));
+  ?>
 
-  </div>
+  <?php if(have_posts()): ?>
+  <?php while(have_posts()):the_post(); ?>
+
+  <!-- ▼ お知らせ内容 -->
+    <div class="info-bg">
+      <p class="f-13 py-sm"><i class="fas fa-info-circle mr-2 f-18"></i><?php echo get_the_title(); ?></p>
+    </div>
+
+  <!-- ▲ お知らせ内容 -->
+
+  <?php endwhile; else: ?>
+  <?php endif; ?>
 </section>
 <!-- ▲ お知らせ -->
 
@@ -18,15 +33,15 @@ get_header(); ?>
     'post_type' => 'slide',
     'posts_per_page' => 3
   ));
-  $id = get_the_ID();
   ?>
-
   <?php if(have_posts()): ?>
   <?php while(have_posts()):the_post(); ?>
 
+  <!-- ▼ 画像 -->
   <div>
     <img class="w-100 br-7 shadow-sm" src="<?php echo the_post_thumbnail_url($id, 'large'); ?>" alt="<?php the_title(); ?>">
   </div>
+  <!-- ▲ 画像 -->
 
   <?php endwhile; else: ?>
   <?php endif; ?>

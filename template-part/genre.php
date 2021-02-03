@@ -10,7 +10,7 @@ get_header(); ?>
         <!-- ▼ ジャンル一覧 -->
         <ul>
           <!-- ▼ ネット予約 -->
-          <li class="br-7" style="background: url('<?php echo $wp_url ?>/dist/images/genre_net@2x.png')">
+          <li class="br-7 shadow-sm" style="background: url('<?php echo $wp_url ?>/dist/images/genre_net@2x.png')">
             <a class="text-body" href="<?php echo $home; ?>/?post_type=shop&s=&shop_category=&shop_tag=net">
               <p class="f-14 text-center m-0">ネット予約</p>
             </a>
@@ -30,7 +30,7 @@ get_header(); ?>
           ?>
 
           <!-- ▼ ループするコンテンツ -->
-          <li class="br-7" style="background: url('<?php echo $genre_img; ?>')">
+          <li class="br-7 shadow-sm" style="background: url('<?php echo $genre_img; ?>')">
             <a class="text-body" href="<?php echo $home; ?>/?post_type=shop&s=&shop_category=<?php echo $genre_slug ?>">
               <p class="f-14 text-center m-0"><?php echo $genre_name ?></p>
             </a>
