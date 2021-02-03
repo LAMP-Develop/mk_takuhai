@@ -13,9 +13,24 @@ get_header(); ?>
 
 <!-- ▼ メインビジュアル -->
 <section id="mv" class="mv">
-  <div class="container">
 
+  <?php query_posts( array(
+    'post_type' => 'slide',
+    'posts_per_page' => 3
+  ));
+  $id = get_the_ID();
+  ?>
+
+  <?php if(have_posts()): ?>
+  <?php while(have_posts()):the_post(); ?>
+
+  <div>
+    <img class="w-100 br-7 shadow-sm" src="<?php echo the_post_thumbnail_url($id, 'large'); ?>" alt="<?php the_title(); ?>">
   </div>
+
+  <?php endwhile; else: ?>
+  <?php endif; ?>
+
 </section>
 <!-- ▲ メインビジュアル -->
 

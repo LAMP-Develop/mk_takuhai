@@ -33,11 +33,12 @@ input {
       &::before {
         font-family: "Font Awesome 5 Free";
         content: '\f002';
+        font-size: 14px;
         font-weight: 900;
         color: $success;
         position: absolute;
-        top: calc(50% - 12px);
-        left: 13px;
+        top: calc(50% - 9px);
+        left: 15px;
       }
     }
   }

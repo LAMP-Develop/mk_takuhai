@@ -12044,7 +12044,8 @@ button:focus {
 
 /* 角丸 */
 .br-7 {
-  border-radius: 7px; }
+  border-radius: 7px;
+  overflow: hidden; }
 
 /*===================================================
  見出し
@@ -12417,11 +12418,12 @@ input {
   .search__free .input-group::before {
     font-family: "Font Awesome 5 Free";
     content: '\f002';
+    font-size: 14px;
     font-weight: 900;
     color: #bcbcbc;
     position: absolute;
-    top: calc(50% - 12px);
-    left: 13px; }
+    top: calc(50% - 9px);
+    left: 15px; }
 
 /*===================================================
  ジャンル
