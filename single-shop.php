@@ -129,8 +129,8 @@ get_header(); ?>
             <p class="f-13 text-secondary"><?php the_field('address'); ?></p>
             <!-- ▼ 電話番号 -->
             <div class="d-flex">
-              <p class="col-4 f-13 text-secondary mb-2 p-0">電話番号</p>
-              <p class="col-8 f-13 text-secondary mb-2 p-0">
+              <p class="col-4 f-13 text-secondary mb-3 p-0">電話番号</p>
+              <p class="col-8 f-13 text-secondary mb-3 p-0">
                 <a href="tel:<?php the_field('tel'); ?>">
                   <i class="fas fa-phone mr-1 text-primary"></i>
                   <?php the_field('tel'); ?>
@@ -140,16 +140,16 @@ get_header(); ?>
             <!-- ▲ 電話番号 -->
             <!-- ▼ 営業日・時間 -->
             <div class="d-flex">
-              <p class="col-4 f-13 text-secondary mb-2 p-0">営業日・時間</p>
-              <p class="col-8 f-13 text-secondary mb-2 p-0">
+              <p class="col-4 f-13 text-secondary mb-3 p-0">営業日・時間</p>
+              <p class="col-8 f-13 text-secondary mb-3 p-0">
                 <?php the_field('time'); ?>
               </p>
             </div>
             <!-- ▲ 営業日・時間 -->
             <!-- ▼ 定休日 -->
             <div class="d-flex">
-              <p class="col-4 f-13 text-secondary mb-2 p-0">定休日</p>
-              <p class="col-8 f-13 text-secondary mb-2 p-0">
+              <p class="col-4 f-13 text-secondary mb-3 p-0">定休日</p>
+              <p class="col-8 f-13 text-secondary mb-3 p-0">
                 <?php the_field('day'); ?>
               </p>
             </div>
@@ -158,8 +158,8 @@ get_header(); ?>
             <?php if(post_custom('hp')): // 入力がある場合 ?>
             <!-- ▼ 公式HP -->
             <div class="d-flex">
-              <p class="col-4 f-13 text-secondary mb-2 p-0">公式HP</p>
-              <p class="col-8 f-13 text-secondary mb-2 p-0">
+              <p class="col-4 f-13 text-secondary mb-3 p-0">公式HP</p>
+              <p class="col-8 f-13 text-secondary mb-3 p-0">
                 <a class="text-primary" href="<?php the_field('hp'); ?>" target="_blank">
                   <?php the_field('hp'); ?>
                   <i class="fas fa-external-link-alt ml-1 text-success"></i>

@@ -11,7 +11,7 @@ get_header(); ?>
         <input type="hidden" name="post_type" value="shop">
         <div class="input-group">
           <div class="input-group-prepend">
-          <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+          <input type="text" class="form-control" name="s" placeholder="「店舗名」で検索" value="<?php echo get_search_query(); ?>" />
           </div>
         </div>
       </form>

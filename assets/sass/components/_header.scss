@@ -138,6 +138,15 @@
   .search__free {
     border: none;
   }
+  .nav .main a {
+    @include media-breakpoint-up(lg) {
+      display: inline-block;
+      margin-right: 25px;
+      padding: 1rem 1.5rem 1rem 0!important;
+      border: none;
+    }
+  }
+
 }
 /*===================================================
  ナビ (メニュー開 + フッターで使用)
@@ -157,7 +166,7 @@
 
     a {
       position: relative;
-      padding: 1rem 0;
+      padding: 1rem 0!important;
       font-size: 0.875rem;
       font-weight: normal;
       text-align: center;
@@ -165,9 +174,15 @@
       border-top: 1px solid $light;
       @include media-breakpoint-up(lg) {
         display: inline-block;
-        margin-right: 45px;
-        padding: 1rem 45px 1rem 0;
+        margin-right: 25px;
+        padding: 1rem 30px 1rem 0;
         border: none;
+      }
+
+      &:last-child() {
+        @include media-breakpoint-up(lg) {;
+          margin-right: 0;
+        }
       }
 
       &::after {

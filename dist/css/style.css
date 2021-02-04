@@ -12290,6 +12290,12 @@ button:focus {
           color: #E3556E; }
   .header .search__free {
     border: none; }
+  @media (min-width: 992px) {
+    .header .nav .main a {
+      display: inline-block;
+      margin-right: 25px;
+      padding: 1rem 1.5rem 1rem 0 !important;
+      border: none; } }
 
 /*===================================================
  ナビ (メニュー開 + フッターで使用)
@@ -12308,7 +12314,7 @@ button:focus {
         text-align: center; } }
     .nav .main a {
       position: relative;
-      padding: 1rem 0;
+      padding: 1rem 0 !important;
       font-size: 0.875rem;
       font-weight: normal;
       text-align: center;
@@ -12317,9 +12323,12 @@ button:focus {
       @media (min-width: 992px) {
         .nav .main a {
           display: inline-block;
-          margin-right: 45px;
-          padding: 1rem 45px 1rem 0;
+          margin-right: 25px;
+          padding: 1rem 30px 1rem 0;
           border: none; } }
+      @media (min-width: 992px) {
+        .nav .main a:last-child {
+          margin-right: 0; } }
       .nav .main a::after {
         content: "";
         position: absolute;
@@ -12383,8 +12392,16 @@ button:focus {
     color: #fff;
     text-align: center;
     border: 1px solid #fff;
-    border-radius: 30px; }
+    border-radius: 30px;
+    text-decoration: none !important;
+    transition: .5s; }
+    .start a:hover {
+      background: #fff;
+      color: #1a1818; }
 
+/*===================================================
+ フッター
+====================================================*/
 @media (min-width: 768px) {
   .footer .main {
     padding: 30px 0; } }
@@ -12573,7 +12590,8 @@ input[type="checkbox"] {
 .form-control {
   width: 100% !important;
   height: auto !important;
-  padding: 0; }
+  padding: 0;
+  font-size: 1rem; }
   .form-control .search-form label {
     width: 100%; }
   .form-control .search-form input {
@@ -12837,7 +12855,7 @@ input[type="checkbox"] {
         height: auto;
         vertical-align: top; }
     .archives__inner-info {
-      width: 65%;
+      width: 95%;
       overflow: hidden; }
       .archives__inner-info time {
         display: block;
@@ -12855,88 +12873,13 @@ input[type="checkbox"] {
           .archives__inner-info h3 {
             font-size: 0.875rem !important; } }
 
-.menu__ranking {
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none; }
-  .menu__ranking::-webkit-scrollbar {
-    display: none; }
-  @media (min-width: 768px) {
-    .menu__ranking {
-      text-align: center; } }
-  .menu__ranking__inner {
-    display: inline-block;
-    vertical-align: top;
-    width: 60vw;
-    box-sizing: border-box;
-    margin-right: 1rem;
-    color: #1a1818;
-    white-space: normal; }
-    @media (min-width: 768px) {
-      .menu__ranking__inner {
-        width: 25%; } }
-    .menu__ranking__inner__thumbnail {
-      z-index: 1;
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 0;
-      padding-top: 75%; }
-      .menu__ranking__inner__thumbnail img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover; }
-      .menu__ranking__inner__thumbnail-no {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #E3556E;
-        color: #fff;
-        font-weight: bold;
-        font-size: 1rem;
-        display: block;
-        line-height: 1;
-        padding: 0.5rem 0.75rem; }
-      .menu__ranking__inner__thumbnail-area {
-        z-index: 1;
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-        background-color: rgba(255, 255, 255, 0.9);
-        font-size: 12px;
-        display: block;
-        line-height: 1;
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.1rem; }
-    .menu__ranking__inner-name {
-      font-weight: bold;
-      font-size: 0.875rem;
-      margin: 1rem 0 0; }
-    .menu__ranking__inner-shop {
-      font-weight: bold;
-      font-size: 12px;
-      color: #cccccc;
-      margin: 0; }
-    .menu__ranking__inner-price {
-      font-size: 0.875rem;
-      margin: 0; }
-      .menu__ranking__inner-price span {
-        font-weight: bold;
-        color: #E3556E; }
-    .menu__ranking__inner:last-child {
-      margin-right: 0; }
-
+/*===================================================
+ モーダル
+====================================================*/
 .modal {
   /*-- 絞り込みボタン --*/ }
   .modal-content {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 100vh;
     border-radius: 0; }
@@ -13041,6 +12984,9 @@ input[type="checkbox"] {
   .btn-primary {
     min-width: 260px; } }
 
+/*===================================================
+ 詳細ページ
+====================================================*/
 .post-header {
   margin-bottom: 2rem; }
 
@@ -13139,6 +13085,9 @@ input[type="checkbox"] {
     font-size: 12px;
     color: #1a1818; }
 
+/*===================================================
+ 詳細ページ
+====================================================*/
 .single__shop {
   max-width: 480px;
   margin: 1.5rem 0;
@@ -13146,33 +13095,6 @@ input[type="checkbox"] {
   border: 3px solid #eeeeee;
   background-color: #fff;
   border-radius: 0.5rem; }
-  .single__shop-name {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0.875rem; }
-  .single__shop .table {
-    margin: 0; }
-    .single__shop .table tr th,
-    .single__shop .table tr td {
-      font-size: 12px;
-      font-weight: normal;
-      padding: 0.25em 1em 0.25em 0;
-      white-space: normal;
-      border: 0 !important; }
-    .single__shop .table tr th {
-      white-space: nowrap; }
-  .single__shop-btn {
-    text-align: center;
-    margin-top: 1rem; }
-    .single__shop-btn a {
-      display: inline-block;
-      line-height: 1;
-      background-color: #E3556E;
-      color: #fff;
-      font-size: 0.875rem;
-      padding: 0.8em 3em;
-      border-radius: 5px;
-      border-bottom: 3px solid #d27110; }
 
 /*===================================================
  レストラン詳細
@@ -13242,10 +13164,16 @@ input[type="checkbox"] {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0; }
 
+/*===================================================
+ ページ設定
+====================================================*/
 .pages form {
   max-width: 768px;
   margin: 0 auto; }
 
+/*===================================================
+ サービスページ
+====================================================*/
 .lp-ttl2 {
   text-align: center;
   font-size: 1.4rem;
@@ -13289,6 +13217,7 @@ input[type="checkbox"] {
       width: 100%; }
   .lp-btn a {
     display: block;
+    background: #E3556E;
     color: #fff;
     font-size: 1rem;
     padding: 1.25rem 0; }

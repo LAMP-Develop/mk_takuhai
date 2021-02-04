@@ -6,7 +6,7 @@
     <div class="search-form mb-md">
       <h3 class="modal-body-title f-13">フリーワード</h3>
       <div class="input-group-prepend">
-        <input type="search" class="border-0 hidden-search-field" name="s" placeholder="店舗で検索" value="<?php echo get_search_query(); ?>" />
+        <input type="search" class="border-0 hidden-search-field" name="s" placeholder="「店舗名」で検索" value="<?php echo get_search_query(); ?>" />
       </div>
     </div>
     <!-- ▲ フリーワード -->

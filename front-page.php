@@ -15,7 +15,7 @@ get_header(); ?>
   <?php while(have_posts()):the_post(); ?>
 
   <!-- ▼ お知らせ内容 -->
-    <div class="info-content">
+    <a href="<?php echo the_permalink(); ?>" class="info-content d-block">
       <p class="f-13 py-sm">
         <i class="fas fa-info-circle mr-1 f-18"></i>
         <?php
@@ -27,7 +27,7 @@ get_header(); ?>
         }
         ?>
       </p>
-    </div>
+    </a>
   <!-- ▲ お知らせ内容 -->
   <!-- ▼ お知らせ背景 -->
     <div class="info-bg">
@@ -51,9 +51,14 @@ get_header(); ?>
   <?php while(have_posts()):the_post(); ?>
 
   <!-- ▼ 画像 -->
-  <div>
+  <?php if( get_field('url') != null): ?>
+
+      <a href="<?php echo get_field('url'); ?>" target="_blank" class="">
+  <?php else: // ないとき ?>
+    <a href="<?php echo the_permalink(); ?>" class="">
+  <?php endif; ?>
     <img class="w-100 br-7 shadow-sm" src="<?php echo the_post_thumbnail_url($id, 'large'); ?>" alt="<?php the_title(); ?>">
-  </div>
+  </a>
   <!-- ▲ 画像 -->
 
   <?php endwhile; else: ?>
@@ -70,7 +75,7 @@ get_header(); ?>
         <input type="hidden" name="post_type" value="shop">
         <div class="input-group">
           <div class="input-group-prepend">
-          <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+          <input type="text" class="form-control" name="s" placeholder="「店舗名」で検索" value="<?php echo get_search_query(); ?>" />
           </div>
         </div>
       </form>

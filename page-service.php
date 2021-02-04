@@ -16,7 +16,7 @@ get_header(); ?>
   <?php while(have_posts()):the_post(); ?>
 
   <!-- ▼ お知らせ内容 -->
-    <div class="info-content">
+    <a href="<?php echo the_permalink(); ?>" class="info-content d-block">
       <p class="f-13 py-sm">
         <i class="fas fa-info-circle mr-1 f-18"></i>
         <?php
@@ -28,7 +28,7 @@ get_header(); ?>
         }
         ?>
       </p>
-    </div>
+    </a>
   <!-- ▲ お知らせ内容 -->
   <!-- ▼ お知らせ背景 -->
     <div class="info-bg">

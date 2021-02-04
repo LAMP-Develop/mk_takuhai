@@ -32,8 +32,18 @@
     text-align: center;
     border: 1px solid $white;
     border-radius: 30px;
+    text-decoration: none!important;
+    transition: .5s;
+    &:hover {
+      background: $white;
+      color: $body-color;
+    }
   }
 }
+
+/*===================================================
+ フッター
+====================================================*/
 
 .footer {
   .main {
