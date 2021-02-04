@@ -29,35 +29,20 @@ $wp_url = get_template_directory_uri(); ?>
 
 <!-- ▼ ヘッダー -->
 <header class="header shadow-sm">
-  <nav class="navbar navbar-expand-md">
+  <nav class="navbar navbar-expand-lg">
     <!-- ▼ スマホで見えている部分 -->
     <div class="header-wrap">
       <!-- ▼ タク配ロゴ -->
       <h1 class="navbar-brand p-0 m-0">
       <a class="d-inline-block align-middle" href="<?php echo $home; ?>">
-        <img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="<?php echo get_field('service-name',2); ?>ロゴ" srcset="<?php echo $wp_url; ?>/dist/images/logo.png 1x, <?php echo $wp_url; ?>/dist/images/logo@2x.png 2x">
+        <img src="<?php echo get_field('service-logo',2); ?>" alt="<?php echo get_field('service-name',2); ?>ロゴ">
       </a>
       </h1>
       <!-- ▲ タク配ロゴ -->
-      <!-- ▼ 検索窓 -->
-      <section class="search__free d-none d-md-block">
-        <div class="container">
-          <div class="input-group">
-            <form class="search__free__form d-flex w-100 shadow-sm" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-              <input type="hidden" name="post_type" value="shop">
-              <div class="input-group">
-                <div class="input-group-prepend">
-                <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-      <!-- ▲ 検索窓 -->
+
       <div class="header-btn">
         <!-- ▼ 検索ボタン -->
-        <button type="button" class="header-btn-item border-0 bg-white search d-block d-md-none" data-toggle="modal" data-target="#search-restaurant">
+        <button type="button" class="header-btn-item border-0 bg-white search d-block d-lg-none" data-toggle="modal" data-target="#search-restaurant">
           <i class="fas fa-search"></i>
           <p>検索</p>
         </button>
@@ -86,7 +71,7 @@ $wp_url = get_template_directory_uri(); ?>
         </div>
         <!-- ▲ メインリンク -->
         <!-- ▼ サブリンク -->
-        <div class="navbar-nav sub py-lg d-block d-md-none">
+        <div class="navbar-nav sub py-lg d-block d-lg-none">
           <a class="f-12" href="<?php echo get_field('taxi-url',2); ?>" target="_blank">運営会社</a>
           <a class="f-12" href="<?php echo $home; ?>/disclaimers">免責事項</a>
           <a class="f-12" href="<?php echo $home; ?>/term">利用規約</a>

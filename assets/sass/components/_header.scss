@@ -23,7 +23,7 @@
     top: 61px;
     left: 0;
     background: #fff;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       position: inherit;
       background: rgba(0,0,0,0);
     }
@@ -40,7 +40,7 @@
     h1 {
       width: 100%;
       margin: 0;
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         width: auto;
       }
 
@@ -144,12 +144,12 @@
 ====================================================*/
 .nav {
   width: 100%;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     width: auto;
   }
   .main {
     width: 100%;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: auto;
       display: block;
       text-align: center;
@@ -163,7 +163,7 @@
       text-align: center;
       color: $body-color;
       border-top: 1px solid $light;
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         display: inline-block;
         margin-right: 45px;
         padding: 1rem 45px 1rem 0;
@@ -189,7 +189,7 @@
     width: 100%;
     text-align: center;
     line-height: 140%;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       border-top: 1px solid $light;
     }
 

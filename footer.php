@@ -5,12 +5,11 @@ $wp_url = get_template_directory_uri(); ?>
 </main>
 
 <!-- ▼ 加盟店募集 -->
-<?php if( get_field('start-bg') != null): ?>
-<div class="start" style="background: url('')">
-<?php else: // ないとき ?>
+<?php if( get_field('start-bg',2) != null): ?>
 <div class="start">
+<?php else: // ないとき ?>
+<div class="start" style="background: url('<?php echo get_field('start-bg',2); ?>'); background-position: center; background-size: cover;">
 <?php endif; ?>
-
   <div class="">
     <h2 class="f-18 text-center">
       <span class="text-body bg-white mr-2">無料</span><?php echo get_field('service-name',2); ?>をはじめませんか？

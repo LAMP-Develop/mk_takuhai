@@ -141,6 +141,16 @@ form {
 /*===================================================
  検索フォーム
 ====================================================*/
+select {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
 .form-control {
   width: 100%!important;
   height: auto!important;
