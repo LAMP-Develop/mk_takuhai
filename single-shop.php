@@ -52,7 +52,7 @@ get_header(); ?>
         <!-- ▼ メニュー -->
         <?php if( get_field('menu') === "はい"):?>
         <div class="restaurant__menu restaurant-block">
-          <h2 class="ttl-h2 py-md m-0">人気デリバリーメニュー</h2>
+          <h2 class="ttl-h2 py-md m-0 f-16">人気デリバリーメニュー</h2>
           <div class="shop-buzz__list-inner-img-wrap mb-lg">
             <div class="shop-buzz__list-inner-img-list">
               <!-- ▼ 商品① -->
@@ -124,7 +124,7 @@ get_header(); ?>
         <!-- ▲ メニュー -->
         <!-- ▼ 店舗情報 -->
         <div class="restaurant__overview restaurant-block">
-          <h2 class="ttl-h2 py-md m-0">店舗情報</h2>
+          <h2 class="ttl-h2 py-md m-0 f-16">店舗情報</h2>
             <p class="font-weight-bold f-13 mb-1"><?php the_title(); ?></p>
             <p class="f-13 text-secondary"><?php the_field('address'); ?></p>
             <!-- ▼ 電話番号 -->

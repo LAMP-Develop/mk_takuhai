@@ -27,7 +27,7 @@ get_header(); ?>
 <div class="main-left  bg-white">
 <div class="container">
 <div class="row">
-
+  <!-- ▼ メイン -->
   <div class="col-md-8">
     <section class="search mb-5">
 
@@ -88,7 +88,12 @@ get_header(); ?>
             <?php if ($s != null): ?>
             <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $s; ?></span>
             <?php endif; ?>
-          の検索結果</p>
+            の検索結果
+            <?php if ($shop_category = null && $shop_category = 'nochoice' && $shop_tag = null && $s = null): // 入力しなかった場合 ?>
+              <span class="font-weight-bold f-15 d-inline mr-1 text-body">すべて</span>
+            <?php endif; ?>
+          </p>
+
           <!-- ▲ 検索中のキーワード・タグ -->
         </div>
         <div class="f-13 text-secondary">検索結果：<span><?php echo $wp_query->found_posts; ?></span>件</div>
@@ -107,37 +112,7 @@ get_header(); ?>
       <?php while(have_posts()): the_post(); ?>
 
         <!-- ▼ ループするコンテンツ -->
-        <a class="shop-buzz__list-inner shadow-sm br-7 d-block mb-md" href="<?php the_permalink(); ?>">
-          <?php if( get_field('net') === "はい"): ?>
-          <p class="shop-buzz__list-net f-11">ネット注文OK</p>
-          <?php elseif( get_field('net') === "いいえ"): ?>
-          <?php endif; ?>
-
-          <div class="shop-buzz__list-txt">
-            <p class="shop-buzz__list-txt-tag f-13">
-              <i class="fas fa-utensils"></i>
-              <?php
-              if ($terms = get_the_terms($post->ID, 'shop_category')) {
-              foreach ( $terms as $term ) {
-              echo esc_html($term->name);
-              }
-              }
-              ?>
-            </p>
-            <h3 class="f-15 pb-sm text-body m-0"><?php the_title(); ?></h3>
-            <div class="py-sm">
-              <p class="shop-buzz__list-txt-time pt-sm">営業時間：<?php $text = mb_substr(get_field('time'),0,23,'utf-8'); echo $text.'...';?>
-              </p>
-              <p class="shop-buzz__list-txt-time pb-sm">定休日：<?php the_field('day'); ?></p>
-            </div>
-          </div>
-
-          <div class="shop-buzz__list-img">
-            <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
-          </div>
-
-          <p class="d-block d-md-none shop-buzz__list-link f-13 py-sm m-0">お店の情報を見る</p>
-        </a>
+        <?php get_template_part('template-part/looop-restaurant') ?>
         <!-- ▲ ループするコンテンツ -->
 
       <?php endwhile; ?>
@@ -177,6 +152,7 @@ get_header(); ?>
     </div>
     <!-- ▲ 一覧 (.shop-buzz__list) -->
   </section>
+  <!-- ▲ メイン -->
 
   <!-- ▼ サイドバー -->
   <div class="col-md-4 d-md-block d-none">

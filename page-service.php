@@ -4,12 +4,48 @@ $wp_url = get_template_directory_uri();
 $img_url = get_template_directory_uri().'/dist/images/';
 get_header(); ?>
 
+<!-- ▼ お知らせ -->
+<section class="info">
+  <?php query_posts( array(
+    'post_type' => 'post',
+    'posts_per_page' => 1
+  ));
+  ?>
+
+  <?php if(have_posts()): ?>
+  <?php while(have_posts()):the_post(); ?>
+
+  <!-- ▼ お知らせ内容 -->
+    <div class="info-content">
+      <p class="f-13 py-sm">
+        <i class="fas fa-info-circle mr-1 f-18"></i>
+        <?php
+        if(mb_strlen($post->post_title, 'UTF-8')>20){
+        	$title= mb_substr($post->post_title, 0, 22, 'UTF-8');
+        	echo $title.'…';
+        }else{
+        	echo $post->post_title;
+        }
+        ?>
+      </p>
+    </div>
+  <!-- ▲ お知らせ内容 -->
+  <!-- ▼ お知らせ背景 -->
+    <div class="info-bg">
+    </div>
+  <!-- ▲ お知らせ背景 -->
+
+  <?php endwhile; else: ?>
+  <?php endif; ?>
+</section>
+<!-- ▲ お知らせ -->
+
 <div class="lp__mv">
 <div class="container">
 <div class="lp__mv-wrap">
 
 <div>
-<h3 class="lp__mv-ttl font-weight-bold">飲食店様向け<br>MKタク配を<span class="text-primary">オンライン注文</span>で始めたい方</h3>
+<h3 class="lp__mv-ttl font-weight-bold f-16">飲食店様向け<br>MKタク配を<span class="text-primary">オンライン注文</span>で始めたい方</h3>
 <img class="sp mb-4" src="<?php echo $img_url; ?>lp_mv_txt.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt.png 1x, <?php echo $img_url; ?>lp_mv_txt@2x.png 2x">
 <!-- sp -->
 <img class="pc w-75 mb-3" src="<?php echo $img_url; ?>lp_mv_txt_pc.png" alt="MKタクシーが大切にお客様のもとへお届け" srcset="<?php echo $img_url; ?>lp_mv_txt_pc.png 1x, <?php echo $img_url; ?>lp_mv_txt_pc@2x.png 2x">
@@ -30,13 +66,6 @@ get_header(); ?>
 <a class="text-center" href="<?php echo $home; ?>/service-tel/" target="_blank">電話注文で始めたい方</a>
 </div>
 </div>
-
-<!-- ▼ 重要なおしらせ -->
-<div class="important">
-  <h3><i class="fas fa-flag mr-2"></i>飲食店応援キャンペーン</h3>
-  <p>緊急事態宣言発令に伴い、1/14～宣言終了期間まで通常550円の宅配料を<span class="font-weight-bold text-primary">110円</span>でご利用いただけます。（京都限定）</p>
-</div>
-<!-- ▲ 重要なおしらせ -->
 
 <section class="mt-5 mb-5 lp__takeeats">
 <div class="container">
@@ -169,7 +198,7 @@ get_header(); ?>
 </p>
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
-<p class="small mt-5 mb-3 text-md-center text-info">
+<p class="small mt-5 mb-3 text-md-center text-secondary">
   ※ 宅配は1回のご注文につき＋宅配料<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>がお客様に加算されます。（宅配料は原則お客様負担）
   <br>※オプションをご選択の場合は別途費用がかかります。
   <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。
@@ -228,13 +257,6 @@ get_header(); ?>
 </div>
 </section>
 <!-- flow -->
-
-<div id="toform" class="lp__cta mt-5 footer-ctabtn">
-<div class="lp__cta__box">
-<a class="smooth-scroll lp__cta__box_btn" href="#contact"><img class="mr-2" src="<?php echo $img_url; ?>cta_btn.svg" style="width:18px;
-height:auto" alt="吹き出しアイコン">まずはお申し込み</a>
-</div>
-</div>
 
 <section id="contact" class="lp__form">
 <div class="container">

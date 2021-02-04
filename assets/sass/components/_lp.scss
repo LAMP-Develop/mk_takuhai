@@ -67,7 +67,7 @@
     overflow: hidden;
     width: calc(100% - 2rem);
     height: auto;
-    margin: calc(1rem + 61px) 1rem 2rem 1rem;
+    margin: 1rem 1rem 2rem 1rem;
     padding: 10px 0;
 
     .sp {
@@ -414,7 +414,7 @@
     }
 
     .another-plan {
-      border: 5px solid $secondary;
+      border: 5px solid $light;
       padding: 2rem 1rem;
       @include media-breakpoint-up(lg) {
         padding: 2rem;

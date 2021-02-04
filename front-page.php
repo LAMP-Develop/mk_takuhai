@@ -15,11 +15,24 @@ get_header(); ?>
   <?php while(have_posts()):the_post(); ?>
 
   <!-- ▼ お知らせ内容 -->
-    <div class="info-bg">
-      <p class="f-13 py-sm"><i class="fas fa-info-circle mr-2 f-18"></i><?php echo get_the_title(); ?></p>
+    <div class="info-content">
+      <p class="f-13 py-sm">
+        <i class="fas fa-info-circle mr-1 f-18"></i>
+        <?php
+        if(mb_strlen($post->post_title, 'UTF-8')>20){
+        	$title= mb_substr($post->post_title, 0, 22, 'UTF-8');
+        	echo $title.'…';
+        }else{
+        	echo $post->post_title;
+        }
+        ?>
+      </p>
     </div>
-
   <!-- ▲ お知らせ内容 -->
+  <!-- ▼ お知らせ背景 -->
+    <div class="info-bg">
+    </div>
+  <!-- ▲ お知らせ背景 -->
 
   <?php endwhile; else: ?>
   <?php endif; ?>
@@ -71,7 +84,7 @@ get_header(); ?>
 <!-- ▲ ジャンル -->
 
 <!-- ▼ メインエリア -->
-<div class="py-md-5 main-left front">
+<div class="py-md-3 main-left front">
   <div class="container">
     <div class="row align-items-start">
       <!-- ▼ 人気のお店 -->

@@ -2,16 +2,19 @@
  お知らせ
 ====================================================*/
 .info {
-  &-bg {
+  position: relative;
+
+  &-content {
     position: relative;
     padding: 0 1rem;
-    background-color: $light;
     @include media-breakpoint-up(md) {
       text-align: center;
     }
+
     p {
       color: $primary;
     }
+
     &::after {
       position: absolute;
       top: 43%;
@@ -22,12 +25,22 @@
       height: 7px;
       display: inline-block;
       vertical-align: middle;
-      border-top: 1px solid $success;
-      border-right: 1px solid $success;
+      border-top: 1px solid $primary;
+      border-right: 1px solid $primary;
     }
   }
-}
 
+  &-bg {
+    background: $primary;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
 /*===================================================
  メインビジュアル
 ====================================================*/
@@ -40,5 +53,38 @@
       max-width: 980px;
       margin: 2rem auto;
     }
+  }
+}
+/*===================================================
+ slick設定
+====================================================*/
+.slick {
+  &-dots {
+    bottom: 15px;
+
+    li {
+      margin: 0 3px;
+
+      button:before {
+        content: '●';
+      }
+    }
+  }
+
+  &-dotted.slick-slider {
+    margin-bottom: 5px;
+  }
+
+  &-slide {
+    transition: 0.3s ease;
+    transform: scale(.95);
+  }
+
+  &-slide:not(.slick-current) {
+    opacity: 0.5;
+  }
+
+  &-current {
+    transform: scale(1);
   }
 }

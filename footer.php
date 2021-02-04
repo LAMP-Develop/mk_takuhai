@@ -23,39 +23,39 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- ▼ フッター -->
 <footer class="footer mt-0 mb-5">
 
-<?php if (is_page('service')): //オンライン注文ページのみ ?>
+  <?php if (is_page('service')): //オンライン注文ページのみ ?>
 
-<div class="container pt-5">
-    <!-- ▼ お問い合わせ -->
-    <div class="footer__tel__inner">
-      <p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
-      <p class="d-inline">【京都】</p><a href="tel:075-778-0150">075-778-0150</a>
-      <p>システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
-      <a href="tel:075-600-2721">075-600-2721</a>
-      <p class="small">運営会社 株式会社ランプ<br>10：00〜18：00（土日祝除く）</p>
-    </div>
-    <!-- ▲ お問い合わせ -->
-</div>
-
-<?php elseif (is_page('service-tel')): //電話注文ページのみ ?>
-
-<div class="container pt-5">
-    <!-- ▼ お問い合わせ -->
-    <div class="footer__tel__inner">
-      <p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
-      <div>
-        <p class="d-inline">【京都】</p><a class="d-inline" href="tel:075-600-2721">075-778-0150</a>
+  <div class="container pt-5">
+      <!-- ▼ お問い合わせ -->
+      <div class="footer__tel__inner">
+        <p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
+        <p class="d-inline">【京都】</p><a href="tel:075-778-0150">075-778-0150</a>
+        <p>システムに関する<br class="visible-md visible-lg">お問い合わせはこちらまで</p>
+        <a href="tel:075-600-2721">075-600-2721</a>
+        <p class="small">運営会社 株式会社ランプ<br>10：00〜18：00（土日祝除く）</p>
       </div>
-      <div>
-        <p class="d-inline">【札幌】</p><a class="d-inline" href="tel:075-600-2721">011-555-3297</a>
-      </div>
-    </div>
-    <!-- ▲ お問い合わせ -->
+      <!-- ▲ お問い合わせ -->
   </div>
 
-<?php else: ?>
+  <?php elseif (is_page('service-tel')): //電話注文ページのみ ?>
 
-<?php endif; ?>
+  <div class="container pt-5">
+      <!-- ▼ お問い合わせ -->
+      <div class="footer__tel__inner">
+        <p>サービス内容に関する<br class="visible-md visible-lg">お問い合わせはこちらまで<br>（24時間対応）</p>
+        <div>
+          <p class="d-inline">【京都】</p><a class="d-inline" href="tel:075-600-2721">075-778-0150</a>
+        </div>
+        <div>
+          <p class="d-inline">【札幌】</p><a class="d-inline" href="tel:075-600-2721">011-555-3297</a>
+        </div>
+      </div>
+      <!-- ▲ お問い合わせ -->
+    </div>
+
+  <?php else: ?>
+
+  <?php endif; ?>
 
   <div class="nav">
     <!-- ▼ メインリンク -->
