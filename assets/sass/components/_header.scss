@@ -195,6 +195,9 @@
         border-top: 2px solid $success;
         border-right: 2px solid $success;
         transform: rotate(45deg);
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
       }
     }
   }
