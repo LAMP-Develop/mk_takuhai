@@ -39,6 +39,22 @@ $wp_url = get_template_directory_uri(); ?>
       </a>
       </h1>
       <!-- ▲ タク配ロゴ -->
+      <!-- ▼ 検索窓 -->
+      <section class="search__free d-none d-md-block">
+        <div class="container">
+          <div class="input-group">
+            <form class="search__free__form d-flex w-100 shadow-sm" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+              <input type="hidden" name="post_type" value="shop">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                <input type="text" class="form-control" name="s" placeholder="お弁当" value="<?php echo get_search_query(); ?>" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- ▲ 検索窓 -->
       <div class="header-btn">
         <!-- ▼ 検索ボタン -->
         <button type="button" class="header-btn-item border-0 bg-white search d-block d-md-none" data-toggle="modal" data-target="#search-restaurant">
@@ -63,10 +79,10 @@ $wp_url = get_template_directory_uri(); ?>
       <div class="nav collapse navbar-collapse" id="navmenu1">
         <!-- ▼ メインリンク -->
         <div class="navbar-nav main">
-          <a class="nav-item nav-link" href="<?php echo $home; ?>/delivery">ご利用方法</a>
-          <a class="nav-item nav-link" href="<?php echo $home; ?>/news">お知らせ一覧</a>
-          <a class="nav-item nav-link" href="<?php echo $home; ?>/service">[オンライン注文]<?php echo get_field('service-name',2); ?>を始める</a>
-          <a class="nav-item nav-link" href="<?php echo $home; ?>/service-tel">[電話注文]<?php echo get_field('service-name',2); ?>を始める</a>
+          <a class="nav-item nav-link f-14 pr-4 mr-0" href="<?php echo $home; ?>/delivery">ご利用方法</a>
+          <a class="nav-item nav-link f-14 pr-4 mr-0" href="<?php echo $home; ?>/news">お知らせ一覧</a>
+          <a class="nav-item nav-link f-14 pr-4 mr-0" href="<?php echo $home; ?>/service">[オンライン注文]<?php echo get_field('service-name',2); ?>を始める</a>
+          <a class="nav-item nav-link f-14 pr-4 mr-0" href="<?php echo $home; ?>/service-tel">[電話注文]<?php echo get_field('service-name',2); ?>を始める</a>
         </div>
         <!-- ▲ メインリンク -->
         <!-- ▼ サブリンク -->

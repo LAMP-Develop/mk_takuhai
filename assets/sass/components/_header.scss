@@ -24,9 +24,8 @@
     left: 0;
     background: #fff;
     @include media-breakpoint-up(md) {
-      position: relative;
-      top: auto;
-      left: 0;
+      position: inherit;
+      background: rgba(0,0,0,0);
     }
   }
 
@@ -136,14 +135,22 @@
       }
     }
   }
+  .search__free {
+    border: none;
+  }
 }
 /*===================================================
  ナビ (メニュー開 + フッターで使用)
 ====================================================*/
 .nav {
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
   .main {
     width: 100%;
     @include media-breakpoint-up(md) {
+      width: auto;
       display: block;
       text-align: center;
     }
@@ -159,6 +166,7 @@
       @include media-breakpoint-up(md) {
         display: inline-block;
         margin-right: 45px;
+        padding: 1rem 45px 1rem 0;
         border: none;
       }
 
@@ -172,9 +180,6 @@
         border-top: 2px solid $success;
         border-right: 2px solid $success;
         transform: rotate(45deg);
-        @include media-breakpoint-up(md) {
-          right: -1rem;
-        }
       }
     }
   }
