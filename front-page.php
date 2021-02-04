@@ -53,11 +53,11 @@ get_header(); ?>
   <!-- ▼ 画像 -->
   <?php if( get_field('url') != null): ?>
 
-      <a href="<?php echo get_field('url'); ?>" target="_blank" class="">
+  <a href="<?php echo get_field('url'); ?>" target="_blank" class="">
   <?php else: // ないとき ?>
     <a href="<?php echo the_permalink(); ?>" class="">
   <?php endif; ?>
-    <img class="w-100 br-7 shadow-sm" src="<?php echo the_post_thumbnail_url($id, 'large'); ?>" alt="<?php the_title(); ?>">
+  <img class="w-100 br-7 shadow-sm" src="<?php echo get_field('img'); ?>" alt="<?php the_title(); ?>">
   </a>
   <!-- ▲ 画像 -->
 

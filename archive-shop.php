@@ -1,6 +1,8 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
+
+$flag = false;
 get_header(); ?>
 
 <!-- ▼ 検索窓 -->
@@ -77,20 +79,22 @@ get_header(); ?>
         <div class="search__filter d-flex align-items-end">
           <!-- ▼ 検索中のキーワード・タグ -->
           <p class="f-13 text-success">
-            <?php if ($shop_category != null && $shop_category !== 'nochoice'): ?>
+            <?php if ($shop_category != null && $shop_category !== 'nochoice'): $flag = true; ?>
             <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $cat_name; ?></span>
             <?php endif; ?>
 
-            <?php if ($shop_tag != null): ?>
+            <?php if ($shop_tag != null): $flag = true; ?>
             <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $tag_name; ?></span>
             <?php endif; ?>
 
-            <?php if ($s != null): ?>
+            <?php if ($s != null): $flag = true; ?>
             <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $s; ?></span>
             <?php endif; ?>
-            の検索結果
-            <?php if ($shop_category = null && $shop_category = 'nochoice' && $shop_tag = null && $s = null): // 入力しなかった場合 ?>
+
+            <?php if ($flag === false): // 入力しなかった場合 ?>
               <span class="font-weight-bold f-15 d-inline mr-1 text-body">すべて</span>
+              <?php else: // ないとき ?>
+                の検索結果
             <?php endif; ?>
           </p>
 
@@ -145,7 +149,7 @@ get_header(); ?>
 
       <?php else: // ないとき ?>
 
-      <p class="txt-c">該当の店舗がありません。</p>
+      <p class="text-center py-5 d-block w-100">該当の店舗がありません。</p>
 
       <?php endif;?>
 
