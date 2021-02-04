@@ -71,7 +71,7 @@
     overflow: hidden;
     width: calc(100% - 2rem);
     height: auto;
-    margin: 1rem 1rem 2rem 1rem;
+    margin: 1rem 1rem 2rem;
     padding: 10px 0;
 
     .sp {
@@ -658,6 +658,10 @@
     }
 
     .wpcf7 {
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+
       input[type="submit"] {
         background: $primary;
         margin: 0 auto;

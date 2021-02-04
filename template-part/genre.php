@@ -12,7 +12,7 @@ get_header(); ?>
           <!-- ▼ ネット予約 -->
           <li class="br-7 shadow-sm" style="background: url('<?php echo $wp_url ?>/dist/images/genre_net@2x.png'); background-position: center; background-size: cover;">
             <a class="text-body" href="<?php echo $home; ?>/?post_type=shop&s=&shop_category=&shop_tag=net">
-              <p class="f-14 text-center m-0">ネット予約</p>
+              <p class="f-14 text-center m-0">ネット注文<br>可能店舗</p>
             </a>
           </li>
           <!-- ▲ ネット予約 -->

@@ -272,7 +272,12 @@ get_header(); ?>
 <a class="text-center font-weight-bold" href="<?php echo $home; ?>/seminar/" target="_blank">WEB説明会</a>
 </div>
 </div>
-<div><?php the_content(); ?></div>
+<div>
+<?php
+$page_data = get_page_by_path('service'); $page = get_post($page_data);
+$content = $page -> post_content;
+echo the_content(); ?>
+</div>
 </div>
 </section>
 

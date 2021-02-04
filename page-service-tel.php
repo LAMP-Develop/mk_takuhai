@@ -219,7 +219,9 @@ get_header(); ?>
 <div class="text-center lp__form-top">
 <h2 class="lp-ttl2 pb-3"><span class="marks">お申し込み</span></h2>
 </div>
-<div><?php the_content(); ?></div>
+<div class="d-block">
+<?php echo do_shortcode( '[contact-form-7 id="548" title="電話注文のお申し込み"]' ); ?>
+</div>
 </div>
 </section>
 

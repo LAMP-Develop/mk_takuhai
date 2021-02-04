@@ -1,4 +1,4 @@
-<a class="shop-buzz__list-inner shadow-sm br-7 d-block mb-md" href="<?php the_permalink(); ?>">
+<a class="shop-buzz__list-inner scroll-content shadow-sm br-7 d-block mb-md" href="<?php the_permalink(); ?>">
   <?php if( get_field('net') === "はい"): ?>
   <p class="shop-buzz__list-net f-11">ネット注文OK</p>
   <?php elseif( get_field('net') === "いいえ"): ?>
