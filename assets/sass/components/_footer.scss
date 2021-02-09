@@ -6,11 +6,15 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 165px;
+  height: 225px;
+  // height: 165px;
   margin-top: 45px;
   background: url("../images/bg-start.png");
   background-size: cover;
   background-position: center;
+  @include media-breakpoint-up(md) {
+    height: 165px;
+  }
 
   h2 {
     color: $white;
@@ -37,6 +41,13 @@
     &:hover {
       background: $white;
       color: $body-color;
+    }
+    &:nth-child(2) {
+      margin-top: 1rem;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
     }
   }
 }

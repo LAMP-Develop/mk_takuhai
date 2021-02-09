@@ -273,10 +273,13 @@ get_header(); ?>
 </div>
 </div>
 <div>
-<?php
-$page_data = get_page_by_path('service'); $page = get_post($page_data);
-$content = $page -> post_content;
-echo the_content(); ?>
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+  <script>
+    hbspt.forms.create({
+  	portalId: "8940987",
+  	formId: "f73c2382-5ce4-41f3-bc5c-ca3bcfe97519"
+  });
+  </script>
 </div>
 </div>
 </section>
