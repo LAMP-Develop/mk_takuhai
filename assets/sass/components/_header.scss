@@ -23,6 +23,7 @@
     top: 61px;
     left: 0;
     background: #fff;
+    flex-grow: inherit;
     @include media-breakpoint-up(lg) {
       position: inherit;
       background: rgba(0,0,0,0);
@@ -32,6 +33,7 @@
   &-wrap {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap!important;
     height: 61px;
