@@ -104,7 +104,7 @@ get_header(); ?>
         <!-- ▲ 検索条件 + 表示件数 -->
 
         <!-- ▼ 条件を変更 -->
-        <button type="button" class="btn-change text-bk" data-toggle="modal" data-target="#search-restaurant">
+        <button type="button" class="btn-change btn-change-fix text-bk" data-toggle="modal" data-target="#search-restaurant">
           <i class="fas fa-search mr-2"></i>
           条件を変更
         </button>
@@ -149,7 +149,13 @@ get_header(); ?>
 
       <?php else: // ないとき ?>
 
-      <p class="text-center py-5 d-block w-100">該当の店舗がありません。</p>
+      <p class="text-center pt-5 pb-1 d-block w-100">該当の店舗がありません。<br>条件を変更して検索してください。</p>
+      <!-- ▼ 条件を変更 -->
+      <button type="button" class="btn-change d-block text-bk" data-toggle="modal" data-target="#search-restaurant">
+        <i class="fas fa-search mr-2"></i>
+        条件を変更
+      </button>
+      <!-- ▲ 条件を変更 -->
 
       <?php endif;?>
 

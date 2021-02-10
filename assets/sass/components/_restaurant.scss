@@ -8,9 +8,9 @@
   }
 
   &__mv {
-    width: calc(100% + 2rem);
+    width: calc(100% + 30px);
     height: 198px;
-    margin: 0 0 0 -1rem;
+    margin: 0 0 0 -15px;
     @include media-breakpoint-up(md) {
       height: 330px;
     }

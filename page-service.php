@@ -73,7 +73,7 @@ get_header(); ?>
     <div class="lp__takeeats__txt col-md-6">
       <h2 class="lp-ttl2"><img src="<?php echo $img_url; ?>lp_takeeats_ttl.png" alt="料理の写真" srcset="<?php echo $img_url; ?>lp_takeeats_ttl.png 1x, <?php echo $img_url; ?>lp_takeeats_ttl@2x.png 2x">注文は<b class="text-primary">店舗オリジナル</b>の<br>オーダーサイトから</h2>
       <p>MKタク配にお申し込みいただきましたら、店舗ごとにオリジナルのオーダーサイトをご用意しております。<br>そのため店舗様はサイト制作からデリバリーまでを初期導入費・月額費０円でご利用いただくことができます。</p>
-      <p>MKタク配では、TakeEatsのシステムを利用しています。<a href="http://take-eats.jp/" target="_blank">詳しくはこちら</a></p>
+      <p>MKタク配では、テイクイーツのシステムを利用しています。<a href="http://take-eats.jp/" target="_blank">詳しくはこちら</a></p>
     </div>
     <div class="lp__takeeats__img col-md-6 text-center">
       <img src="<?php echo $img_url; ?>lp_takeeats_sp.png" alt="オーダーサイト" srcset="<?php echo $img_url; ?>lp_takeeats_sp.png 1x, <?php echo $img_url; ?>lp_takeeats_sp@2x.png 2x">
@@ -180,7 +180,7 @@ get_header(); ?>
 <div class="lp__feature__list__inner-wrap">
 <h3>MKタク配のサイトで<br>あなたの<span>お店を紹介</span></h3>
 <img src="<?php echo $img_url; ?>lp_feature_4.png" alt="MKタク配のサイトであなたのお店を紹介" srcset="<?php echo $img_url; ?>lp_feature_4.png 1x, <?php echo $img_url; ?>lp_feature_4@2x.png 2x">
-<p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（TakeEats)を導入の方は、お客様のオンライン注文が簡単です。</p>
+<p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（テイクイーツ)を導入の方は、お客様のオンライン注文が簡単です。</p>
 </div>
 </div>
 </div>
@@ -193,8 +193,8 @@ get_header(); ?>
 <h2 class="lp-ttl2"><span class="marks">料金について</span></h2>
 <div class="txt-c">
 <p class="small mb-5 text-md-center">
-  MKタク配では、株式会社ランプが提供する<span class="font-weight-bold">TakeEatsのシステム</span>を利用しています。
-  <br>システム利用料（TakeEats）以外の店舗様にかかる費用はございません。
+  MKタク配では、株式会社ランプが提供する<span class="font-weight-bold">テイクイーツのシステム</span>を利用しています。
+  <br>システム利用料（テイクイーツ）以外の店舗様にかかる費用はございません。
 </p>
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>

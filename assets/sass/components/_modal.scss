@@ -38,13 +38,14 @@
     position: fixed;
     left: calc(50% -165px);
     bottom: 2rem;
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
     margin: 0 auto;
     @include media-breakpoint-up(md) {
       position: relative;
       left: auto;
       bottom: auto;
-      width: 200px
+      max-width: 200px;
     }
   }
 
