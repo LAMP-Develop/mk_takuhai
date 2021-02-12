@@ -50,43 +50,6 @@ $wp_url = get_template_directory_uri(); ?>
 <!-- ▲ フッター -->
 
 <?php wp_footer(); ?>
-<?php if (is_home() || is_front_page()): ?>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-new Swiper(".swiper-container", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 10,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-</script>
-<?php endif; ?>
-
-<?php if( is_archive() ) : ?>
-<script>
-// 無限スクロール
-let infScroll = new InfiniteScroll('#scroll', {
-  path: '.next',
-  append: '.scroll-content',
-  history: false,
-});
-</script>
-<?php endif; ?>
 
 </body>
 </html>

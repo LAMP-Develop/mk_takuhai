@@ -25,8 +25,10 @@ $wp_url = get_template_directory_uri(); ?>
   </style>
 </head>
 
+<body class="<?php if(is_archive('shop')) {
+  echo "archives-shop";
+} ?>">
 <?php wp_body_open(); ?>
-
 <!-- ▼ ヘッダー -->
 <header class="header shadow-sm">
   <nav class="navbar navbar-expand-lg">

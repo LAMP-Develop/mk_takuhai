@@ -26,6 +26,12 @@ get_header(); ?>
 <?php get_template_part('template-part/genre'); ?>
 <!-- ▲ ジャンル -->
 
+<?php if ($wp_query->found_posts >= 10) {
+  echo '<input type="hidden" name="shop_flag" value="true">';
+} else {
+  echo '<input type="hidden" name="shop_flag" value="false">';
+} ?>
+
 <div class="main-left  bg-white">
 <div class="container">
 <div class="row">
@@ -146,9 +152,7 @@ get_header(); ?>
           )); ?>
       </div>
       <!-- ▲ ページネーション -->
-
       <?php else: // ないとき ?>
-
       <p class="text-center pt-5 pb-1 d-block w-100">該当の店舗がありません。<br>条件を変更して検索してください。</p>
       <!-- ▼ 条件を変更 -->
       <button type="button" class="btn-change d-block text-bk" data-toggle="modal" data-target="#search-restaurant">
