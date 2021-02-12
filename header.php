@@ -42,20 +42,20 @@ $wp_url = get_template_directory_uri(); ?>
 
       <div class="header-btn">
         <!-- ▼ 検索ボタン -->
-        <button type="button" class="header-btn-item border-0 bg-white search d-block d-lg-none" data-toggle="modal" data-target="#search-restaurant">
+        <button type="button" class="header-btn-item border-0 bg-white search d-block d-lg-none f-10" data-toggle="modal" data-target="#search-restaurant">
           <i class="fas fa-search"></i>
-          <p>検索</p>
+          <br>検索
         </button>
         <!-- ▲ 検索ボタン -->
         <!-- ▼ メニューボタン -->
-        <button class="header-btn-item navbar-toggler hum" type="button"
+        <button class="header-btn-item navbar-toggler hum f-10" type="button"
             data-toggle="collapse"
             data-target="#navmenu1"
             aria-controls="navmenu1"
             aria-expanded="false"
             aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          <p>メニュー</p>
+          <br>メニュー
         </button>
         <!-- ▲ メニューボタン -->
       </div>

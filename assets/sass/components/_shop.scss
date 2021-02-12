@@ -70,13 +70,8 @@
           &-wrap {
             position: relative;
             width: 100%;
-            overflow-x: scroll;
-          }
-
-          &-list {
-            width: 775px;
-            display: flex;
-            justify-content: flex-start;
+            overflow-x: auto;
+            white-space: nowrap;
           }
 
           &-item {

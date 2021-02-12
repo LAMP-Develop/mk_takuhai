@@ -7,12 +7,6 @@ import "slick-carousel";
 import InfiniteScroll from 'infinite-scroll';
 
 $(function(){
-  // 無限スクロール
-  let infScroll = new InfiniteScroll('#scroll', {
-    path: '.next',
-    append: '.scroll-content',
-    history: false,
-  });
   // スライドショー
   $("#mv").slick({
     slidesToShow: 1,

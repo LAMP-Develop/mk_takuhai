@@ -161,6 +161,8 @@ input[type="checkbox"] {
     &-form {
       label {
         width: 100%;
+        display: flex;
+        align-items: center;
       }
 
       input {
@@ -173,6 +175,7 @@ input[type="checkbox"] {
       input[type="checkbox"] {
         display: inline;
         width: 25px;
+        margin-right: 10px;
       }
 
       select {

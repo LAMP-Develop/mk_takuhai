@@ -14,9 +14,9 @@ $wp_url = get_template_directory_uri(); ?>
     <h2 class="f-18 text-center">
       <span class="text-body bg-white mr-2">無料</span><?php echo get_field('service-name',2); ?>をはじめませんか？
     </h2>
-    <div class="row">
+    <div class="d-block">
       <a style="width: 300px;" href="<?php echo $home; ?>/service">オンライン注文で申し込む</a>
-      <a  style="width: 300px;" class="ml-md-3"href="<?php echo $home; ?>/service-tel">電話注文で申し込む</a>
+      <a style="width: 300px;" class="ml-md-3" href="<?php echo $home; ?>/service-tel">電話注文で申し込む</a>
     </div>
   </div>
 </div>
@@ -73,6 +73,17 @@ new Swiper(".swiper-container", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+</script>
+<?php endif; ?>
+
+<?php if( is_archive() ) : ?>
+<script>
+// 無限スクロール
+let infScroll = new InfiniteScroll('#scroll', {
+  path: '.next',
+  append: '.scroll-content',
+  history: false,
 });
 </script>
 <?php endif; ?>
