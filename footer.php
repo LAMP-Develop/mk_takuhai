@@ -14,7 +14,7 @@ $wp_url = get_template_directory_uri(); ?>
     <h2 class="f-18 text-center">
       <span class="text-body bg-white mr-2">無料</span><?php echo get_field('service-name',2); ?>をはじめませんか？
     </h2>
-    <div class="d-block">
+    <div class="d-block d-md-flex">
       <a style="width: 300px;" href="<?php echo $home; ?>/service">オンライン注文で申し込む</a>
       <a style="width: 300px;" class="ml-md-3" href="<?php echo $home; ?>/service-tel">電話注文で申し込む</a>
     </div>
