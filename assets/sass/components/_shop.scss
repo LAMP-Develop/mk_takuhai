@@ -40,6 +40,7 @@
         width: 100%;
         background-color: $white;
         white-space: normal;
+        text-decoration: none!important;
         @include media-breakpoint-up(md) {
           display: flex!important;
           justify-content: space-between;
@@ -72,6 +73,7 @@
             width: 100%;
             overflow-x: auto;
             white-space: nowrap;
+            text-decoration: none!important;
           }
 
           &-item {
