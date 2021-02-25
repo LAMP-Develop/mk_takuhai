@@ -197,18 +197,16 @@
 /*===================================================
  ページネーション
 ====================================================*/
-.pagination {
+/*wp-pagenavi 17*/
+.wp-pagenavi {
   clear: both;
   text-align: center;
   margin: 2rem auto 3rem;
-  justify-content: center;
-
-  .page-numbers {
+  a,
+  span {
     color: $primary;
-    background-color: $white;
-    border-color: $primary!important;
-    padding: 7px 0;
-    width: 40px;
+    background-color: #FFFFFF;
+    padding: 10px 15px;
     border-radius: 50%;
     margin: 0 2px;
     white-space: nowrap;
@@ -216,37 +214,23 @@
     text-decoration: none;
     border: 1px solid $light;
     transition: 0.3s;
-
-    &:hover {
-      color: #fff;
-      background-color: $primary;
-    }
-
-    &.current {
-      color: $white;
-      border: none;
-      background-color: $primary;
-    }
-
-    &.next {
-      display: inline-table;
-      width: 60px;
-      border: none;
-      margin-left: 1rem;
-      &:hover {
-        color: $primary;
-        background-color: $white;
-      }
-    }
-    &.prev {
-      display: inline-table;
-      width: 60px;
-      border: none;
-      margin-right: 1rem;
-      &:hover {
-        color: $primary;
-        background-color: $white;
-      }
-    }
+  }
+  span:first-child {
+    border: none;
+  }
+  span.extend {
+    padding: 0 10px;
+    border: none;
+  }
+  span.current {
+    color: #fff;
+    background-color: $primary;
+  }
+  a:hover {
+    color: #fff;
+    background-color: $primary;
+  }
+  .pages {
+    display: none;
   }
 }
