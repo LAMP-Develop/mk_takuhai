@@ -48,7 +48,14 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
         <div class="restaurant__wrap mt-lg position-relative">
           <p class="f-18 font-weight-bold mb-1"><?php the_title() ?></p>
           <p class="f-13 text-secondary mb-0">
-            <?php echo get_the_term_list($post->ID,'shop_category'); ?>
+            <!-- ▼ カテゴリ -->
+            <?php if ($terms = get_the_terms($post->ID, 'shop_category')) {
+              foreach ( $terms as $term ) {
+                echo esc_html($term->name);
+                }
+              }
+             ?>
+             <!-- ▲ カテゴリ -->
             <?php if(post_custom('price')): // 入力がある場合 ?>
                ¥<?php the_field('price'); ?>から注文可
             <?php endif; ?>
