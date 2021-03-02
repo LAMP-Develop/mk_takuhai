@@ -83,7 +83,7 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
         <?php if( get_field('menu') === "はい"):?>
         <div class="restaurant__menu restaurant-block w-100">
           <h2 class="ttl-h2 py-md m-0 f-16">人気デリバリーメニュー</h2>
-          <a href="<?php the_field('order_url'); ?>" class="shop-buzz__list-inner-img-wrap mb-lg d-block">
+          <a href="<?php the_field('order_url'); ?>" class="shop-buzz__list-inner-img-wrap mb-lg d-block text-decoration-none">
             <!-- ▼ 商品① -->
             <?php if(post_custom('menu_price_1')): // 入力がある場合 ?>
             <div class="shop-buzz__list-inner-img-item">

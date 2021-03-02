@@ -45,7 +45,6 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
       <div class="shop-buzz__list-inner-img-item">
         <?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
           <img src="<?php echo $img_1[0]; ?>" alt="<?php the_title(); ?>の商品">
-
         <?php else: // ないとき ?>
         <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
         <?php endif; ?>
