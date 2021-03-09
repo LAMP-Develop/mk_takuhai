@@ -168,13 +168,6 @@ get_header(); ?>
 </p>
 </div>
 </div>
-<div class="lp__feature__list__inner">
-<div class="lp__feature__list__inner-wrap">
-<h3>MKタク配のサイトで<br>あなたの<span>お店を紹介</span></h3>
-<img src="<?php echo $img_url; ?>lp_feature_4.png" alt="MKタク配のサイトであなたのお店を紹介" srcset="<?php echo $img_url; ?>lp_feature_4.png 1x, <?php echo $img_url; ?>lp_feature_4@2x.png 2x">
-<p>MKタク配お店検索サイトにてあなたのお店が掲載されます。店舗サイト（TakeEats)を導入の方は、お客様のネット注文が簡単です。</p>
-</div>
-</div>
 </div>
 
 </div>

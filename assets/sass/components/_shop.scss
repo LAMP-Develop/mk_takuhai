@@ -56,15 +56,28 @@
         }
 
         &-img {
+          width: 100%;
+          height: 145px;
+          @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            overflow: hidden;
+            background: $light;
+          }
+
           &-none {
             width: 100%;
-            height: 145px;
+            height: 100%;
             object-fit: cover;
+            @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              height: auto;
+            }
 
             img {
               width: 100%;
-              height: 145px;
+              height: 100%;
               object-fit: cover;
+              @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                height: auto;
+              }
             }
           }
 
@@ -82,11 +95,18 @@
             width: 155px;
             height: 145px;
             margin: 0 5px 0 0;
+            @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+              overflow: hidden;
+              background: $light;
+            }
 
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
+              @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                height: auto;
+              }
             }
 
             p {
@@ -121,11 +141,18 @@
         @include media-breakpoint-up(md) {
           width: 50%;
         }
+        @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          overflow: hidden;
+          background: $light;
+        }
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            height: auto;
+          }
         }
       }
 
@@ -225,14 +252,20 @@
     border: none;
   }
 
-  span.extend,
   a.first,
   a.last,
   a.nextpostslink,
-  a.previouspostslink {
+  a.previouspostslink,
+  span.extend {
     padding: 0 10px;
     border: none;
     width: auto;
+
+    &:hover {
+      color: $primary;
+      background: none;
+      font-weight: bold;
+    }
   }
 
   span.current {

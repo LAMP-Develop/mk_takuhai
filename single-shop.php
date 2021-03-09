@@ -2,12 +2,6 @@
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
 get_header();
-
-$img_1 = wp_get_attachment_image_src(get_field('menu_img_1'), 'medium', false);
-$img_2 = wp_get_attachment_image_src(get_field('menu_img_2'), 'medium', false);
-$img_3 = wp_get_attachment_image_src(get_field('menu_img_3'), 'medium', false);
-$img_4 = wp_get_attachment_image_src(get_field('menu_img_4'), 'medium', false);
-$img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
 ?>
 
 <!-- ▼ 画面下固定ボタン -->
@@ -66,7 +60,7 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
             <?php if( get_field('net') === "はい"): ?>
               <!-- ▼ ネット注文 -->
               <?php if(post_custom('order_url')): // 入力がある場合 ?>
-              <a class="btn btn-primary w-100 mt-3" href="<?php the_field('order_url'); ?>" target="_blank" >
+              <a class="btn btn-primary w-100 mt-3 font-weight-bold" href="<?php the_field('order_url'); ?>" target="_blank" >
                 ネットで今すぐ注文
                 <i class="fas fa-angle-right ml-2"></i>
               </a>
@@ -90,68 +84,11 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
         <?php if( get_field('menu') === "はい"):?>
         <div class="restaurant__menu restaurant-block w-100">
           <h2 class="ttl-h2 py-md m-0 f-16">人気デリバリーメニュー</h2>
-          <a href="<?php the_field('order_url'); ?>" class="shop-buzz__list-inner-img-wrap mb-lg d-block text-decoration-none">
-            <!-- ▼ 商品① -->
-            <?php if(post_custom('menu_price_1')): // 入力がある場合 ?>
-            <div class="shop-buzz__list-inner-img-item">
-              <?php if(post_custom('menu_img_1')): // 入力がある場合 ?>
-              <img src="<?php echo $img_1[0]; ?>" alt="<?php the_title(); ?>の商品">
-              <?php else: // ないとき ?>
-              <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
-              <?php endif; ?>
-              <p class="mb-0 text-white">¥<?php the_field('menu_price_1'); ?></p>
-            </div>
-            <?php endif; ?>
-            <!-- ▲ 商品① -->
-            <!-- ▼ 商品② -->
-            <?php if(post_custom('menu_price_2')): // 入力がある場合 ?>
-            <div class="shop-buzz__list-inner-img-item">
-              <?php if(post_custom('menu_img_2')): // 入力がある場合 ?>
-              <img src="<?php echo $img_2[0]; ?>" alt="<?php the_title(); ?>の商品">
-              <?php else: // ないとき ?>
-              <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
-              <?php endif; ?>
-              <p class="mb-0 text-white">¥<?php the_field('menu_price_2'); ?></p>
-            </div>
-            <?php endif; ?>
-            <!-- ▲ 商品② -->
-            <!-- ▼ 商品③ -->
-            <?php if(post_custom('menu_price_3')): // 入力がある場合 ?>
-            <div class="shop-buzz__list-inner-img-item">
-              <?php if(post_custom('menu_img_3')): // 入力がある場合 ?>
-              <img src="<?php echo $img_3[0]; ?>" alt="<?php the_title(); ?>の商品">
-              <?php else: // ないとき ?>
-              <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
-              <?php endif; ?>
-              <p class="mb-0 text-white">¥<?php the_field('menu_price_3'); ?></p>
-            </div>
-            <?php endif; ?>
-            <!-- ▲ 商品③ -->
-            <!-- ▼ 商品④ -->
-            <?php if(post_custom('menu_price_4')): // 入力がある場合 ?>
-            <div class="shop-buzz__list-inner-img-item">
-              <?php if(post_custom('menu_img_4')): // 入力がある場合 ?>
-              <img src="<?php echo $img_4[0]; ?>" alt="<?php the_title(); ?>の商品">
-              <?php else: // ないとき ?>
-              <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
-              <?php endif; ?>
-              <p class="mb-0 text-white">¥<?php the_field('menu_price_4'); ?></p>
-            </div>
-            <?php endif; ?>
-            <!-- ▲ 商品④ -->
-            <!-- ▼ 商品⑤ -->
-            <?php if(post_custom('menu_price_5')): // 入力がある場合 ?>
-            <div class="shop-buzz__list-inner-img-item">
-              <?php if(post_custom('menu_img_5')): // 入力がある場合 ?>
-              <img src="<?php echo $img_5[0]; ?>" alt="<?php the_title(); ?>の商品">
-              <?php else: // ないとき ?>
-              <img class="d-block" src="<?php echo $wp_url; ?>/dist/images/noimg.png" alt="noimage">
-              <?php endif; ?>
-              <p class="mb-0 text-white">¥<?php the_field('menu_price_5'); ?></p>
-            </div>
-            <?php endif; ?>
-            <!-- ▲ 商品⑤ -->
-          </a>
+            <!-- ▼ メニュー -->
+            <a href="<?php the_field('order_url'); ?>" class="shop-buzz__list-inner-img-wrap mb-lg d-block text-decoration-none">
+            <?php get_template_part('template-part/item') ?>
+            </a>
+            <!-- ▲ メニュー -->
         </div>
         <?php elseif( get_field('menu') === "いいえ"): ?>
 
@@ -204,7 +141,6 @@ $img_5 = wp_get_attachment_image_src(get_field('menu_img_5'), 'medium', false);
             <!-- ▲ 公式HP -->
             <?php endif; ?>
           <!-- ▲ 店舗情報 -->
-
         </div>
       </section>
     </div>
