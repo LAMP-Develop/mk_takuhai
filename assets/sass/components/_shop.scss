@@ -95,10 +95,6 @@
             width: 155px;
             height: 145px;
             margin: 0 5px 0 0;
-            @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-              overflow: hidden;
-              background: $light;
-            }
 
             img {
               width: 100%;
@@ -280,5 +276,11 @@
 
   .pages {
     display: none;
+  }
+}
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .shop-buzz__list-inner-img-item {
+    overflow: hidden;
+    background: $light;
   }
 }
