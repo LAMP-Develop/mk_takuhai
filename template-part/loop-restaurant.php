@@ -1,6 +1,7 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
+$img_url = get_template_directory_uri().'/dist/images/';
 $id = $post->ID;
 $text = get_field('time');
 $str = str_replace(array('<br>', '<br />', "\r\n", "\n", "\r", '　'), '', $text);
@@ -31,7 +32,7 @@ $str = str_replace(array('<br>', '<br />', "\r\n", "\n", "\r", '　'), '', $text
     </div>
   </div>
 
-  <?php if( get_field('menu') === "はい"):?>
+  <?php if( get_field('net') === "はい"):?>
   <!-- ▼ メニュー -->
   <div class="restaurant__menu restaurant-block">
     <div class="shop-buzz__list-inner-img-wrap">
@@ -39,7 +40,7 @@ $str = str_replace(array('<br>', '<br />', "\r\n", "\n", "\r", '　'), '', $text
     </div>
   </div>
   <!-- ▲ メニュー -->
-  <?php elseif( get_field('menu') === "いいえ"): ?>
+<?php elseif( get_field('net') === "いいえ"): ?>
   <div class="shop-buzz__list-img">
     <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
   </div>

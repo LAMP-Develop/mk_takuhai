@@ -1,6 +1,7 @@
 <?php
 $home = esc_url(home_url());
 $wp_url = get_template_directory_uri();
+$img_url = get_template_directory_uri().'/dist/images/';
 get_header();
 ?>
 
@@ -35,7 +36,7 @@ get_header();
       <section class="pb-4 restaurant">
         <!-- ▼ メインビジュアル -->
         <div class="restaurant__mv">
-        <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
+          <img src="<?php the_field('main_img'); ?>" alt="<?php the_title(); ?>">
         </div>
         <!-- ▲ メインビジュアル -->
         <!-- ▼ 導入文 -->
@@ -81,7 +82,7 @@ get_header();
         </div>
         <!-- ▲ 導入文 -->
         <!-- ▼ メニュー -->
-        <?php if( get_field('menu') === "はい"):?>
+        <?php if( get_field('net') === "はい"):?>
         <div class="restaurant__menu restaurant-block w-100">
           <h2 class="ttl-h2 py-md m-0 f-16">人気デリバリーメニュー</h2>
             <!-- ▼ メニュー -->
@@ -90,7 +91,7 @@ get_header();
             </a>
             <!-- ▲ メニュー -->
         </div>
-        <?php elseif( get_field('menu') === "いいえ"): ?>
+      <?php elseif( get_field('net') === "いいえ"): ?>
 
         <?php endif; ?>
         <!-- ▲ メニュー -->

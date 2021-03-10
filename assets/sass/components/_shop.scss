@@ -58,28 +58,6 @@
         &-img {
           width: 100%;
           height: 145px;
-          @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            overflow: hidden;
-            background: $light;
-          }
-
-          &-none {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-              height: auto;
-            }
-
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                height: auto;
-              }
-            }
-          }
 
           &-wrap {
             position: relative;
@@ -100,9 +78,6 @@
               width: 100%;
               height: 100%;
               object-fit: cover;
-              @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-                height: auto;
-              }
             }
 
             p {
@@ -137,18 +112,11 @@
         @include media-breakpoint-up(md) {
           width: 50%;
         }
-        @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-          overflow: hidden;
-          background: $light;
-        }
 
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            height: auto;
-          }
         }
       }
 
@@ -279,8 +247,13 @@
   }
 }
 @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .shop-buzz__list-img,
   .shop-buzz__list-inner-img-item {
     overflow: hidden;
     background: $light;
+
+    img {
+      height: auto;
+    }
   }
 }
