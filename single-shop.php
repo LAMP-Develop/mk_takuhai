@@ -9,12 +9,15 @@ get_header();
 <div id="restaurant-btn" class="border-top">
   <?php if( get_field('net') === "はい"): ?>
     <!-- ▼ ネット注文 -->
-    <?php if(post_custom('order_url')): // 入力がある場合 ?>
-    <a class="btn btn-primary w-100" href="<?php the_field('order_url'); ?>" target="_blank" >
-      ネットで今すぐ注文
-      <i class="fas fa-angle-right ml-2"></i>
-    </a>
-    <?php endif; ?>
+    <div class="w-100">
+      <?php if(post_custom('order_url')): // 入力がある場合 ?>
+      <a class="btn btn-primary w-100" href="<?php the_field('order_url'); ?>" target="_blank" >
+        ネットで今すぐ注文
+        <i class="fas fa-angle-right ml-2"></i>
+      </a>
+      <p class="text-center f-12 mt-1 mb-0">※ 前日<span class="font-weight-bold">19時まで</span>のご注文に限ります。</p>
+      <?php endif; ?>
+    </div>
     <!-- ▲ ネット注文 -->
   <?php elseif( get_field('net') === "いいえ"): ?>
     <!-- ▼ 電話注文 -->
@@ -65,6 +68,7 @@ get_header();
                 ネットで今すぐ注文
                 <i class="fas fa-angle-right ml-2"></i>
               </a>
+              <p class="text-center f-12 mt-1 mb-0">※ 前日<span class="font-weight-bold">19時まで</span>のご注文に限ります。</p>
               <?php endif; ?>
               <!-- ▲ ネット注文 -->
             <?php elseif( get_field('net') === "いいえ"): ?>
