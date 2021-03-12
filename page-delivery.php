@@ -8,6 +8,7 @@ get_header(); ?>
   <div class="container">
     <h2 class="ttl-h2 pt-5 pb-4">ご利用方法</h2>
     <!-- ▼ 注文の流れ -->
+    <h2 class="f-18 text-white bg-primary p-3">「ネット注文可」の記載がある店舗</h2>
     <div class="delivery__items">
       <!-- ▼ ステップ1 -->
       <div class="delivery__item">
@@ -84,6 +85,15 @@ get_header(); ?>
       <p><?php echo get_field('attn'); ?></p>
     </div>
     <!-- ▲ ご注意ください。 -->
+  </div>
+</section>
+
+<section>
+  <div class="container py-5">
+    <h2 class="f-18 text-white bg-primary p-3">電話注文の場合</h2>
+    <div class="post-main">
+    <?php the_content(); ?>
+    </div>
   </div>
 </section>
 
