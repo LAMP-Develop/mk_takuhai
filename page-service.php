@@ -199,7 +199,7 @@ get_header(); ?>
 <img src="<?php echo $img_url; ?>lp_price_img.png" alt="初期費用・月額利用料¥0で導入可能！" srcset="<?php echo $img_url; ?>lp_price_img.png 1x, <?php echo $img_url; ?>lp_price_img@2x.png 2x">
 </div>
 <p class="small mt-5 mb-3 text-md-center text-secondary">
-  ※ 宅配は1回のご注文につき＋宅配料<span class="text-primary">550円</span>がお客様に加算されます。（宅配料は原則お客様負担）
+  ※ 宅配は1回のご注文につき＋宅配料<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>がお客様に加算されます。（宅配料は原則お客様負担）
   <br>※オプションをご選択の場合は別途費用がかかります。
   <br>※クレジットカードでの決済の場合手数料3.6%が別途発生します。
   <br>※ 宅配完了ごとに車両は毎回消毒を行っております。
@@ -210,7 +210,7 @@ get_header(); ?>
 <div class="another-plan mt-5">
 <h3 class="mb-3 text-center">MKタク配を電話注文で始めたい方</h3>
 <ul>
-<li>宅配料1回<span class="text-primary">550円</span>（税込）</li>
+<li>宅配料1回<s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span>（税込）</li>
 <li>配達以外はお電話で！（24時間対応）</li>
 <li>京都市外メーターも配達可能</li>
 </ul>

@@ -138,10 +138,10 @@ get_header(); ?>
 </div>
 <div class="lp__feature__list__inner">
 <div class="lp__feature__list__inner-wrap">
-<h3>ご利用は1回のご注文<br><span>550円</span>から(京都限定)
+<h3>ご利用は1回のご注文<br><s class="text-decoration-line-through">550円</s><span class="text-primary">110円</span></span>から(京都限定)
 </h3>
-<img src="<?php echo $img_url; ?>lp_feature_3_tel.png" alt="ご利用は1回のご注文550円から" srcset="<?php echo $img_url; ?>lp_feature_3_tel.png 1x, <?php echo $img_url; ?>lp_feature_3_tel@2x.png 2x">
-<!-- <img src="<?php echo $img_url; ?>lp_feature_3_110.png" alt="ご利用は1回のご注文110円から" srcset="<?php echo $img_url; ?>lp_feature_3_110.png 1x, <?php echo $img_url; ?>lp_feature_3_110@2x.png 2x"> -->
+<!-- <img src="<?php echo $img_url; ?>lp_feature_3_tel.png" alt="ご利用は1回のご注文550円から" srcset="<?php echo $img_url; ?>lp_feature_3_tel.png 1x, <?php echo $img_url; ?>lp_feature_3_tel@2x.png 2x"> -->
+<img src="<?php echo $img_url; ?>lp_feature_3_110.png" alt="ご利用は1回のご注文110円から" srcset="<?php echo $img_url; ?>lp_feature_3_110.png 1x, <?php echo $img_url; ?>lp_feature_3_110@2x.png 2x">
 <p>料理代金は直接お客様と精算願います。宅配先においてもお客様に直接トランクからお受け取りいただきます。<br>ドライバーが商品をお預かりする際に、宅配料（現金）をドライバーにお支払いください。</p>
 <p class="small mt-2">
   ※ 商品代の収受に関して、MKは一切関与いたしません。
@@ -179,7 +179,7 @@ get_header(); ?>
 <table class="lp__table mb-3 bg-white">
 <tr>
 <th class="bg-success p-3">宅配料</th>
-<td class="p-3">1回の注文で<span class="font-weight-bold text-primary">550円</span></td>
+<td class="p-3">1回の注文で<s class="text-decoration-line-through">550円</s><span class="text-primary">110円（京都限定）</span></td>
 </tr>
 <tr>
 <th class="bg-success p-3">対象エリア</th>
