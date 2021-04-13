@@ -15,7 +15,7 @@ get_header();
         ネットで今すぐ注文
         <i class="fas fa-angle-right ml-2"></i>
       </a>
-      <p class="text-center f-12 mt-1 mb-0">※ ご注文は前日<span class="font-weight-bold">19時まで</span>に限ります。</p>
+      <!-- <p class="text-center f-12 mt-1 mb-0">※ ご注文は前日<span class="font-weight-bold">19時まで</span>に限ります。</p> -->
       <?php endif; ?>
     </div>
     <!-- ▲ ネット注文 -->
@@ -68,7 +68,7 @@ get_header();
                 ネットで今すぐ注文
                 <i class="fas fa-angle-right ml-2"></i>
               </a>
-              <p class="text-center f-12 mt-1 mb-0">※ ご注文は前日<span class="font-weight-bold">19時まで</span>に限ります。</p>
+              <!-- <p class="text-center f-12 mt-1 mb-0">※ ご注文は前日<span class="font-weight-bold">19時まで</span>に限ります。</p> -->
               <?php endif; ?>
               <!-- ▲ ネット注文 -->
             <?php elseif( get_field('net') === "いいえ"): ?>
