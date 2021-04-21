@@ -41,18 +41,23 @@
         background-color: $white;
         white-space: normal;
         text-decoration: none!important;
-        @include media-breakpoint-up(md) {
-          display: flex!important;
-          justify-content: space-between;
-          box-sizing: border-box;
-        }
+        transition: .3s;
 
         &:hover {
-          text-decoration: none;
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.03)!important;
         }
 
         &:last-child {
           margin-bottom: 0;
+        }
+
+        &-link {
+          text-decoration: none!important;
+          @include media-breakpoint-up(md) {
+            display: flex!important;
+            justify-content: space-between;
+            box-sizing: border-box;
+          }
         }
 
         &-img {
@@ -96,12 +101,12 @@
 
       &-net {
         position: absolute;
-        top: 0;
-        right: 0;
+        font-weight: bold;
+        top: 9px;
+        right: 4px;
         padding: 0.15rem 0.5rem;
-        background: $primary;
         font-size: 0.8rem;
-        color: $white;
+        color: $primary;
         z-index: 1;
       }
 
@@ -139,11 +144,11 @@
 
         &-tag {
           color: $secondary;
-          margin-bottom: 6px;
+          margin-bottom: 10px;
 
           i {
             color: $success;
-            margin-right: 5px;
+            margin-right: 1px;
           }
         }
 
@@ -156,19 +161,29 @@
         }
       }
 
+      .btn {
+        margin: 10px auto 0;
+        width: 95%;
+        font-weight: bold;
+        font-size: 0.875rem;
+        padding: 0.875rem 0!important;
+      }
+
       &-link {
+        color: #5D5D5D;
         position: relative;
-        text-align: right;
-        padding-right: 1.5rem;
+        text-align: center;
+        padding: 15px 0 20px;
 
         &::after {
           position: absolute;
-          top: 43%;
-          right: 8px;
+          top: 37%;
+          right: auto;
           transform: rotate(45deg);
           content: "";
           width: 7px;
           height: 7px;
+          margin-left: 10px;
           display: inline-block;
           vertical-align: middle;
           border-top: 1px solid $success;
@@ -197,13 +212,13 @@
   a,
   span {
     display: inline-flex;
-    width: 41px;
+    width: 35px;
     height: 41px;
+    font-size: 0.875rem;
     align-items: center;
     justify-content: center;
-    color: $primary;
+    color: $body-color;
     background-color: #FFFFFF;
-    border-radius: 50%;
     margin: 0 2px;
     white-space: nowrap;
     text-align: center;
@@ -222,24 +237,21 @@
   a.previouspostslink,
   span.extend {
     padding: 0 10px;
-    border: none;
     width: auto;
 
     &:hover {
-      color: $primary;
+      color: $body-color;
       background: none;
       font-weight: bold;
     }
   }
 
   span.current {
-    color: #fff;
-    background-color: $primary;
+    background-color: $light;
   }
 
   a:hover {
-    color: #fff;
-    background-color: $primary;
+    background-color: $light;
   }
 
   .pages {

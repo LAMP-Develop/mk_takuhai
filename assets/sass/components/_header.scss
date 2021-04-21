@@ -9,7 +9,7 @@
   width: 100%;
   background: $white;
   margin: 0;
-  padding: 0!important !important;
+  padding: 0!important;
 
   .navbar {
     background: $white;
@@ -42,6 +42,7 @@
     h1 {
       width: 100%;
       margin: 0;
+      display: flex;
       @include media-breakpoint-up(lg) {
         width: auto;
       }
@@ -90,7 +91,7 @@
           position: relative;
           width: 16px;
           height: 2px;
-          background: $primary;
+          background: $body-color;
           margin-top: -4px;
           text-align: center;
 
@@ -99,7 +100,7 @@
             content: '';
             width: 16px;
             height: 2px;
-            background: $primary;
+            background: $body-color;
             position: absolute;
             left: 0;
           }
@@ -112,6 +113,7 @@
             bottom: -6px;
           }
         }
+
         .txt {
           position: relative;
           bottom: -3px;
@@ -127,15 +129,16 @@
         .fa-search:before {
           display: block;
           font-size: 16px;
-          color: $primary;
           padding-bottom: 4px;
         }
       }
     }
   }
+
   .search__free {
     border: none;
   }
+
   .nav .main a {
     @include media-breakpoint-up(lg) {
       display: inline-block;
@@ -144,7 +147,6 @@
       border: none;
     }
   }
-
 }
 /*===================================================
  ナビ (メニュー開 + フッターで使用)
@@ -154,6 +156,7 @@
   @include media-breakpoint-up(lg) {
     width: auto;
   }
+
   .main {
     width: 100%;
     @include media-breakpoint-up(lg) {
@@ -178,7 +181,7 @@
       }
 
       &:last-child() {
-        @include media-breakpoint-up(lg) {;
+        @include media-breakpoint-up(lg) {
           margin-right: 0;
         }
       }
@@ -231,6 +234,44 @@
           display: none;
         }
       }
+    }
+  }
+}
+/*===================================================
+ エリア変更
+====================================================*/
+.erea {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding-top: 2px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #bcbcbc;
+    border-right: 2px solid #bcbcbc;
+    transform: rotate(135deg);
+    top: calc(50% - 6px);
+    right: 12px;
+  }
+
+  select {
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0 40px 0 14px;
+
+    &::-ms-expand {
+      display: none;
     }
   }
 }

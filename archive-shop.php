@@ -84,21 +84,21 @@ get_header(); ?>
       <div class="d-flex justify-content-between">
         <div class="search__filter d-flex align-items-end">
           <!-- ▼ 検索中のキーワード・タグ -->
-          <p class="f-13 text-success">
+          <p class="f-13 text-success pb-2">
             <?php if ($shop_category != null && $shop_category !== 'nochoice'): $flag = true; ?>
-            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $cat_name; ?></span>
+            <span class="f-15 d-inline mr-1 text-body"><?php echo $cat_name; ?></span>
             <?php endif; ?>
 
             <?php if ($shop_tag != null): $flag = true; ?>
-            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $tag_name; ?></span>
+            <span class="f-15 d-inline mr-1 text-body"><?php echo $tag_name; ?></span>
             <?php endif; ?>
 
             <?php if ($s != null): $flag = true; ?>
-            <span class="font-weight-bold f-15 d-inline mr-1 text-body"><?php echo $s; ?></span>
+            <span class="f-15 d-inline mr-1 text-body"><?php echo $s; ?></span>
             <?php endif; ?>
 
             <?php if ($flag === false): // 入力しなかった場合 ?>
-              <span class="font-weight-bold f-15 d-inline mr-1 text-body">すべて</span>
+              <span class="f-15 d-inline mr-1 text-body">すべて</span>
               <?php else: // ないとき ?>
                 の検索結果
             <?php endif; ?>

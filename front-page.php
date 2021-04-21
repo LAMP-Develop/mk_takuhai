@@ -93,12 +93,12 @@ get_header(); ?>
   <div class="container">
     <div class="row align-items-start">
       <!-- ▼ 人気のお店 -->
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <?php get_template_part('template-part/reco-restaurants'); ?>
       </div>
       <!-- ▲ おすすめ店舗 -->
       <!-- ▼ サイドバー -->
-      <div class="col-md-4 d-md-block d-none">
+      <div class="col-lg-4 d-none d-lg-block">
         <?php get_template_part('template-part/search-form') ?>
       </div>
       <!-- ▲ サイドバー -->

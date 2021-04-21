@@ -12,18 +12,20 @@
   <!-- ▼ ジャンル -->
   <div class="search-form mb-md">
     <h3 class="modal-body-title f-13">ジャンル</h3>
-    <select class="border-0" name="shop_category">
-      <option value="">すべて</option>
-      <?php
-      $taxonomy_name = 'shop_category';
-      $args = array( 'hide_empty' => 0 );
-      $taxonomys = get_terms($taxonomy_name,$args);
-      if( !empty( $taxonomys ) && !is_wp_error( $taxonomys ) ):
-      foreach($taxonomys as $taxonomy):
-      ?><option value="<?php echo $taxonomy->slug; ?>"><?php echo $taxonomy->name; ?></option>
-      <?php endforeach; ?>
-      <?php endif;?>
-    </select>
+    <div class="search-form-wrap">
+      <select class="border-0" name="shop_category">
+        <option value="">すべて</option>
+        <?php
+        $taxonomy_name = 'shop_category';
+        $args = array( 'hide_empty' => 0 );
+        $taxonomys = get_terms($taxonomy_name,$args);
+        if( !empty( $taxonomys ) && !is_wp_error( $taxonomys ) ):
+        foreach($taxonomys as $taxonomy):
+        ?><option value="<?php echo $taxonomy->slug; ?>"><?php echo $taxonomy->name; ?></option>
+        <?php endforeach; ?>
+        <?php endif;?>
+      </select>
+    </div>
   </div>
   <!-- ▲ ジャンル -->
 

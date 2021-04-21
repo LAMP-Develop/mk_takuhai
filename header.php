@@ -39,6 +39,13 @@ $wp_url = get_template_directory_uri(); ?>
       <a class="d-inline-block align-middle" href="<?php echo $home; ?>">
         <img src="<?php echo get_field('service-logo',2); ?>" alt="<?php echo get_field('service-name',2); ?>ロゴ">
       </a>
+      <div class="erea d-inline-block bg-light">
+        <select class="font-weight-bold" name="select" onChange="location.href=value;">
+          <option value="#">京都</option>
+          <!-- <option value="http://mk-takuhai.jp/">京都</option> -->
+          <option value="http://sapporo.mk-takuhai.jp/">札幌</option>
+        </select>
+      </div>
       </h1>
       <!-- ▲ タク配ロゴ -->
 
